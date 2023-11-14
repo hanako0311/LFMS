@@ -25,7 +25,7 @@ npm run test
 
 ## Show your support
 
-Give a ⭐️ if this project helped you!
+Give a ⭐️ if this project helped you! Boang na
 
 # LFMS
 LF: Lost and Management System 
