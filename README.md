@@ -26,3 +26,10 @@ npm run test
 ## Show your support
 
 Give a ⭐️ if this project helped you!
+
+***
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
+=======
+# LFMS
+LF: Lost and Management System 
+>>>>>>> origin/main
