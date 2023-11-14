@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h1 align="center">Welcome to lost-and-found 👋</h1>
 <p>
   <a href="https://www.npmjs.com/package/lost-and-found" target="_blank">
@@ -35,3 +36,7 @@ Give a ⭐️ if this project helped you!
 
 ***
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
+=======
+# LFMS
+LF: Lost and Management System 
+>>>>>>> origin/main
