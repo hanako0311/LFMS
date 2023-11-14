@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <h1 align="center">Welcome to lost-and-found 👋</h1>
 <p>
   <a href="https://www.npmjs.com/package/lost-and-found" target="_blank">
