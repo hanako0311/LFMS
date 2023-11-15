@@ -1,6 +1,6 @@
 import React from 'react';
-import './App.css'; // Import your CSS file for styling
-import backgroundImage from './landingbg.png'; // Import your background image
+import './App.css'; 
+import backgroundImage from './landingbg.png'; 
 
 const App = () => {
   return (
@@ -12,11 +12,14 @@ const App = () => {
         </div>
       </div>
       <div className="content">
-        <h1 className="welcome-text">taena ni2</h1>
+        <h1 className="welcome-text">
+        <span className="italic-text">  Welcome to, </span> <br /> 
+        <span className="lf-text">LOST AND FOUND</span> <br />
+        <span className="italic-text">  Find Lost Items, Report Found Items </span>
+        </h1>
       </div>
     </div>
   );
 };
 
 export default App;
-
