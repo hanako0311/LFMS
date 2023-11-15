@@ -33,6 +33,9 @@ const Register = () => {
       <div className="register-container">
         <form className="register-form" onSubmit={handleSubmit}>
           <h2>Register</h2>
+          <p className="login-link">
+            Already have an account? <Link to="/login">Login now</Link>
+          </p>
           <input
             type="email"
             name="email"
@@ -66,9 +69,6 @@ const Register = () => {
             required
           />
           <button type="submit">Register</button>
-          <p className="login-link">
-            Already have an account? <Link to="/login">Login now</Link>
-          </p>
         </form>
       </div>
     </div>

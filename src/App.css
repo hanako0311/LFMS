@@ -107,8 +107,11 @@
     color: white;
     padding: 0.5rem;
     border: none;
-    border-radius: 5px;
+    border-radius: 15px;
     margin-top: 1rem;
+    width: 15em;
+    height: 2.5em;
+    margin: auto;
     cursor: pointer;
   }
   
@@ -118,7 +121,8 @@
   
   .login-link {
     text-align: center;
-    margin-top: 1rem;
+    margin-top: 0.5px;
+    margin-bottom: 1em;
   }
   
   
