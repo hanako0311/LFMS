@@ -13,7 +13,7 @@ const App = () => {
       </div>
       <div className="content">
         <h1 className="welcome-text">
-        <span className="italic-text">  Welcome to, </span> <br /> 
+        <span className="italic-text">Welcome to</span> <br /> 
         <span className="lf-text">LOST AND FOUND</span> <br />
         <span className="italic-text">  Find Lost Items, Report Found Items </span>
         </h1>
