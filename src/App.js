@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './App.css'; // Import your CSS file for styling
+import backgroundImage from './landingbg.png'; // Import your background image
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="landing-page" style={{ backgroundImage: `url(${backgroundImage})` }}>
+      <div className="header">
+        <div>
+          <button className="login-button">Login</button>
+          <button className="register-button">Register</button>
+        </div>
+      </div>
+      <div className="content">
+        <h1 className="welcome-text">taena ni2</h1>
+      </div>
     </div>
   );
-}
+};
 
 export default App;
+
