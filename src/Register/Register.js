@@ -74,7 +74,10 @@ const Register = () => {
             Already have an account? <Link to="/login">Login now</Link>
           </p>
         </form>
+        <Link to="/" style={{ display: 'block', margin: '20px auto', textAlign: 'center', color: '#4f45b6', textDecoration: 'none' }}>Back to Home</Link>
       </div>
+      <div>
+    </div>
     </div>
   );
 };

@@ -1,3 +1,14 @@
+body {
+  font-family: 'Poppins', sans-serif;
+}
+.heading {
+  font-weight: 600; /* Semi-bold */
+}
+
+.normal-text {
+  font-weight: 400; /* Regular */
+}
+
 .landing-page {
   background-image: url('./landingbg.png');
   background-position: center;

@@ -64,6 +64,7 @@ function Login() {
               Don't have an account? <Link to="/register">Register here</Link>
             </p>
           </div>
+          <Link to="/" className="back-home-link">Back to Home</Link>
         </form>
       </div>
     </div>
