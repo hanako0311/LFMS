@@ -27,8 +27,8 @@
 }
 
 
-.login-button,
-.register-button {
+.login-btn,
+.register-btn {
   background: none;
   border: none;
   padding: 0;
@@ -40,8 +40,8 @@
   transition: color 0.3s;
 }
 
-.login-button:hover,
-.register-button:hover {
+.login-btn:hover,
+.register-btn:hover {
   color: #4F45B6; 
 }
 
@@ -88,6 +88,7 @@
   .register-form {
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
   
   .register-form h2 {
@@ -97,9 +98,11 @@
   
   .register-form input {
     margin-bottom: 1rem;
-    padding: 0.5rem;
+    padding: 0.4rem;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 30px;
+    width: 85%; /* Adjust the width as needed */
+    height: 2.5em; /* Adjust the height as needed */
   }
   
   .register-form button {
@@ -121,8 +124,13 @@
   
   .login-link {
     text-align: center;
-    margin-top: 0.5px;
-    margin-bottom: 1em;
+    margin-top: 1.5em;
   }
   
+  .register-txt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px; /* You can adjust the height to your preference */
+  }
   

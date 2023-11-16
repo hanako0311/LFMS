@@ -33,9 +33,6 @@ const Register = () => {
       <div className="register-container">
         <form className="register-form" onSubmit={handleSubmit}>
           <h2>Register</h2>
-          <p className="login-link">
-            Already have an account? <Link to="/login">Login now</Link>
-          </p>
           <input
             type="email"
             name="email"
@@ -43,6 +40,7 @@ const Register = () => {
             value={formData.email}
             onChange={handleChange}
             required
+            style={{ textAlign: 'left', paddingLeft:'1em' }}
           />
           <input
             type="text"
@@ -51,6 +49,7 @@ const Register = () => {
             value={formData.firstName}
             onChange={handleChange}
             required
+            style={{ textAlign: 'left', paddingLeft:'1em' }}
           />
           <input
             type="text"
@@ -59,6 +58,7 @@ const Register = () => {
             value={formData.lastName}
             onChange={handleChange}
             required
+            style={{ textAlign: 'left', paddingLeft:'1em' }}
           />
           <input
             type="password"
@@ -67,8 +67,12 @@ const Register = () => {
             value={formData.password}
             onChange={handleChange}
             required
+            style={{ textAlign: 'left', paddingLeft:'1em' }}
           />
-          <button type="submit">Register</button>
+          <button type="submit" style={{ marginTop: '1em', height: '38px', borderRadius: '30px'}}>Register</button>
+          <p className="login-link">
+            Already have an account? <Link to="/login">Login now</Link>
+          </p>
         </form>
       </div>
     </div>

@@ -12,10 +12,10 @@ const LandingPage = () => {
       <div className="header">
         <div>
           <Link to="/login">
-            <button className="login-button">Login</button>
+            <button className="login-btn">Login</button>
           </Link>
           <Link to="/register">
-            <button className="register-button">Register</button>
+            <button className="register-btn">Register</button>
           </Link>
         </div>
       </div>
