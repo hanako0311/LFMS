@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Login.css';
+import './Login.css'; // Adjusted to the correct relative path
 import { Link } from 'react-router-dom';
 import backgroundImage from './Log-in.png';
 

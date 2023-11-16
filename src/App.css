@@ -10,7 +10,7 @@
 }
 
 .register-page {
-  background-image: url('./registerbg.png');
+  background-image: url('./Register/registerbg.png');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -69,7 +69,7 @@
 
   /* register page */
   .register-page {
-    background-image: url('./registerbg.png');
+    background-image: url('./Register/registerbg.png');
     background-size: cover;
     display: flex;
     justify-content: center;

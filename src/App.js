@@ -3,8 +3,8 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import backgroundImage from './landingbg.png';
-import Registration from './Register';
-import Login from './Login'; // Import the Login component
+import Registration from './Register/Register.js';
+import Login from './Login/Login.js'; // Import the Login component
 
 const LandingPage = () => {
   return (
