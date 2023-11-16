@@ -1,0 +1,118 @@
+/* App.css */
+
+/* Import Inter font */
+@import url('https://rsms.me/inter/inter.css');
+
+.app-container {
+  width: 100%;
+  height: 100vh; /* Use viewport height instead of 100% */
+  position: relative;
+  overflow: hidden; /* Ensure no scroll bars */
+}
+
+.background-image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.login-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form {
+  width: 585px;
+  height: 690px;
+  background: white;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.form-header {
+  padding-top: 20px;
+  margin-bottom: 50px;
+  text-align: center;
+  color: #292929;
+  font-size: 30px;
+  font-family: 'Inter';
+  font-weight: 700;
+  word-wrap: break-word;
+  margin-top: 60px;
+}
+
+.form-input {
+  margin-top: 20px;
+  width: 440px;
+  height: 69px;
+  margin: 20px 80px;
+  position: relative;
+}
+
+.email-input,
+.password-input {
+  width: 100%;
+  height: 100%;
+  background: white;
+  border-radius: 30px;
+  border: 1px solid #8ac0ff;
+  padding: 20px; /* Adjust padding for the desired appearance */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  font-size: 16px;
+  color: #0c0c0c;
+  font-family: 'Inter';
+  font-weight: 500;
+}
+
+
+.form-button {
+  padding-top: 50px;
+  width: 312px;
+  height: 62px;
+  margin: 20px auto;
+  position: relative;
+}
+
+.login-button {
+  width: 100%;
+  height: 100%;
+  background: #4f45b6;
+  border-radius: 30px;
+  color: white;
+  font-size: 16px;
+  font-family: 'Inter';
+  font-weight: 400;
+  word-wrap: break-word;
+  cursor: pointer;
+}
+
+.form-footer {
+  text-align: center;
+  color: #545454;
+  font-size: 16px;
+  font-family: 'Inter';
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+.register-prompt {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.register-link {
+  display: inline-block;
+  color: #4f45b6;
+  cursor: pointer;
+}
