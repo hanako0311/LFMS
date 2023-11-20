@@ -1,6 +1,6 @@
 import React from 'react';
 import './home.css'; // Import CSS file
-import backgroundImage from './home-btn.png';
+
 
 function Home() {
     
