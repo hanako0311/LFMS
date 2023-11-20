@@ -1,0 +1,201 @@
+/* Home.css */
+.main-container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: white;
+}
+
+.top-bar {
+    width: 1802px;
+    height: 161px;
+    left: 150px;
+    top: 0;
+    position: absolute;
+}
+
+.top-bar-background {
+    width: 1797.91px;
+    height: 160px;
+    left: 1.02px;
+    top: 0;
+    position: absolute;
+    background: #4F45B6;
+}
+
+.top-bar-border {
+    width: 1802px;
+    height: 0;
+    left: 1802px;
+    top: 161px;
+    position: absolute;
+    transform: rotate(-180deg);
+    transform-origin: 0 0;
+    border: 2px #F5EFFC solid;
+}
+
+.user-profile {
+    width: 193.18px;
+    height: 68px;
+    left: 1554.65px;
+    top: 46px;
+    position: absolute;
+}
+
+.user-avatar {
+    width: 61.33px;
+    height: 60px;
+    left: 0;
+    top: 4px;
+    position: absolute;
+    background: linear-gradient(0deg, #A098AE 0%, #A098AE 100%);
+    border-radius: 10px;
+}
+
+.user-info {
+    width: 107.32px;
+    height: 68px;
+    left: 85.86px;
+    top: 0;
+    position: absolute;
+}
+
+.user-name {
+    width: 107.32px;
+    left: 0;
+    top: 0;
+    position: absolute;
+    color: white;
+    font-size: 18px;
+    font-family: 'Cairo';
+    font-weight: 700;
+    word-wrap: break-word;
+}
+
+.user-role {
+    width: 50.08px;
+    left: 0;
+    top: 34px;
+    position: absolute;
+    color: #A098AE;
+    font-size: 18px;
+    font-family: 'Cairo';
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.dashboard-title {
+    left: 337px;
+    top: 211px;
+    position: absolute;
+    color: #252525;
+    font-size: 36px;
+    font-family: 'Cairo';
+    font-weight: 700;
+    word-wrap: break-word;
+}
+
+/* Home.css */
+.main-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: white;
+}
+
+
+
+/* Found Items Section 
+.found-items-section {}
+.found-items-box {  }
+.found-items-header { }
+.found-items-title { }
+.found-items-count { }
+*/
+
+/* Lost Items Section 
+.lost-items-section { }
+.lost-items-box { }
+.lost-items-header { }
+.lost-items-title { }
+.lost-items-count {weight }
+ */
+
+/* Sidebar Section */
+.sidebar {
+    width: 199px;
+    height: 2032px;
+    position: absolute;
+    left: 0;
+    top: -17px;
+}
+
+.sidebar-background {
+    width: 198.55px;
+    height: 2019.38px;
+    position: absolute;
+    left: 0.11px;
+    top: 0;
+    background: #4F45B6;
+}
+
+.sidebar-btn {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    left: 65px;
+    /* Top property will be set inline in JSX to position each icon 
+    background: url('https://via.placeholder.com/60x60'); */
+}
+
+.sidebar-btn:nth-of-type(1) {
+    background-image: url('./home-btn.png');
+   
+    
+} 
+
+
+.search-bar-container {
+    width: 100%;
+    height: 100%;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-right: 32px;
+    background: #F5EFFC;
+    border-radius: 20px;
+    justify-content: flex-start;
+    align-items: center;
+    display: inline-flex;
+}
+
+.search-bar {
+    width: 214px;
+    padding: 23px 32px;
+    border-radius: 22px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.search-icon-container {
+    width: 32px;
+    height: 32px;
+    position: relative;
+}
+
+.search-icon {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    background: #808080;
+}
+
+.search-text {
+    color: #A098AE;
+    font-size: 18px;
+    font-family: 'Cairo', sans-serif;
+    font-weight: 400;
+    word-wrap: break-word;
+}

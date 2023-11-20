@@ -19,8 +19,8 @@ const Register = () => {
     e.preventDefault();
     // Handle the form submission logic here
     console.log('Form data submitted:', formData);
-    alert('Registration Complete'); // Show a popup message
-    setFormData({ // Reset the form fields
+    alert('Registration Complete'); 
+    setFormData({ 
       email: '',
       firstName: '',
       lastName: '',
@@ -69,7 +69,7 @@ const Register = () => {
             required
             style={{ textAlign: 'left', paddingLeft:'1em' }}
           />
-          <button type="submit" style={{ marginTop: '1em', height: '38px', borderRadius: '30px'}}>Register</button>
+          <button type="submit" style={{ marginTop: '1em', height: '38px', borderRadius: '30px'}}>REGISTER</button>
           <p className="login-link">
             Already have an account? <Link to="/login">Login now</Link>
           </p>

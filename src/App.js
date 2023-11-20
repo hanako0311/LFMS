@@ -4,7 +4,9 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import backgroundImage from './landingbg.png';
 import Registration from './Register/Register.js';
-import Login from './Login/Login.js'; // Import the Login component
+import Login from './Login/Login.js'; // Import the Login 
+import Home from './Homepage/Home.js'
+
 
 const LandingPage = () => {
   return (
@@ -38,6 +40,7 @@ const App = () => {
         <Route path="/" element={<LandingPage />} />
         <Route path="/register" element={<Registration />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/home" element={<Home />} />
       </Routes>
     </Router>
   );
