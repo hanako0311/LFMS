@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import backgroundImage from './Register';
 import '../App.css';
 
 const Register = () => {
@@ -15,17 +14,37 @@ const Register = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle the form submission logic here
-    console.log('Form data submitted:', formData);
-    alert('Registration Complete'); // Show a popup message
-    setFormData({ // Reset the form fields
-      email: '',
-      firstName: '',
-      lastName: '',
-      password: ''
-    });
+
+    try {
+      // Make a POST request to your Spring Boot backend
+      const response = await fetch('http://localhost:8080/user/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      // Check if the request was successful (status code 200-299)
+      if (response.ok) {
+        alert('Registration Successful'); // Show a success message
+        setFormData({ // Reset the form fields
+          email: '',
+          firstName: '',
+          lastName: '',
+          password: ''
+        });
+      } else {
+        // Handle registration failure
+        const errorMessage = await response.text();
+        alert(`Registration Failed: ${errorMessage}`);
+      }
+    } catch (error) {
+      console.error('Error during registration:', error);
+      alert('An error occurred during registration');
+    }
   };
 
   return (
