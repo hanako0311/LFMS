@@ -7,32 +7,14 @@
 }
 
 .top-bar {
-    width: 1802px;
-    height: 161px;
+    width: 1850px;
+    height: 131px;
     left: 150px;
-    top: 0;
-    position: absolute;
-}
-
-.top-bar-background {
-    width: 1797.91px;
-    height: 160px;
-    left: 1.02px;
     top: 0;
     position: absolute;
     background: #4F45B6;
 }
 
-.top-bar-border {
-    width: 1802px;
-    height: 0;
-    left: 1802px;
-    top: 161px;
-    position: absolute;
-    transform: rotate(-180deg);
-    transform-origin: 0 0;
-    border: 2px #F5EFFC solid;
-}
 
 .user-profile {
     width: 193.18px;
@@ -123,30 +105,25 @@
 
 /* Sidebar Section */
 .sidebar {
-    width: 199px;
+    width: 150px;
     height: 2032px;
     position: absolute;
     left: 0;
     top: -17px;
-}
-
-.sidebar-background {
-    width: 198.55px;
-    height: 2019.38px;
-    position: absolute;
-    left: 0.11px;
-    top: 0;
     background: #4F45B6;
 }
+
 
 .sidebar-btn {
     width: 60px;
     height: 60px;
     position: absolute;
     left: 65px;
+    background-image: url('./home-btn.png');
     /* Top property will be set inline in JSX to position each icon 
     background: url('https://via.placeholder.com/60x60'); */
 }
+
 
 .sidebar-btn:nth-of-type(1) {
     background-image: url('./home-btn.png');
@@ -155,12 +132,14 @@
 
 
 .search-bar-container {
-    width: 100%;
-    height: 100%;
+    width: 50%;
+    height: 50%;
     padding-top: 2px;
     padding-bottom: 2px;
     padding-right: 32px;
     background: #F5EFFC;
+    margin-left: 25em;
+    margin-top: 2.5em;
     border-radius: 20px;
     justify-content: flex-start;
     align-items: center;
@@ -169,11 +148,11 @@
 
 .search-bar {
     width: 214px;
-    padding: 23px 32px;
+    padding: 16px 32px;
     border-radius: 22px;
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 10px;
 }
 
 .search-icon-container {
@@ -188,7 +167,7 @@
     position: absolute;
     left: 4px;
     top: 4px;
-    background: #808080;
+    background-image: #808080;
 }
 
 .search-text {
@@ -197,4 +176,4 @@
     font-family: 'Cairo', sans-serif;
     font-weight: 400;
     word-wrap: break-word;
-}
+} 

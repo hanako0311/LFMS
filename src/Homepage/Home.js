@@ -7,8 +7,6 @@ function Home() {
     return (
         <div className="main-container">
             <div className="top-bar">
-                <div className="top-bar-background"></div>
-                <div className="top-bar-border"></div>
                 <div className="user-profile">
                     <img className="user-avatar" src="https://via.placeholder.com/61x60" alt="User" />
                     <div className="user-info">
@@ -19,8 +17,8 @@ function Home() {
             </div>
             <div className="dashboard-title">Dashboard</div>
 
-            {/* New Search Bar Section */}
-            <div className="search-bar-container">
+             {/* New Search Bar Section */}
+             <div className="search-bar-container">
                 <div className="search-bar">
                     <div className="search-icon-container">
                         <div className="search-icon"></div>
@@ -28,7 +26,7 @@ function Home() {
                     <div className="search-text">Search here...</div>
                 </div>
             </div>
-          
+           
             {/* Found Items Section */}
             <div className="found-items-section">
                 <div className="found-items-box">
@@ -51,7 +49,6 @@ function Home() {
 
              {/* Sidebar Section */}
              <div className="sidebar">
-                <div className="sidebar-background"></div>
                 <div className="sidebar-btn" style={{ top: '242px' }}></div>
                 <div className="sidebar-btn" style={{ top: '353px' }}></div>
                 <div className="sidebar-btn" style={{ top: '490px' }}></div>
@@ -61,7 +58,9 @@ function Home() {
             {/* More JSX elements go here following the same pattern */}
             {/* ... */}
         </div>
+
+        
     );
 }
 
-export default Home;
+export default Home; 
