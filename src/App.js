@@ -1,11 +1,12 @@
 // App.js
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { Link, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import './App.css';
-import backgroundImage from './landingbg.png';
-import Registration from './Register/Register.js';
+import Home from './Homepage/Home.js';
 import Login from './Login/Login.js'; // Import the Login 
-import Home from './Homepage/Home.js'
+import Registration from './Register/Register.js';
+import FormFound from './Report Found/FormFound.js';
+import backgroundImage from './landingbg.png';
 
 
 const LandingPage = () => {
@@ -41,6 +42,7 @@ const App = () => {
         <Route path="/register" element={<Registration />} />
         <Route path="/login" element={<Login />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/formfound" element={<FormFound />} />
       </Routes>
     </Router>
   );

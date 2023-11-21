@@ -2,6 +2,7 @@ import React from 'react';
 import './FormFound.css'; // Import the CSS file
 
 function FormFound() {
+    
     return (
         <div className="form-found-container">
             <div className="header">
