@@ -1,7 +1,22 @@
 import { useCallback } from "react";
 import "./home.css";
 import LostButtonImage from './/lost-btn.png';
-
+import userImage from './Placeholder.png';
+import logo from './LF splash 1.png';
+import home from './Home.png';
+import profile from './profile.png';
+import found from './report found.png';
+import lost1 from './Group.png';
+import lost2 from './search.png';
+import magnifier from './magnifier.png';
+import history from './image 5.png';
+import back from './Subtract.png';
+import tablet from './tablet.png';
+import umbrella from './umbrella.png';
+import money from './money.png';
+import tumbler from './tumbler.png';
+import calc from './calc.png';
+import heart from './heart.png';
 
 const Home = () => {
   const onContainer1Click = useCallback(() => {
@@ -38,7 +53,7 @@ const Home = () => {
         <div className="bg" />
         <img className="top-menu-child" alt="" src="/line.svg" />
         <div className="user">
-          <img className="placeholder-icon" alt="" src="/placeholder@2x.png" />
+          <img className="placeholder-icon" alt="" src={userImage} />
           <div className="name">
             <b className="zara-wardani">Zara Wardani</b>
             <div className="admin">Admin</div>
@@ -50,7 +65,7 @@ const Home = () => {
         <div className="overview">
           <div className="col-1" />
           <div className="col-2">
-            <div className="div">
+            <div className="div" onClick={onContainer1Click}>
               <div className="content1">
                 <div className="found-items">Found Items</div>
               </div>
@@ -69,7 +84,7 @@ const Home = () => {
         <div className="div2">
           <div className="image">
             <div className="background" />
-            <img className="image-icon" alt="" src="/image@2x.png" />
+            <img className="image-icon" alt="" src={tablet} />
             <div className="tags">
               <div className="tag">
                 <div className="tech">Tech</div>
@@ -101,7 +116,7 @@ const Home = () => {
           <div className="claim">Claim</div>
         </div>
         <div className="div3">
-          <img className="image-3-icon" alt="" src="/image-3@2x.png" />
+          <img className="image-3-icon" alt="" src={umbrella} />
           <div className="content6">
             <div className="detail">
               <div className="min-ago">December 05, 2021</div>
@@ -131,7 +146,7 @@ const Home = () => {
           </div>
         </div>
         <div className="div3">
-          <img className="image-3-icon1" alt="" src="/image-31@2x.png" />
+          <img className="image-3-icon1" alt="" src={money} />
           <div className="content6">
             <div className="detail">
               <div className="min-ago">December 05, 2021</div>
@@ -166,7 +181,7 @@ const Home = () => {
         <div className="div2">
           <div className="image">
             <div className="background" />
-            <img className="image-icon" alt="" src="/image1@2x.png" />
+            <img className="image-icon" alt="" src={tumbler} />
             <div className="tags3">
               <div className="tag">
                 <div className="tech">Tumbler</div>
@@ -197,7 +212,7 @@ const Home = () => {
           <div className="claim2">Claim</div>
         </div>
         <div className="div3">
-          <img className="image-3-icon" alt="" src="/image-32@2x.png" />
+          <img className="image-3-icon" alt="" src={calc} />
           <div className="content6">
             <div className="detail">
               <div className="min-ago">December 05, 2021</div>
@@ -232,7 +247,7 @@ const Home = () => {
           </div>
         </div>
         <div className="div3">
-          <img className="image-3-icon1" alt="" src="/image-33@2x.png" />
+          <img className="image-3-icon1" alt="" src={heart} />
           <div className="content6">
             <div className="detail">
               <div className="min-ago">December 05, 2021</div>
@@ -268,12 +283,12 @@ const Home = () => {
         <img className="top-menu-item" alt="" src="/line1.svg" />
         <div className="nav">
           <div className="report-lost" onClick={onReportLostContainerClick}>
-            <img className="group-icon" alt="" src="/group.svg" />
+            <img className="group-icon" alt="" src={lost1} />
             <div className="search-dollar-search-pay-prod">
               <img
                 className="search-dollar-search-pay-prod-icon"
                 alt=""
-                src="/searchdollarsearchpayproductcurrencyquerymagnifyingcashbusinessmoneyglass.svg"
+                src={lost2}
               />
               <b className="b2">?</b>
             </div>
@@ -281,33 +296,32 @@ const Home = () => {
           <img
             className="report-found-icon"
             alt=""
-            src={LostButtonImage}
+            src={found}
             onClick={onReportFoundClick}
           />
           <img
             className="profile-icon"
             alt=""
-            src="/profile.svg"
+            src={profile}
             onClick={onProfileClick}
           />
-          <img className="home-icon" alt="" src="/home.svg" />
-          <img className="image-5-icon" alt="" src="/image-5@2x.png" />
+          <img className="home-icon" alt="" src={home} />
+          <img className="image-5-icon" alt="" src={history} />
         </div>
         <img
           className="subtract-icon"
           alt=""
-          src="/subtract.svg"
+          src={back}
           onClick={onSubtractClick}
         />
       </div>
       <div className="search-bar" onClick={onSearchBarContainerClick}>
         <div className="content21">
-          <img className="magnifier-icon" alt="" src="/magnifier.svg" />
+          <img className="magnifier-icon" alt="" src={magnifier} />
           <div className="search-here">Search here...</div>
         </div>
       </div>
-      <div className="image-4" />
-      <img className="lf-splash-1" alt="" src="/lf-splash-1@2x.png" />
+      <img className="lf-splash-1" alt="" src={logo} />
     </div>
   );
 };

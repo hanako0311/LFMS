@@ -2,7 +2,7 @@
     position: absolute;
     top: 0;
     left: 1px;
-    background-color: var(--color-slateblue);
+    background-color: #4F45B6;
     width: 1797.9px;
     height: 160px;
   }
@@ -74,6 +74,7 @@
     display: inline-block;
     width: 305px;
     flex-shrink: 0;
+    /* background-color: #4F45B6; */
   }
   .content1 {
     display: flex;
@@ -98,6 +99,7 @@
     justify-content: flex-start;
     padding: var(--padding-13xl);
     gap: 163px;
+    cursor: pointer;
   }
   .col-2,
   .content,
@@ -157,15 +159,18 @@
   }
   .background,
   .image-icon {
+    border-radius: 20px;
     position: absolute;
     top: 0;
     left: 0;
     height: 370px;
   }
   .background {
-    border-radius: var(--br-xl);
-    background-color: var(--color-silver);
+    border-radius: 20px;
+    background-color: #C4C4C4;
     width: 285.5px;
+    height: 370px;
+    flex-shrink: 0;
   }
   .image-icon {
     width: 434.5px;
@@ -174,11 +179,19 @@
   .tech {
     position: relative;
     font-weight: 600;
+    display: flex;
+    padding: 14px 35px 15px 35px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 24px;
+    background: #4F45B6;
+    box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.25);
+    color: white;
   }
   .tag {
     border-radius: var(--br-5xl);
     background-color: var(--color-slateblue);
-    box-shadow: 0 10px 12px rgba(0, 0, 0, 0.25);
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -286,14 +299,15 @@
   .child {
     top: 589px;
     left: 0;
-    background-color: var(--color-slateblue);
+    background: #4F45B6;
     width: 434px;
     height: 52px;
   }
   .claim {
-    top: 596px;
+    top: 600px;
     left: 191px;
     line-height: 150.5%;
+    color:white;
   }
   .div2 {
     position: relative;
@@ -302,6 +316,7 @@
   }
   .image-3-icon {
     position: absolute;
+    border-radius: 20px;
     top: 0;
     left: 0;
     border-radius: var(--br-17xl);
@@ -352,15 +367,16 @@
   .item {
     top: 591px;
     left: 0.5px;
-    background-color: var(--color-slateblue);
+    background-color: #4F45B6;
     width: 434px;
     height: 52px;
     cursor: pointer;
   }
   .claim1 {
-    top: 598px;
+    top: 605px;
     left: 191px;
     line-height: 150.5%;
+    color: white;
   }
   .image1,
   .tags1 {
@@ -420,14 +436,16 @@
   .inner {
     top: 589px;
     left: 0;
-    background-color: var(--color-mediumseagreen);
+    background-color: #45B665;
     width: 434px;
     height: 52px;
   }
   .claimed {
-    top: 597px;
+    top: 602px;
     left: 180px;
     line-height: 150.5%;
+    background: #45B665;
+    color: white;
   }
   .found-items-2,
   .tags3 {
@@ -442,7 +460,7 @@
     height: 670px;
     align-items: flex-start;
     justify-content: center;
-    gap: var(--gap-28xl);
+    gap: 47px;
     font-size: var(--font-size-xl);
     font-family: var(--font-mulish);
   }
@@ -464,11 +482,13 @@
   .claim2,
   .rectangle-div {
     position: absolute;
+    background: #4F45B6 ;
   }
   .claim2 {
     top: 627px;
     left: 191px;
     line-height: 150.5%;
+    color: white;
   }
   .child1 {
     top: 591px;
@@ -476,12 +496,14 @@
     background-color: var(--color-mediumseagreen);
     width: 434px;
     height: 52px;
+    background: #45B665;
   }
   .claimed1 {
     position: absolute;
-    top: 598px;
+    top: 605px;
     left: 179px;
     line-height: 150.5%;
+    color: white;
   }
   .tags5 {
     width: 309px;
@@ -505,9 +527,10 @@
     gap: var(--gap-mini);
   }
   .claim3 {
-    top: 597px;
+    top: 600px;
     left: 191px;
     line-height: 150.5%;
+    color: white;
   }
   .found-items1 {
     position: absolute;
@@ -519,15 +542,15 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: center;
-    gap: var(--gap-28xl);
+    gap: 47px;
     font-size: var(--font-size-xl);
-    font-family: var(--font-mulish);
+    font-family: 'Mulish';
   }
   .bg1 {
     position: absolute;
     top: 0;
     left: 0.1px;
-    background-color: var(--color-slateblue);
+    background-color: #4F45B6;
     width: 198.5px;
     height: 2019.4px;
   }
@@ -566,6 +589,7 @@
     top: 17.67%;
     left: 33.33%;
     display: inline-block;
+    color: white;
   }
   .search-dollar-search-pay-prod {
     position: absolute;
@@ -611,11 +635,12 @@
   }
   .image-5-icon {
     position: absolute;
-    top: 490px;
-    left: 6px;
+    top: 480px;
+    left: 2px;
     width: 60px;
     height: 59px;
     object-fit: cover;
+    cursor: pointer;
   }
   .nav {
     position: absolute;
@@ -625,7 +650,9 @@
     height: 549px;
   }
   .subtract-icon {
-    position: relative;
+    position: absolute;
+    top: 850px;
+    left: 65px;
     width: 66px;
     height: 65px;
     cursor: pointer;
@@ -667,14 +694,13 @@
     position: absolute;
     top: 47px;
     left: calc(50% - 401px);
-    border-radius: var(--br-xl);
-    background-color: var(--gray-1);
+    border-radius: 20;
+    background-color: #F5EFFC;
     width: 818px;
-    padding: var(--padding-11xs) var(--padding-13xl) var(--padding-11xs) 0;
+    padding: 2px 32px 2px 0px;
     cursor: pointer;
     color: var(--gray-4);
   }
-  .image-4,
   .lf-splash-1 {
     position: absolute;
     top: 247px;
