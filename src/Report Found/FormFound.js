@@ -1,9 +1,9 @@
-import React from 'react'; // Import CSS file
-
+import React from 'react';
+import './FormFound.css'; // Import the CSS file
 
 function FormFound() {
-    
-    return(
+
+    return (
         <div style={{width: '100%', height: '100%', position: 'relative', background: 'white'}}>
             <div style={{width: 1963, height: 161, left: -2, top: 0, position: 'absolute'}}>
                 <div style={{width: 1958.55, height: 160, left: 1.11, top: -0, position: 'absolute', background: '#4F45B6'}} />
@@ -146,4 +146,4 @@ function FormFound() {
     );
 }
 
-export default FormFound
+export default FormFound;

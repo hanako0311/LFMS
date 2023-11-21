@@ -1,0 +1,103 @@
+.form-found-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: white;
+}
+
+.form-found-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: white;
+}
+
+.header {
+    width: 100%;
+    height: 161px;
+    position: absolute;
+    background: #4F45B6;
+}
+
+.user-info {
+    width: 1963px;
+    height: 160px;
+    position: absolute;
+    left: -2px;
+    top: 0;
+}
+
+.user-info img {
+    width: 66.81px;
+    height: 60px;
+    left: 0;
+    top: 4px;
+    position: absolute;
+    background: linear-gradient(0deg, #A098AE 0%, #A098AE 100%);
+    border-radius: 10px;
+}
+
+.user-details {
+    width: 116.91px;
+    height: 68px;
+    left: 93.53px;
+    top: 0;
+    position: absolute;
+}
+
+.user-name {
+    width: 116.91px;
+    left: 0;
+    top: 0;
+    position: absolute;
+    color: white;
+    font-size: 18px;
+    font-family: 'Cairo';
+    font-weight: 700;
+    word-wrap: break-word;
+}
+
+.user-role {
+    width: 54.56px;
+    left: 0;
+    top: 34px;
+    position: absolute;
+    color: #A098AE;
+    font-size: 18px;
+    font-family: 'Cairo';
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.form-section {
+    width: 671px;
+    height: 63px;
+    padding: 12px;
+    left: 867px;
+    top: 339px;
+    position: absolute;
+    background: white;
+    border-radius: 6px;
+    border: 1px #DFE3E8 solid;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.form-field {
+    color: #919EAB;
+    font-size: 20px;
+    font-family: 'DM Sans';
+    font-weight: 500;
+    word-wrap: break-word;
+}
+
+.separator {
+    width: 1500px;
+    height: 1px;
+    left: 288px;
+    top: 262px;
+    position: absolute;
+    background: #C4CDD5;
+}
+
