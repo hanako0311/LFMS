@@ -1,7 +1,9 @@
-/* Home.css */
-.main-container {
+/* styles.css */
+
+/* Container Styles */
+.container {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     position: relative;
     background: white;
 }
@@ -48,18 +50,16 @@
     top: 0;
     position: absolute;
     color: white;
+  }
+  
+  .profile-name {
     font-size: 18px;
     font-family: 'Cairo';
     font-weight: 700;
     word-wrap: break-word;
-}
-
-.user-role {
-    width: 50.08px;
-    left: 0;
-    top: 34px;
-    position: absolute;
-    color: #A098AE;
+  }
+  
+  .profile-role {
     font-size: 18px;
     font-family: 'Cairo';
     font-weight: 400;
@@ -158,10 +158,12 @@
 .search-icon-container {
     width: 32px;
     height: 32px;
-    position: relative;
-}
-
-.search-icon {
+    background: #808080;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .search-icon-inner {
     width: 24px;
     height: 24px;
     position: absolute;
@@ -173,7 +175,7 @@
 .search-text {
     color: #A098AE;
     font-size: 18px;
-    font-family: 'Cairo', sans-serif;
+    font-family: 'Cairo';
     font-weight: 400;
     word-wrap: break-word;
 } 

@@ -15,7 +15,22 @@ function Home() {
                     </div>
                 </div>
             </div>
+          </div>
+          <div className="search-box">
+            <div className="search-input">
+              <div className="search-icon">
+                <div className="search-icon-inner" />
+              </div>
+              <div className="search-text">Search here...</div>
+            </div>
+          </div>
+          <div className="content-section">
+            <div className="found-items">Found Items</div>
+            <div className="items-count">15</div>
+          </div>
+          <div className="dashboard-section">
             <div className="dashboard-title">Dashboard</div>
+<<<<<<< HEAD
 
              {/* New Search Bar Section */}
              <div className="search-bar-container">
@@ -62,5 +77,18 @@ function Home() {
         
     );
 }
+=======
+          </div>
+          <div className="lost-items-section">
+            <div className="lost-items-title">Lost Items</div>
+            <div className="lost-items-count">34</div>
+          </div>
+          <div className="image-section">
+            <img className="placeholder-image" src="https://via.placeholder.com/512x512" alt="Placeholder" />
+          </div>
+        </div>
+      );
+    };
+>>>>>>> 70cfec458503bba3e46441ffe4273357acc2365f
 
 export default Home; 
