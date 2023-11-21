@@ -59,7 +59,7 @@ function Login() {
           
           <button type="submit" style={{ marginTop: '1em', height: '38px', borderRadius: '30px', fontSize: '14px'}}>LOGIN</button>
           <p className="register-link">
-            Already have an account? <Link to="/register">Register here</Link>
+            Don't have an account? <Link to="/register">Register here</Link>
           </p>
         </form>
         <Link to="/" style={{ display: 'block', margin: '20px auto', textAlign: 'center', color: '#4f45b6', textDecoration: 'none' }}>Back to Home</Link>
