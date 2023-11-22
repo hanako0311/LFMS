@@ -6,6 +6,7 @@ import Home from './Homepage/Home.js';
 import Login from './Login/Login.js'; // Import the Login 
 import Registration from './Register/Register.js';
 import ReportFoundItems from './Report Found/ReportFoundItems.js';
+import ReportLostItems from './Report Lost/ReportLostItems.js';
 import backgroundImage from './landingbg.png';
 
 
@@ -43,6 +44,7 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/home" element={<Home />} />
         <Route path="/formfound" element={<ReportFoundItems />} />
+        <Route path="/formlost" element={<ReportLostItems />} />
       </Routes>
     </Router>
   ); 
