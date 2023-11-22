@@ -2,6 +2,7 @@
 import React from 'react';
 import { Link, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import './App.css';
+import Claim from './Claim/Claim.js';
 import Home from './Homepage/Home.js';
 import Login from './Login/Login.js'; // Import the Login 
 import Registration from './Register/Register.js';
@@ -45,6 +46,7 @@ const App = () => {
         <Route path="/home" element={<Home />} />
         <Route path="/formfound" element={<ReportFoundItems />} />
         <Route path="/formlost" element={<ReportLostItems />} />
+        <Route path="/claim" element={<Claim />} />
       </Routes>
     </Router>
   ); 

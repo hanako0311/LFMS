@@ -1,0 +1,551 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap");
+body {
+  margin: 0;
+  line-height: normal;
+}
+:root {
+  /* fonts */
+  --font-inter: Inter;
+  --font-cairo: Cairo;
+  --font-dm-sans: "DM Sans";
+  --font-mulish: Mulish;
+
+  /* font sizes */
+  --font-size-lg: 18px;
+
+  /* Colors */
+  --white: #fff;
+  --color-slateblue: #4f45b6;
+  --gray-1: #f5effc;
+  --gray-4: #a098ae;
+  --color-gray-100: #808080;
+  --gray-900: #161c24;
+  --gray-400: #c4cdd5;
+
+  /* Paddings */
+  --padding-11xs: 2px;
+  --padding-13xl: 32px;
+}
+.claim-button-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--color-slateblue);
+    width: 436px;
+    height: 65px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .claim1 {
+    position: absolute;
+    top: 8px;
+    left: 43px;
+    font-size: 30px;
+    line-height: 150.5%;
+    font-family: var(--font-mulish);
+    color: var(--white);
+    text-align: center;
+    display: inline-block;
+    width: 343px;
+    color:#fff;
+  }
+  .claim-button {
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    position: absolute;
+    top: 463px;
+    left: 598px;
+    width: 436px;
+    height: 65px;
+  }
+  .line {
+    position: absolute;
+    top: 176.5px;
+    left: 588.5px;
+    border-top: 1px solid #dcdcdc;
+    box-sizing: border-box;
+    width: 435px;
+    height: 1px;
+  }
+  .blue-automatic {
+    display: block;
+  }
+  .description {
+    margin: 0;
+    position: relative;
+    line-height: 150.5%;
+    display: inline-block;
+    width: 535px;
+    height: 197px;
+    flex-shrink: 0;
+  }
+  .not-yet-claimed {
+    color: #ab1414;
+  }
+  .status {
+    margin: 0;
+    position: relative;
+    font-size: 20px;
+    line-height: 120%;
+    font-weight: 900;
+    display: inline-block;
+    width: 428px;
+    height: 29px;
+    flex-shrink: 0;
+  }
+  .item-details {
+    position: absolute;
+    top: 198px;
+    left: 598px;
+    width: 535px;
+    height: 274px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 17px;
+    color:#817e7e;
+  }
+  .essentials {
+    position: relative;
+    font-weight: 600;
+  }
+  .item-tags,
+  .tag {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .tag {
+    border-radius: 24px;
+    background-color: var(--color-slateblue);
+    box-shadow: 0 10px 12px rgba(0, 0, 0, 0.25);
+    justify-content: center;
+    padding: 14px 35px 15px;
+  }
+  .item-tags {
+    position: absolute;
+    top: 85px;
+    left: 598px;
+    width: 202px;
+    justify-content: flex-start;
+    font-size: 23px;
+    color: var(--white);
+  }
+  .blue-umbrella {
+    position: relative;
+    line-height: 120%;
+    font-weight: 900;
+    display: inline-block;
+    width: 458px;
+    height: 34px;
+    flex-shrink: 0;
+  }
+  .item-name {
+    margin: 0;
+    position: absolute;
+    top: 3px;
+    left: 598px;
+    width: 428px;
+    height: 66px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-size: 54px;
+    color: #2f2f2f;
+    font-family: inherit;
+  }
+  .item-picture-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 36px;
+    width: 532px;
+    height: 529px;
+    object-fit: cover;
+  }
+  .claim-child {
+    position: absolute;
+    top: 349px;
+    left: 415px;
+    width: 1133px;
+    height: 529px;
+    top: 293px;
+    left: 288px;
+    background-color: var(--gray-400);
+    width: 1500px;
+    height: 1px;
+  }
+  .item-status {
+    position: absolute;
+    top: 226px;
+    left: 300px;
+    font-size: 40px;
+    font-family: var(--font-dm-sans);
+    color: var(--gray-900);
+  }
+  .bg,
+  .placeholder-icon {
+    position: absolute;
+    left: 0;
+  }
+  .bg {
+    top: 0;
+    background-color: var(--color-slateblue);
+    width: 1920px;
+    height: 160px;
+  }
+  .placeholder-icon {
+    top: 4px;
+    border-radius: 10px;
+    width: 65.49px;
+    height: 60px;
+    object-fit: cover;
+  }
+  .username,
+  .usertype {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 114.61px;
+  }
+  .usertype {
+    top: 34px;
+    color: var(--gray-4);
+    width: 53.48px;
+  }
+  .name,
+  .user {
+    position: absolute;
+    top: 0;
+    left: 91.69px;
+    width: 114.61px;
+    height: 68px;
+  }
+  .user {
+    top: 46px;
+    left: 1659.12px;
+    width: 206.3px;
+  }
+  .magnifier-icon {
+    width: 32px;
+    height: 32px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .magnifier-icon,
+  .search-here {
+    position: relative;
+  }
+  .search,
+  .search-bar {
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    box-sizing: border-box;
+  }
+  .search {
+    border-radius: 22px;
+    width: 818px;
+    padding: 23px var(--padding-13xl);
+    gap: 16px;
+  }
+  .search-bar {
+    position: absolute;
+    top: 50px;
+    left: calc(50% - 452.19px);
+    border-radius: 20px;
+    background-color: var(--gray-1);
+    width: 801.9px;
+    padding: var(--padding-11xs) var(--padding-13xl) var(--padding-11xs) 0;
+    color: var(--gray-4);
+  }
+  .bg1,
+  .top-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .top-menu {
+    width: 1920px;
+    height: 160px;
+    text-align: left;
+    font-size: var(--font-size-lg);
+    color: var(--white);
+    font-family: var(--font-cairo);
+  }
+  .bg1 {
+    margin: 0;
+    background-color: var(--color-slateblue);
+    width: 198.55px;
+    height: 1080px;
+  }
+  .subtract-icon {
+    position: relative;
+    width: 59.98px;
+    height: 58.22px;
+  }
+  .view-history-icon {
+    position: absolute;
+    top: 396.86px;
+    left: 6px;
+    width: 60px;
+    height: 57.25px;
+    object-fit: cover;
+  }
+  .group-icon,
+  .search-dollar-search-pay-prod-icon {
+    position: absolute;
+    height: 72.92%;
+    width: 84.38%;
+    top: 13.54%;
+    right: 9.12%;
+    bottom: 13.54%;
+    left: 6.5%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+  }
+  .search-dollar-search-pay-prod-icon {
+    height: 96.49%;
+    width: 96.69%;
+    top: 1.75%;
+    right: 1.65%;
+    bottom: 1.75%;
+    left: 1.65%;
+  }
+  .b {
+    position: absolute;
+    height: 32%;
+    width: 21.74%;
+    top: 17.65%;
+    left: 33.5%;
+    display: inline-block;
+  }
+  .search-dollar-search-pay-prod {
+    position: absolute;
+    height: 41.67%;
+    width: 38.33%;
+    top: 50%;
+    right: 8.33%;
+    bottom: 8.33%;
+    left: 53.33%;
+    overflow: hidden;
+  }
+  .report-found-icon,
+  .report-lost {
+    position: absolute;
+    top: 279.45px;
+    left: 1px;
+    width: 68px;
+    height: 65.98px;
+    overflow: hidden;
+  }
+  .report-found-icon {
+    top: 181.45px;
+    left: 0;
+    width: 67px;
+    height: 65.01px;
+  }
+  .profile-icon {
+    position: absolute;
+    top: 96.06px;
+    left: 1px;
+    width: 68px;
+    height: 65.98px;
+  }
+  .home-icon {
+    top: 0;
+    left: 2px;
+    width: 65px;
+    height: 63.07px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .home-icon,
+  .logo-icon,
+  .nav {
+    position: absolute;
+  }
+  .nav {
+    height: 52.2%;
+    width: 34.75%;
+    top: 18.96%;
+    right: 29.55%;
+    bottom: 28.84%;
+    left: 35.7%;
+  }
+  .logo-icon {
+    top: 29.55px;
+    left: 33.89px;
+    width: 103.23px;
+    height: 101.57px;
+    object-fit: cover;
+    cursor: pointer;
+  }
+  .bg1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--color-slateblue);
+    width: 198.55px;
+    height: 100%;
+  }
+  .b {
+    position: absolute;
+    height: 32%;
+    width: 21.74%;
+    top: 17.65%;
+    left: 33.5%;
+    display: inline-block;
+  }
+  
+  .view-history {
+    top: 409px;
+    left: 6px;
+    width: 60px;
+    height: 59px;
+    background-image: url(/src/history-btn.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    cursor: pointer;
+    border: 10px;
+    padding: 20px;
+    margin: 10px;
+    margin-bottom: 45px;
+    background-color: transparent;
+  }
+  .back {
+    top: 409px;
+    left: 6px;
+    width: 60px;
+    height: 59px;
+    background-image: url(/src/logout-btn.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    cursor: pointer;
+    border: 10px;
+    padding: 20px;
+    margin: 10px;
+    margin-bottom: 45px;
+    background-color: transparent;
+  }
+  .home-button {
+    top: 409px;
+    left: 6px;
+    width: 60px;
+    height: 59px;
+    background-image: url(/src/Homepage/home-btn.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    cursor: pointer;
+    border: 10px;
+    padding: 20px;
+    margin: 10px;
+    margin-bottom: 45px;
+    background-color: transparent;
+  }
+  .profile-button {
+    top: 409px;
+    left: 6px;
+    width: 60px;
+    height: 59px;
+    background-image: url(/src/profile-btn.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    cursor: pointer;
+    border: 10px;
+    padding: 20px;
+    margin: 10px;
+    margin-bottom: 45px;
+    background-color: transparent;
+  }
+  .found {
+    top: 409px;
+    left: 6px;
+    width: 60px;
+    height: 59px;
+    background-image: url(/src/found-btn.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    cursor: pointer;
+    border: 10px;
+    padding: 20px;
+    margin: 10px;
+    margin-bottom: 45px;
+    background-color: transparent;
+  }
+  .lost {
+    top: 409px;
+    left: 6px;
+    width: 60px;
+    height: 59px;
+    background-image: url(/src/Homepage/lost-btn.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    cursor: pointer;
+    border: 10px;
+    padding: 20px;
+    margin: 10px;
+    margin-bottom: 45px;
+    background-color: transparent;
+  }
+  .nav {
+    position: absolute;
+    top: 211px;
+    left: 70.89px;
+    width: 69px;
+    height: 581px;
+  }
+  .logo {
+    position: absolute;
+    top: 30px;
+    left: 40px;
+    width: 120px;
+    height: 146px;
+    background-image: url(/src/LF-logo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    cursor: pointer;
+    border: 10px;
+    padding: 20px;
+    margin: 10px;
+    margin-bottom: 45px;
+    background-color: transparent;
+  }
+  .side-menu {
+    position: absolute;
+    top: -20px;
+    left: -19.89px;
+    width: 198.55px;
+    height: 100%;
+    font-size: 12px;
+  }
+  .claim {
+    position: relative;
+    background-color: var(--white);
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    text-align: left;
+    font-size: 26px;
+    color: var(--color-gray-100);
+    font-family: var(--font-mulish);
+  }
+  
