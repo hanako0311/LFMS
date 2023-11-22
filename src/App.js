@@ -5,7 +5,7 @@ import './App.css';
 import Home from './Homepage/Home.js';
 import Login from './Login/Login.js'; // Import the Login 
 import Registration from './Register/Register.js';
-//import FormFound from './Report Found/FormFound.js';
+import ReportFoundItems from './Report Found/ReportFoundItems.js';
 import backgroundImage from './landingbg.png';
 
 
@@ -42,7 +42,7 @@ const App = () => {
         <Route path="/register" element={<Registration />} />
         <Route path="/login" element={<Login />} />
         <Route path="/home" element={<Home />} />
-        
+        <Route path="/formfound" element={<ReportFoundItems />} />
       </Routes>
     </Router>
   ); 
