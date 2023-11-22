@@ -5,14 +5,8 @@ import "./ReportLostItems.css";
 import { useNavigate } from "react-router-dom";
 
 const ReportLostItems = () => {
-  const navigate = useNavigate();
-
   const [inputTextDateTimePickerValue, setInputTextDateTimePickerValue] =
     useState(null);
-
-  const onHomePageClick = useCallback(() => {
-    navigate("/home"); 
-  }, [navigate]);
 
   const onUserContainerClick = useCallback(() => {
     // Please sync "Profile" to the project
@@ -22,9 +16,54 @@ const ReportLostItems = () => {
     // Please sync "Search item" to the project
   }, []);
 
+  const showPopup = (message) => {
+    // Create a div element for the modal
+    const modal = document.createElement('div');
+    modal.classList.add('custom-modal');
+
+    // Create content for the modal
+    const content = document.createElement('div');
+    content.textContent = message;
+
+    // Create a close button
+    const closeButton = document.createElement('button');
+    closeButton.textContent = 'Close';
+    closeButton.addEventListener('click', () => {
+      // Close the modal when the button is clicked
+      document.body.removeChild(modal);
+    });
+
+    // Append content and button to the modal
+    modal.appendChild(content);
+    modal.appendChild(closeButton);
+
+    // Append the modal to the body
+    document.body.appendChild(modal);
+  };
+  
+
   const onSubmitButtonClick = useCallback(() => {
-    // Please sync "Successful reported lost items" to the project
-  }, []);
+    const itemName = document.querySelector('.inputtext').value;
+    const dateLost = inputTextDateTimePickerValue;
+    const locationLost = document.querySelector('.inputtext2').value;
+    const itemDescription = document.querySelector('.inputtext3').value;
+
+    // Validate if all required fields are filled
+    if (!itemName || !dateLost || !locationLost || !itemDescription) {
+      // Show error popup
+      showPopup('Please fill in all required fields.');
+      return;
+    }
+
+    // Assuming a successful submission, you can log the values or send them to a server
+    console.log('Item Name:', itemName);
+    console.log('Date Lost:', dateLost);
+    console.log('Location Lost:', locationLost);
+    console.log('Item Description:', itemDescription);
+
+    // Show success popup
+    showSuccessPopup();
+  }, [inputTextDateTimePickerValue]);
 
   const onReportFoundClick = useCallback(() => {
     navigate("/report-found-items"); // Update with your form's route
@@ -59,7 +98,7 @@ const ReportLostItems = () => {
           <div className="nav">
             <button className="home-button" id="home" onClick={onHomePageClick} />
             <button className="profile-button" id="profile" />
-            <button className="found" id="found" onClick={onReportFoundClick} />
+            <button className="lost" id="lost" />
             <button className="lost" id="history" />
             <button className="view-history" id="history" />
             <button className="back" id="back" onClick={onSignOutClick}/>
@@ -72,7 +111,7 @@ const ReportLostItems = () => {
         <div className="lost-item-form">
           <input
             className="inputtext"
-            name="Item Found"
+            name="Item Lost"
             placeholder="Name of item"
             type="text"
           />
@@ -109,14 +148,17 @@ const ReportLostItems = () => {
             <button className="choose-file1">Choose file</button>
           </button>
         </div>
-        <button
-          className="submit-button"
-          id="submit"
-          onClick={onSubmitButtonClick}
-        >
+        <button className="submit-button" id="submit" onClick={onSubmitButtonClick}>
           <button className="submit-button-child" id="submt" />
           <div className="submit">Submit</div>
         </button>
+        {/* Success Popup */}
+        {isSuccessPopupVisible && (
+          <div className="success-popup">
+            <p>Successfully reported lost item!</p>
+            <button onClick={hideSuccessPopup}>Close</button>
+          </div>
+        )}
       </div>
     </LocalizationProvider>
   );

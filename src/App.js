@@ -2,11 +2,11 @@
 import React from 'react';
 import { Link, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import './App.css';
+// import DashboardLostItems from './Dashboard Lost Items/DashboardLostItems.js';
 import Home from './Homepage/Home.js';
 import Login from './Login/Login.js'; // Import the Login 
 import Registration from './Register/Register.js';
-import ReportFoundItems from './Report Found/ReportFoundItems.js';
-import ReportLostItems from './Report Lost/ReportLostItems.js';
+//import FormFound from './Report Found/FormFound.js';
 import backgroundImage from './landingbg.png';
 
 
@@ -45,6 +45,7 @@ const App = () => {
         <Route path="/home" element={<Home />} />
         <Route path="/report-found-items" element={<ReportFoundItems />} />
         <Route path="/report-lost-items" element={<ReportLostItems />} />
+        {/* <Route path="/dashboardlostitems" element={<DashboardLostItems />} /> */}
       </Routes>
     </Router>
   ); 
