@@ -43,8 +43,8 @@ const ReportFoundItems = () => {
               src="Placeholder.png"
             />
             <div className="name">
-              <b className="zara-wardani">Zara Wardani</b>
-              <div className="admin">Admin</div>
+              <b className="username">Zara Wardani</b>
+              <div className="user-type">Admin</div>
             </div>
           </div>
           <input
