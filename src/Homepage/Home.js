@@ -192,7 +192,7 @@ const Home = () => {
         <div className="div2">
           <div className="image">
             <div className="background" />
-            <img className="image-icon" alt="" src={tumbler} />
+            <img className="image-icon" alt="" src={tumbler} onClick={onRectangle1Click} />
             <div className="tags3">
               <div className="tag">
                 <div className="tech">Tumbler</div>
