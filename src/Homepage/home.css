@@ -1,9 +1,9 @@
 .bg {
     position: absolute;
-    top: 0;
-    left: 1px;
+    top: 0px;
+    left: 0px;
     background-color: #4F45B6;
-    width: 1797.9px;
+    width: 1769px;
     height: 160px;
   }
   .placeholder-icon,
@@ -20,47 +20,52 @@
     width: 61.3px;
     height: 60px;
     object-fit: cover;
+    left: -100px;
   }
   .admin,
   .zara-wardani {
     position: absolute;
+    color: #FFF;
     top: 0;
-    left: 0;
+    
     display: inline-block;
-    width: 107.3px;
+    width: 116.91px;
   }
   .admin {
     top: 34px;
     color: var(--gray-4);
-    width: 50.1px;
+    width: 54.56px;
+    
   }
   .name,
   .top-menu,
   .user {
     position: absolute;
     top: 0;
-    left: 85.9px;
+    left: 0px;
     width: 107.3px;
     height: 68px;
+    
   }
   .top-menu,
   .user {
     top: 46px;
     left: 1554.6px;
     width: 193.2px;
+    
   }
   .top-menu {
     top: 0;
     left: 150px;
-    width: 1802px;
+    width: 1722px;
     height: 161px;
   }
   .dashboard {
     position: absolute;
     top: 211px;
     left: 337px;
-    font-size: var(--heading-1-size);
-    color: var(--black);
+    font-size: 36px;
+    color: #252525;
   }
   .col-1 {
     position: absolute;
@@ -71,10 +76,11 @@
   .found-items {
     position: relative;
     font-weight: 800;
+    font-size: 32px;
     display: inline-block;
     width: 305px;
     flex-shrink: 0;
-    /* background-color: #4F45B6; */
+    color: #FFF;
   }
   .content1 {
     display: flex;
@@ -84,20 +90,29 @@
   }
   .b {
     position: relative;
-    font-size: var(--heading-2-size);
+    font-size: 24px;
+    font-weight: 600;
+    color: #FFF;
+    font-family: var(--heading-2);
+  }
+  .b1 {
+    position: relative;
+    font-size: 24px;
+    font-weight: 600;
+    color: #252525;
     font-family: var(--heading-2);
   }
   .div {
-    border-radius: var(--br-xl);
-    background-color: var(--color-slateblue);
-    border: 2px solid var(--gray-1);
+    border-radius: 20px;
+    background-color: #4F45B6;
+    border: 2px solid #F5EFFC;
     box-sizing: border-box;
     width: 690px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    padding: var(--padding-13xl);
+    padding: 32px;
     gap: 163px;
     cursor: pointer;
   }
@@ -132,6 +147,7 @@
     display: inline-block;
     width: 188px;
     flex-shrink: 0;
+    font-size: 32px;
   }
   .content2,
   .div1 {
@@ -145,12 +161,12 @@
     position: absolute;
     top: 332px;
     left: 1043px;
-    border-radius: var(--br-xl);
-    border: 2px solid var(--gray-1);
+    border-radius: 20px;
+    border: 2px solid #F5EFFC;
     box-sizing: border-box;
     width: 690px;
     align-items: center;
-    padding: var(--padding-13xl) 393px var(--padding-13xl) var(--padding-13xl);
+    padding: 32px 393px 32px 32px;
     gap: 297px;
     cursor: pointer;
     font-size: var(--font-size-13xl);
@@ -178,7 +194,7 @@
   }
   .tech {
     position: relative;
-    font-weight: 600;
+    font-weight: 100;
     display: flex;
     padding: 14px 35px 15px 35px;
     justify-content: center;
@@ -210,7 +226,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    gap: var(--gap-mini);
+    gap: 10px;
   }
   .image {
     top: 0;
@@ -230,20 +246,21 @@
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    gap: var(--gap-123xl);
+    gap: 200px;
   }
   .line {
     position: absolute;
-    top: -0.5px;
+    top: 10px;
     left: 1.5px;
-    border-top: 1px solid var(--color-gainsboro);
+    border-top: 1px solid #DCDCDC;
     box-sizing: border-box;
     width: 435px;
     height: 1px;
   }
   .huawei-tablet {
     position: absolute;
-    top: 18px;
+    font-size: 30px;
+    top: 20px;
     left: 0;
     line-height: 120%;
     display: inline-block;
@@ -302,6 +319,7 @@
     background: #4F45B6;
     width: 434px;
     height: 52px;
+    cursor: pointer;
   }
   .claim {
     top: 600px;
@@ -524,7 +542,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    gap: var(--gap-mini);
+    gap: 10px;
   }
   .claim3 {
     top: 600px;
@@ -544,7 +562,7 @@
     justify-content: center;
     gap: 47px;
     font-size: var(--font-size-xl);
-    font-family: 'Mulish';
+    font-family: var(--font-mulish);
   }
   .bg1 {
     position: absolute;
@@ -552,7 +570,7 @@
     left: 0.1px;
     background-color: #4F45B6;
     width: 198.5px;
-    height: 2019.4px;
+    height: 1970px;
   }
   .top-menu-item {
     position: absolute;
@@ -632,6 +650,7 @@
     width: 65px;
     height: 65px;
     overflow: hidden;
+    cursor: pointer;
   }
   .image-5-icon {
     position: absolute;
@@ -662,7 +681,7 @@
     top: -17px;
     left: 0;
     width: 199px;
-    height: 2032px;
+    height: 1950px;
     font-size: 12px;
     font-family: var(--font-inter);
   }
@@ -674,16 +693,29 @@
   }
   .magnifier-icon,
   .search-here {
-    position: relative;
+    position: absolute;
+    left: 20px;
   }
   .content21,
   .search-bar {
     height: 60px;
+    border: 1px solid var(--gray-300);
+    font-weight: 500;
+    font-family: var(--font-dm-sans);
+    font-size: var(--font-size-xl);
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
     box-sizing: border-box;
+    position: absolute;
+    top: 47px;
+    left: calc(50% - 401px);
+    border-radius: 20px;
+    background-color: #F5EFFC;
+    width: 818px;
+    padding: 2px 32px 2px 20px;
+    color: var(--gray-4);
   }
   .content21 {
     border-radius: 22px;
@@ -691,15 +723,7 @@
     gap: 16px;
   }
   .search-bar {
-    position: absolute;
-    top: 47px;
-    left: calc(50% - 401px);
-    border-radius: 20;
-    background-color: #F5EFFC;
-    width: 818px;
-    padding: 2px 32px 2px 0px;
-    cursor: pointer;
-    color: var(--gray-4);
+    
   }
   .lf-splash-1 {
     position: absolute;
@@ -719,7 +743,7 @@
     background-color: var(--white);
     width: 1920px;
     height: 1954px;
-    overflow: hidden;
+    overflow-x: hidden;
     text-align: left;
     font-size: var(--font-size-lg);
     color: var(--white);

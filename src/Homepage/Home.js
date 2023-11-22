@@ -19,8 +19,15 @@ import calc from './calc.png';
 import heart from './heart.png';
 
 const Home = () => {
+  const onUserContainerClick = useCallback(() => {
+
+  }, []);
   const onContainer1Click = useCallback(() => {
     // Please sync "Dashboard Lost Items" to the project
+  }, []);
+
+  const onHomeClick = useCallback(() => {
+
   }, []);
 
   const onRectangle1Click = useCallback(() => {
@@ -33,6 +40,10 @@ const Home = () => {
 
   const onReportFoundClick = useCallback(() => {
     // Please sync "Report Found Items" to the project
+  }, []);
+
+  const onHistoryClick = useCallback(() => {
+
   }, []);
 
   const onProfileClick = useCallback(() => {
@@ -52,7 +63,7 @@ const Home = () => {
       <div className="top-menu">
         <div className="bg" />
         <img className="top-menu-child" alt="" src="/line.svg" />
-        <div className="user">
+        <div className="user" onClick={onUserContainerClick}>
           <img className="placeholder-icon" alt="" src={userImage} />
           <div className="name">
             <b className="zara-wardani">Zara Wardani</b>
@@ -69,7 +80,7 @@ const Home = () => {
               <div className="content1">
                 <div className="found-items">Found Items</div>
               </div>
-              <b className="b">15</b>
+              <b className="b">2</b>
             </div>
           </div>
         </div>
@@ -78,7 +89,7 @@ const Home = () => {
         <div className="content2">
           <div className="lost-items">Lost Items</div>
         </div>
-        <b className="b">34</b>
+        <b className="b1">4</b>
       </div>
       <div className="found-items-2">
         <div className="div2">
@@ -208,7 +219,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="rectangle-div" />
+          <div className="rectangle-div" onClick={onRectangle1Click}/>
           <div className="claim2">Claim</div>
         </div>
         <div className="div3">
@@ -267,7 +278,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="child" />
+          <div className="child" onClick={onRectangle1Click}/>
           <div className="claim3">Claim</div>
           <div className="image1">
             <div className="tags1">
@@ -305,8 +316,8 @@ const Home = () => {
             src={profile}
             onClick={onProfileClick}
           />
-          <img className="home-icon" alt="" src={home} />
-          <img className="image-5-icon" alt="" src={history} />
+          <img className="home-icon" alt="" src={home}  onClick={onHomeClick} />
+          <img className="image-5-icon" alt="" src={history} onClick={onHistoryClick} />
         </div>
         <img
           className="subtract-icon"
@@ -315,12 +326,12 @@ const Home = () => {
           onClick={onSubtractClick}
         />
       </div>
-      <div className="search-bar" onClick={onSearchBarContainerClick}>
-        <div className="content21">
-          <img className="magnifier-icon" alt="" src={magnifier} />
-          <div className="search-here">Search here...</div>
-        </div>
-      </div>
+      <input
+              className="search-bar"
+              name="Search"
+              placeholder="Search Here..."
+              type="text"
+            />
       <img className="lf-splash-1" alt="" src={logo} />
     </div>
   );

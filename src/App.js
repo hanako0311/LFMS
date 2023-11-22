@@ -2,6 +2,7 @@
 import React from 'react';
 import { Link, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import './App.css';
+// import DashboardLostItems from './Dashboard Lost Items/DashboardLostItems.js';
 import Home from './Homepage/Home.js';
 import Login from './Login/Login.js'; // Import the Login 
 import Registration from './Register/Register.js';
@@ -42,7 +43,7 @@ const App = () => {
         <Route path="/register" element={<Registration />} />
         <Route path="/login" element={<Login />} />
         <Route path="/home" element={<Home />} />
-        
+        {/* <Route path="/dashboardlostitems" element={<DashboardLostItems />} /> */}
       </Routes>
     </Router>
   ); 
