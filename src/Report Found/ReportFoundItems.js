@@ -2,8 +2,11 @@ import { DateTimePicker, LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import { useCallback, useState } from "react";
 import "./ReportFoundItems.css";
+import { useNavigate } from "react-router-dom";
 
 const ReportFoundItems = () => {
+  const navigate = useNavigate();
+
   const [inputTextDateTimePickerValue, setInputTextDateTimePickerValue] = useState(null);
   const [isSuccessPopupVisible, setIsSuccessPopupVisible] = useState(false);
 
@@ -13,6 +16,10 @@ const ReportFoundItems = () => {
   const hideSuccessPopup = () => {
     setIsSuccessPopupVisible(false);
   };
+  const onHomePageClick = useCallback(() => {
+    navigate("/home"); 
+  }, [navigate]);
+
   const onUserContainerClick = useCallback(() => {
     // Please sync "Profile" to the project
   }, []);
@@ -69,17 +76,13 @@ const ReportFoundItems = () => {
     showSuccessPopup();
   }, [inputTextDateTimePickerValue]);
 
-  const onReportLostContainerClick = useCallback(() => {
-    // Please sync "Report Lost Items" to the project
-  }, []);
+  const onReportLostClick = useCallback(() => {
+    navigate("/report-lost-items"); // Update with your form's route
+  }, [navigate]);
 
-  const onHomeClick = useCallback(() => {
-    // Please sync "Dashboard Found Items - Default" to the project
-  }, []);
-
-  const onLFSplash5Click = useCallback(() => {
-    // Please sync "Dashboard Found Items - Default" to the project
-  }, []);
+  const onSignOutClick = useCallback(() => {
+    navigate("/"); 
+  }, [navigate]);
 
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
@@ -104,12 +107,12 @@ const ReportFoundItems = () => {
           <div className="bg1" />
             <button className="logo" id="logo" />
           <div className="nav">
-            <button className="home-button" id="home" />
+            <button className="home-button" id="home" onClick={onHomePageClick}/>
             <button className="profile-button" id="profile" />
             <button className="found" id="found" />
-            <button className="lost" id="lost" />
+            <button className="lost" id="history" />
             <button className="view-history" id="history" />
-            <button className="back" id="back" />
+            <button className="back" id="back" onClick={onSignOutClick}/>
           </div>
         </div>
         <div className="report-found-items-child" />
