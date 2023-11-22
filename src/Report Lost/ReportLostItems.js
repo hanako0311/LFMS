@@ -4,9 +4,15 @@ import { useCallback, useState } from "react";
 import "./ReportLostItems.css";
 
 const ReportLostItems = () => {
-  const [inputTextDateTimePickerValue, setInputTextDateTimePickerValue] =
-    useState(null);
+  const [inputTextDateTimePickerValue, setInputTextDateTimePickerValue] = useState(null);
+  const [isSuccessPopupVisible, setIsSuccessPopupVisible] = useState(false);
 
+  const showSuccessPopup = () => {
+    setIsSuccessPopupVisible(true);
+  };
+  const hideSuccessPopup = () => {
+    setIsSuccessPopupVisible(false);
+  };
   const onUserContainerClick = useCallback(() => {
     // Please sync "Profile" to the project
   }, []);
@@ -15,9 +21,54 @@ const ReportLostItems = () => {
     // Please sync "Search item" to the project
   }, []);
 
+  const showPopup = (message) => {
+    // Create a div element for the modal
+    const modal = document.createElement('div');
+    modal.classList.add('custom-modal');
+
+    // Create content for the modal
+    const content = document.createElement('div');
+    content.textContent = message;
+
+    // Create a close button
+    const closeButton = document.createElement('button');
+    closeButton.textContent = 'Close';
+    closeButton.addEventListener('click', () => {
+      // Close the modal when the button is clicked
+      document.body.removeChild(modal);
+    });
+
+    // Append content and button to the modal
+    modal.appendChild(content);
+    modal.appendChild(closeButton);
+
+    // Append the modal to the body
+    document.body.appendChild(modal);
+  };
+  
+
   const onSubmitButtonClick = useCallback(() => {
-    // Please sync "Successful reported lost items" to the project
-  }, []);
+    const itemName = document.querySelector('.inputtext').value;
+    const dateLost = inputTextDateTimePickerValue;
+    const locationLost = document.querySelector('.inputtext2').value;
+    const itemDescription = document.querySelector('.inputtext3').value;
+
+    // Validate if all required fields are filled
+    if (!itemName || !dateLost || !locationLost || !itemDescription) {
+      // Show error popup
+      showPopup('Please fill in all required fields.');
+      return;
+    }
+
+    // Assuming a successful submission, you can log the values or send them to a server
+    console.log('Item Name:', itemName);
+    console.log('Date Lost:', dateLost);
+    console.log('Location Lost:', locationLost);
+    console.log('Item Description:', itemDescription);
+
+    // Show success popup
+    showSuccessPopup();
+  }, [inputTextDateTimePickerValue]);
 
   const onReportLostContainerClick = useCallback(() => {
     // Please sync "Report Lost Items" to the project
@@ -106,14 +157,17 @@ const ReportLostItems = () => {
             <button className="choose-file1">Choose file</button>
           </button>
         </div>
-        <button
-          className="submit-button"
-          id="submit"
-          onClick={onSubmitButtonClick}
-        >
+        <button className="submit-button" id="submit" onClick={onSubmitButtonClick}>
           <button className="submit-button-child" id="submt" />
           <div className="submit">Submit</div>
         </button>
+        {/* Success Popup */}
+        {isSuccessPopupVisible && (
+          <div className="success-popup">
+            <p>Successfully reported lost item!</p>
+            <button onClick={hideSuccessPopup}>Close</button>
+          </div>
+        )}
       </div>
     </LocalizationProvider>
   );
