@@ -1,9 +1,9 @@
 import { DateTimePicker, LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import { useCallback, useState } from "react";
-import "./ReportFoundItems.css";
+import "./ReportLostItems.css";
 
-const ReportFoundItems = () => {
+const ReportLostItems = () => {
   const [inputTextDateTimePickerValue, setInputTextDateTimePickerValue] = useState(null);
   const [isSuccessPopupVisible, setIsSuccessPopupVisible] = useState(false);
 
@@ -45,6 +45,7 @@ const ReportFoundItems = () => {
     // Append the modal to the body
     document.body.appendChild(modal);
   };
+  
 
   const onSubmitButtonClick = useCallback(() => {
     const itemName = document.querySelector('.inputtext').value;
@@ -83,7 +84,7 @@ const ReportFoundItems = () => {
 
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
-      <div className="report-found-items">
+      <div className="report-lost-items">
         <div className="top-menu">
           <div className="bg" />
           <div className="user" onClick={onUserContainerClick}>
@@ -112,18 +113,18 @@ const ReportFoundItems = () => {
             <button className="back" id="back" />
           </div>
         </div>
-        <div className="report-found-items-child" />
-        <div className="report-found-item-wrapper">
-          <b className="report-found-item">Report Found Item</b>
+        <div className="report-lost-items-child" />
+        <div className="report-lost-item-wrapper">
+          <b className="report-lost-item">Report Lost Item</b>
         </div>
-        <div className="found-item-form">
+        <div className="lost-item-form">
           <input
             className="inputtext"
-            name="Item Found"
+            name="Item Lost"
             placeholder="Name of item"
             type="text"
           />
-          <div className="item-found">Item Found</div>
+          <div className="item-lost">Item Lost</div>
           <div className="inputtext1">
             <DateTimePicker
               label="Name of item"
@@ -140,14 +141,14 @@ const ReportFoundItems = () => {
               }}
             />
           </div>
-          <div className="date-found">Date Found</div>
+          <div className="date-lost">Date Lost</div>
           <input
             className="inputtext2"
             name="Location"
             placeholder="Location"
             type="text"
           />
-          <div className="location-found">Location Found</div>
+          <div className="location-lost">Location Lost</div>
           <textarea className="inputtext3" placeholder="Describe the item" />
           <div className="item-description">Item Description</div>
           <div className="insert-image">Insert Image</div>
@@ -156,17 +157,14 @@ const ReportFoundItems = () => {
             <button className="choose-file1">Choose file</button>
           </button>
         </div>
-        <button
-          className="submit-button"
-          id="submit"
-          onClick={onSubmitButtonClick}
-        >
+        <button className="submit-button" id="submit" onClick={onSubmitButtonClick}>
           <button className="submit-button-child" id="submt" />
           <div className="submit">Submit</div>
         </button>
+        {/* Success Popup */}
         {isSuccessPopupVisible && (
           <div className="success-popup">
-            <p>Successfully reported found item!</p>
+            <p>Successfully reported lost item!</p>
             <button onClick={hideSuccessPopup}>Close</button>
           </div>
         )}
@@ -175,4 +173,4 @@ const ReportFoundItems = () => {
   );
 };
 
-export default ReportFoundItems;
+export default ReportLostItems;

@@ -112,7 +112,7 @@ body {
   height: 160px;
   font-family: var(--font-cairo);
 }
-.report-found-items-child {
+.report-lost-items-child {
   position: absolute;
   top: 262px;
   left: 288px;
@@ -120,12 +120,12 @@ body {
   width: 1500px;
   height: 1px;
 }
-.report-found-item {
+.report-lost-item {
   position: absolute;
   top: 6px;
   left: 0;
 }
-.report-found-item-wrapper {
+.report-lost-item-wrapper {
   position: absolute;
   top: 201px;
   left: 300px;
@@ -187,7 +187,7 @@ body {
   justify-content: flex-start;
   padding: var(--padding-xs) var(--padding-xl);
 }
-.item-found {
+.item-lost {
   position: absolute;
   top: 10px;
   left: 0;
@@ -197,13 +197,13 @@ body {
   width: 136px;
   height: 29px;
 }
-.date-found,
+.date-lost,
 .inputtext1 {
   position: absolute;
   top: 99px;
   left: 253px;
 }
-.date-found {
+.date-lost {
   top: 109px;
   left: 0;
   line-height: 24px;
@@ -231,7 +231,7 @@ body {
   justify-content: flex-start;
   padding: var(--padding-xs) var(--padding-xl);
 }
-.location-found {
+.location-lost {
   position: absolute;
   top: 220px;
   left: 0;
@@ -312,7 +312,7 @@ body {
   width: 157px;
   height: 42px;
 }
-.found-item-form {
+.lost-item-form {
   position: absolute;
   top: 339px;
   left: 614px;
@@ -466,7 +466,7 @@ body {
   height: 100%;
   font-size: 12px;
 }
-.report-found-items {
+.report-lost-items {
   position: relative;
   background-color: var(--white);
   width: 100%;
