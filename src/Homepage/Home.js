@@ -1,5 +1,6 @@
 import { useCallback } from "react";
 import "./home.css";
+import { useNavigate } from "react-router-dom";
 import LostButtonImage from './/lost-btn.png';
 import userImage from './Placeholder.png';
 import logo from './LF splash 1.png';
@@ -19,6 +20,8 @@ import calc from './calc.png';
 import heart from './heart.png';
 
 const Home = () => {
+  const navigate = useNavigate();
+
   const onContainer1Click = useCallback(() => {
     // Please sync "Dashboard Lost Items" to the project
   }, []);
@@ -27,13 +30,13 @@ const Home = () => {
     // Please sync "Status/Claim Item Owner Side" to the project
   }, []);
 
-  const onReportLostContainerClick = useCallback(() => {
-    // Please sync "Report Lost Items" to the project
-  }, []);
+  const onReportLostClick = useCallback(() => {
+    navigate("/report-lost-items"); // Update with your form's route
+  }, [navigate]);
 
   const onReportFoundClick = useCallback(() => {
-    // Please sync "Report Found Items" to the project
-  }, []);
+    navigate("/report-found-items"); // Update with your form's route
+  }, [navigate]);
 
   const onProfileClick = useCallback(() => {
     // Please sync "Profile" to the project
@@ -282,7 +285,7 @@ const Home = () => {
         <div className="bg1" />
         <img className="top-menu-item" alt="" src="/line1.svg" />
         <div className="nav">
-          <div className="report-lost" onClick={onReportLostContainerClick}>
+          <div className="report-lost" onClick={onReportLostClick}>
             <img className="group-icon" alt="" src={lost1} />
             <div className="search-dollar-search-pay-prod">
               <img

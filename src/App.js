@@ -43,14 +43,11 @@ const App = () => {
         <Route path="/register" element={<Registration />} />
         <Route path="/login" element={<Login />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/formfound" element={<ReportFoundItems />} />
-        <Route path="/formlost" element={<ReportLostItems />} />
+        <Route path="/report-found-items" element={<ReportFoundItems />} />
+        <Route path="/report-lost-items" element={<ReportLostItems />} />
       </Routes>
     </Router>
   ); 
 }; 
 
 export default App;
-
-/*<Route path="/home" element={<Home />} />
-        <Route path="/formfound" element={<FormFound />} /> */
