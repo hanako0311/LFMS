@@ -56,8 +56,8 @@ const ReportLostItems = () => {
           <div className="nav">
             <button className="home-button" id="home" />
             <button className="profile-button" id="profile" />
+            <button className="found" id="found" />
             <button className="lost" id="lost" />
-            <button className="lost" id="history" />
             <button className="view-history" id="history" />
             <button className="back" id="back" />
           </div>
@@ -69,7 +69,7 @@ const ReportLostItems = () => {
         <div className="lost-item-form">
           <input
             className="inputtext"
-            name="Item Found"
+            name="Item Lost"
             placeholder="Name of item"
             type="text"
           />
