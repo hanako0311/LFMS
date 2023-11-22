@@ -37,11 +37,7 @@ const ReportFoundItems = () => {
         <div className="top-menu">
           <div className="bg" />
           <div className="user" onClick={onUserContainerClick}>
-            <img
-              className="placeholder-icon"
-              alt=""
-              src="Placeholder.png"
-            />
+            <img className="placeholder-icon" alt="" src="Placeholder.png" />
             <div className="name">
               <b className="username">Zara Wardani</b>
               <div className="user-type">Admin</div>
