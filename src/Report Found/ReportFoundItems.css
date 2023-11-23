@@ -1,13 +1,4 @@
-:root {
-  /* Colors */
-  --white: #fff;
-  --color-slateblue: #4f45b6;
-  --gray-900: #161c24;
-  --gray-300: #dfe3e8;
-  --gray-400: #c4cdd5;
-  --gray-1: #f5effc;
-  --gray-500: #919eab;
-}
+
 .bg,
 .placeholder-icon {
   position: absolute;

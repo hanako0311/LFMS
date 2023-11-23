@@ -1,30 +1,25 @@
 import { useCallback } from "react";
-import "./home.css";
-import { useNavigate } from "react-router-dom";
-import LostButtonImage from './/lost-btn.png';
-import userImage from './Placeholder.png';
-import logo from './LF splash 1.png';
-import home from './Home.png';
-import profile from './profile.png';
-import found from './report found.png';
 import lost1 from './Group.png';
-import lost2 from './search.png';
-import magnifier from './magnifier.png';
-import history from './image 5.png';
+import home from './Home.png';
+import logo from './LF splash 1.png';
+import userImage from './Placeholder.png';
 import back from './Subtract.png';
-import tablet from './tablet.png';
-import umbrella from './umbrella.png';
-import money from './money.png';
-import tumbler from './tumbler.png';
 import calc from './calc.png';
 import heart from './heart.png';
+import "./home.css";
+import history from './image 5.png';
+import money from './money.png';
+import profile from './profile.png';
+import found from './report found.png';
+import lost2 from './search.png';
+import tablet from './tablet.png';
+import tumbler from './tumbler.png';
+import umbrella from './umbrella.png';
 
 const Home = () => {
   const onUserContainerClick = useCallback(() => {
 
   }, []);
-  const navigate = useNavigate();
-
   const onContainer1Click = useCallback(() => {
     // Please sync "Dashboard Lost Items" to the project
   }, []);
@@ -37,13 +32,13 @@ const Home = () => {
     // Please sync "Status/Claim Item Owner Side" to the project
   }, []);
 
-  const onReportLostClick = useCallback(() => {
-    navigate("/report-lost-items"); // Update with your form's route
-  }, [navigate]);
+  const onReportLostContainerClick = useCallback(() => {
+    // Please sync "Report Lost Items" to the project
+  }, []);
 
   const onReportFoundClick = useCallback(() => {
-    navigate("/report-found-items"); // Update with your form's route
-  }, [navigate]);
+    // Please sync "Report Found Items" to the project
+  }, []);
 
   const onHistoryClick = useCallback(() => {
 
@@ -296,7 +291,7 @@ const Home = () => {
         <div className="bg1" />
         <img className="top-menu-item" alt="" src="/line1.svg" />
         <div className="nav">
-          <div className="report-lost" onClick={onReportLostClick}>
+          <div className="report-lost" onClick={onReportLostContainerClick}>
             <img className="group-icon" alt="" src={lost1} />
             <div className="search-dollar-search-pay-prod">
               <img
