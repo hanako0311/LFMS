@@ -1,12 +1,23 @@
 import { DateTimePicker, LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import { useCallback, useState } from "react";
-import "./ReportLostItems.css";
 import { useNavigate } from "react-router-dom";
+import "./ReportLostItems.css";
 
 const ReportLostItems = () => {
-  const [inputTextDateTimePickerValue, setInputTextDateTimePickerValue] =
-    useState(null);
+  const navigate = useNavigate();
+  const [inputTextDateTimePickerValue, setInputTextDateTimePickerValue] = useState(null);
+  const [isSuccessPopupVisible, setIsSuccessPopupVisible] = useState(false);
+
+  const showSuccessPopup = () => {
+    setIsSuccessPopupVisible(true);
+  };
+  const hideSuccessPopup = () => {
+    setIsSuccessPopupVisible(false);
+  };
+  const onHomePageClick = useCallback(() => {
+    navigate("/home"); 
+  }, [navigate]);
 
   const onUserContainerClick = useCallback(() => {
     // Please sync "Profile" to the project
@@ -65,13 +76,13 @@ const ReportLostItems = () => {
     showSuccessPopup();
   }, [inputTextDateTimePickerValue]);
 
-  const onReportFoundClick = useCallback(() => {
-    navigate("/report-found-items"); // Update with your form's route
+  const onReportLostClick = useCallback(() => {
+    navigate("/report-lost-items"); // Update with your form's route
   }, [navigate]);
 
   const onSignOutClick = useCallback(() => {
-    navigate("/"); // Update with your form's route
-  }, [navigate])
+    navigate("/"); 
+  }, [navigate]);
 
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
