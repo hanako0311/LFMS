@@ -320,7 +320,7 @@ const Home = () => {
             src={profile}
             onClick={onProfileClick}
           />
-          <img className="home-icon" alt="" src={home}  onClick={onHomePageClick} />
+          <img className="home-icon" alt="" src={home}  onClick={onHomePageClick} /> 
           <img className="image-5-icon" alt="" src={history} onClick={onHistoryClick} />
         </div>
         <img
