@@ -21,11 +21,11 @@ const ReportFoundItems = () => {
   }, [navigate]);
 
   const onUserContainerClick = useCallback(() => {
-    // Please sync "Profile" to the project
+   
   }, []);
 
   const onSearchBarContainerClick = useCallback(() => {
-    // Please sync "Search item" to the project
+    
   }, []);
 
   const showPopup = (message) => {
