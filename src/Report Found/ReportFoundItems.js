@@ -1,8 +1,8 @@
 import { DateTimePicker, LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import { useCallback, useState } from "react";
-import "./ReportFoundItems.css";
 import { useNavigate } from "react-router-dom";
+import "./ReportFoundItems.css";
 
 const ReportFoundItems = () => {
   const navigate = useNavigate();
@@ -77,7 +77,7 @@ const ReportFoundItems = () => {
   }, [inputTextDateTimePickerValue]);
 
   const onReportLostClick = useCallback(() => {
-    navigate("/report-lost-items"); // Update with your form's route
+    navigate("/report-lost-items"); 
   }, [navigate]);
 
   const onSignOutClick = useCallback(() => {
@@ -109,8 +109,8 @@ const ReportFoundItems = () => {
           <div className="nav">
             <button className="home-button" id="home" onClick={onHomePageClick}/>
             <button className="profile-button" id="profile" />
-            <button className="found" id="found" />
-            <button className="lost" id="history" />
+            <button className="found" id="found"/>
+            <button className="lost" id="lost" onClick={onReportLostClick}/>
             <button className="view-history" id="history" />
             <button className="back" id="back" onClick={onSignOutClick}/>
           </div>

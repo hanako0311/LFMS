@@ -1,3 +1,4 @@
+
 .bg,
 .placeholder-icon {
   position: absolute;
@@ -289,14 +290,14 @@
   width: 198.55px;
   height: 100%;
 }
-.b {
+/* .b {
   position: absolute;
   height: 32%;
   width: 21.74%;
   top: 17.65%;
   left: 33.5%;
   display: inline-block;
-}
+} */
 
 .view-history {
   top: 409px;
@@ -427,6 +428,13 @@
   font-size: 12px;
 }
 .report-lost-items {
+  --white: #fff;
+  --color-slateblue: #4f45b6;
+  --gray-900: #161c24;
+  --gray-300: #dfe3e8;
+  --gray-400: #c4cdd5;
+  --gray-1: #f5effc;
+  --gray-500: #919eab;
   position: relative;
   background-color: var(--white);
   width: 100%;
@@ -474,4 +482,4 @@
 
 .custom-modal button:hover {
   background-color: #45a049;
-}
+} 

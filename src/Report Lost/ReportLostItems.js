@@ -76,8 +76,8 @@ const ReportLostItems = () => {
     showSuccessPopup();
   }, [inputTextDateTimePickerValue]);
 
-  const onReportLostClick = useCallback(() => {
-    navigate("/report-lost-items"); // Update with your form's route
+  const onReportFoundClick = useCallback(() => {
+    navigate("/report-found-items"); 
   }, [navigate]);
 
   const onSignOutClick = useCallback(() => {
@@ -109,7 +109,7 @@ const ReportLostItems = () => {
           <div className="nav">
             <button className="home-button" id="home" onClick={onHomePageClick} />
             <button className="profile-button" id="profile" />
-            <button className="lost" id="lost" />
+            <button className="lost" id="lost" onClick={onReportFoundClick}/>
             <button className="lost" id="history" />
             <button className="view-history" id="history" />
             <button className="back" id="back" onClick={onSignOutClick}/>
