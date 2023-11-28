@@ -1,6 +1,5 @@
 import { useCallback } from "react";
 import "./home.css";
-import { useNavigate } from "react-router-dom";
 import LostButtonImage from './/lost-btn.png';
 import userImage from './Placeholder.png';
 import logo from './LF splash 1.png';
@@ -18,31 +17,33 @@ import money from './money.png';
 import tumbler from './tumbler.png';
 import calc from './calc.png';
 import heart from './heart.png';
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate();
+
+  const onHomePageClick = useCallback(() => {
+    navigate("/home"); //mao ni para ma click ang icon
+  }, [navigate]);
+
   const onUserContainerClick = useCallback(() => {
 
   }, []);
-  const navigate = useNavigate();
-
   const onContainer1Click = useCallback(() => {
     // Please sync "Dashboard Lost Items" to the project
   }, []);
 
-  const onHomeClick = useCallback(() => {
-
-  }, []);
 
   const onRectangle1Click = useCallback(() => {
     // Please sync "Status/Claim Item Owner Side" to the project
   }, []);
 
   const onReportLostClick = useCallback(() => {
-    navigate("/report-lost-items"); // Update with your form's route
-  }, [navigate]);
+    navigate("/report-lost-items");  //mao ni para ma click ang icon
+  }, [navigate]); 
 
   const onReportFoundClick = useCallback(() => {
-    navigate("/report-found-items"); // Update with your form's route
+    navigate("/report-found-items"); //mao ni para ma click ang icon
   }, [navigate]);
 
   const onHistoryClick = useCallback(() => {
@@ -50,12 +51,12 @@ const Home = () => {
   }, []);
 
   const onProfileClick = useCallback(() => {
-    // Please sync "Profile" to the project
-  }, []);
+    navigate("/profile"); //mao ni para ma click ang icon
+  }, [navigate]);
 
-  const onSubtractClick = useCallback(() => {
-    // Please sync "Landing" to the project
-  }, []);
+  const onSignOutClick = useCallback(() => {
+    navigate("/"); //mao ni para ma click ang icon
+  }, [navigate]);
 
   const onSearchBarContainerClick = useCallback(() => {
     // Please sync "Search item" to the project
@@ -319,14 +320,14 @@ const Home = () => {
             src={profile}
             onClick={onProfileClick}
           />
-          <img className="home-icon" alt="" src={home}  onClick={onHomeClick} />
+          <img className="home-icon" alt="" src={home}  onClick={onHomePageClick} />
           <img className="image-5-icon" alt="" src={history} onClick={onHistoryClick} />
         </div>
         <img
           className="subtract-icon"
           alt=""
           src={back}
-          onClick={onSubtractClick}
+          onClick={onSignOutClick}
         />
       </div>
       <input
