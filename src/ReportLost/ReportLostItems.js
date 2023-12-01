@@ -1,19 +1,30 @@
 import { DateTimePicker, LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import { useCallback, useState } from "react";
-import "./ReportLostItems.css";
 import { useNavigate } from "react-router-dom";
+import "./ReportLostItems.css";
 
 const ReportLostItems = () => {
-  const [inputTextDateTimePickerValue, setInputTextDateTimePickerValue] =
-    useState(null);
+  const navigate = useNavigate();
+  const [inputTextDateTimePickerValue, setInputTextDateTimePickerValue] = useState(null);
+  const [isSuccessPopupVisible, setIsSuccessPopupVisible] = useState(false);
+
+  const showSuccessPopup = () => {
+    setIsSuccessPopupVisible(true);
+  };
+  const hideSuccessPopup = () => {
+    setIsSuccessPopupVisible(false);
+  };
+  const onHomePageClick = useCallback(() => {
+    navigate("/home"); 
+  }, [navigate]);
 
   const onUserContainerClick = useCallback(() => {
-    // Please sync "Profile" to the project
+    
   }, []);
 
   const onSearchBarContainerClick = useCallback(() => {
-    // Please sync "Search item" to the project
+    
   }, []);
 
   const showPopup = (message) => {
@@ -66,12 +77,12 @@ const ReportLostItems = () => {
   }, [inputTextDateTimePickerValue]);
 
   const onReportFoundClick = useCallback(() => {
-    navigate("/report-found-items"); // Update with your form's route
+    navigate("/report-found-items"); 
   }, [navigate]);
 
   const onSignOutClick = useCallback(() => {
-    navigate("/"); // Update with your form's route
-  }, [navigate])
+    navigate("/"); 
+  }, [navigate]);
 
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
@@ -98,7 +109,7 @@ const ReportLostItems = () => {
           <div className="nav">
             <button className="home-button" id="home" onClick={onHomePageClick} />
             <button className="profile-button" id="profile" />
-            <button className="lost" id="lost" />
+            <button className="lost" id="lost" onClick={onReportFoundClick}/>
             <button className="lost" id="history" />
             <button className="view-history" id="history" />
             <button className="back" id="back" onClick={onSignOutClick}/>
