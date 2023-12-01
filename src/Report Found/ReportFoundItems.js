@@ -77,7 +77,7 @@ const ReportFoundItems = () => {
   }, [inputTextDateTimePickerValue]);
 
   const onReportLostClick = useCallback(() => {
-    navigate("/report-lost-items"); // Update with your form's route
+    navigate("/report-lost-items"); 
   }, [navigate]);
 
   const onSignOutClick = useCallback(() => {
@@ -88,7 +88,7 @@ const ReportFoundItems = () => {
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <div className="report-found-items">
         <div className="top-menu">
-          <div className="bg" />
+          <div className="bg1" />
           <div className="user" onClick={onUserContainerClick}>
             <img className="placeholder-icon" alt="" src="Placeholder.png" />
             <div className="name">
@@ -109,8 +109,8 @@ const ReportFoundItems = () => {
           <div className="nav">
             <button className="home-button" id="home" onClick={onHomePageClick}/>
             <button className="profile-button" id="profile" />
-            <button className="found" id="found" />
-            <button className="lost" id="history" />
+            <button className="found" id="found"/>
+            <button className="lost" id="lost" onClick={onReportLostClick}/>
             <button className="view-history" id="history" />
             <button className="back" id="back" onClick={onSignOutClick}/>
           </div>
