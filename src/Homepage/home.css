@@ -568,10 +568,10 @@
 .bg2 {
   position: absolute;
   top: 0;
-  left: 0.1px;
+  left: 0;
   background-color: #4F45B6;
-  width: 198.5px;
-  height: 1970px;
+  width: 198.55px;
+  height: 100%;
 }
 .top-menu-item {
   position: absolute;
