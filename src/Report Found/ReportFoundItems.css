@@ -35,15 +35,15 @@ body {
   --padding-13xl: 32px; */
 
   /* Border radiuses */
-  /* --br-7xs: 6px; */
+  --br-7xs: 6px;
 }
 
-.bg,
+.bg1,
 .placeholder-icon {
   position: absolute;
   left: 0;
 }
-.bg {
+.bg1 {
   top: 0;
   background-color: var(--color-slateblue);
   width: 100%;
@@ -336,7 +336,7 @@ body {
   top: 17.65%;
   left: 33.5%;
   display: inline-block;
-}
+}  
 
 .view-history {
   top: 409px;

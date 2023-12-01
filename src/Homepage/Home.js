@@ -30,12 +30,12 @@ const Home = () => {
 
   }, []);
   const onContainer1Click = useCallback(() => {
-    // Please sync "Dashboard Lost Items" to the project
+    
   }, []);
 
 
   const onRectangle1Click = useCallback(() => {
-    // Please sync "Status/Claim Item Owner Side" to the project
+    
   }, []);
 
   const onReportLostClick = useCallback(() => {
