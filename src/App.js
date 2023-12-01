@@ -8,6 +8,7 @@ import Login from './Login/Login.js'; // Import the Login
 import Registration from './Register/Register.js';
 //import FormFound from './Report Found/FormFound.js';
 import backgroundImage from './landingbg.png';
+import ReportFoundItems from './ReportFound/ReportFoundItems.js'
 
 
 const LandingPage = () => {
