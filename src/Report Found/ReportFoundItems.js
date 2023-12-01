@@ -87,7 +87,7 @@ const ReportFoundItems = () => {
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <div className="report-found-items">
-        <div className="top-menu">
+        <div className="top-menu2">
           <div className="bg1" />
           <div className="user" onClick={onUserContainerClick}>
             <img className="placeholder-icon" alt="" src="Placeholder.png" />
@@ -104,7 +104,7 @@ const ReportFoundItems = () => {
             />
         </div>
         <div className="side-menu">
-          <div className="bg1" />
+          <div className="bg4" />
             <button className="logo" id="logo" />
           <div className="nav">
             <button className="home-button" id="home" onClick={onHomePageClick}/>

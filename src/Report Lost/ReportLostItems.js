@@ -104,7 +104,7 @@ const ReportLostItems = () => {
             />
         </div>
         <div className="side-menu">
-          <div className="bg1" />
+          <div className="bglost" />
             <button className="logo" id="logo" />
           <div className="nav">
             <button className="home-button" id="home" onClick={onHomePageClick} />
