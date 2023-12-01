@@ -65,9 +65,9 @@ const Home = () => {
   return (
     <div className="dashboard-found-items-defaul">
       <div className="top-menu">
-        <div className="bg" />
+        <div className="bg3" />
         <img className="top-menu-child" alt="" src="/line.svg" />
-        <div className="user" onClick={onUserContainerClick}>
+        <div className="user1" onClick={onUserContainerClick}>
           <img className="placeholder-icon" alt="" src={userImage} />
           <div className="name">
             <b className="zara-wardani">Zara Wardani</b>
@@ -84,7 +84,7 @@ const Home = () => {
               <div className="content1">
                 <div className="found-items">Found Items</div>
               </div>
-              <b className="b">2</b>
+              <b className="b3">2</b>
             </div>
           </div>
         </div>
@@ -294,7 +294,7 @@ const Home = () => {
         </div>
       </div>
       <div className="top-menu1">
-        <div className="bg1" />
+        <div className="bg2" />
         <img className="top-menu-item" alt="" src="/line1.svg" />
         <div className="nav">
           <div className="report-lost" onClick={onReportLostClick}>
