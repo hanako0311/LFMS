@@ -21,11 +21,11 @@ const ReportFoundItems = () => {
   }, [navigate]);
 
   const onUserContainerClick = useCallback(() => {
-    // Please sync "Profile" to the project
+   
   }, []);
 
   const onSearchBarContainerClick = useCallback(() => {
-    // Please sync "Search item" to the project
+    
   }, []);
 
   const showPopup = (message) => {
@@ -87,8 +87,8 @@ const ReportFoundItems = () => {
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <div className="report-found-items">
-        <div className="top-menu">
-          <div className="bg" />
+        <div className="top-menu2">
+          <div className="bg1" />
           <div className="user" onClick={onUserContainerClick}>
             <img className="placeholder-icon" alt="" src="Placeholder.png" />
             <div className="name">
@@ -104,7 +104,7 @@ const ReportFoundItems = () => {
             />
         </div>
         <div className="side-menu">
-          <div className="bg1" />
+          <div className="bg4" />
             <button className="logo" id="logo" />
           <div className="nav">
             <button className="home-button" id="home" onClick={onHomePageClick}/>

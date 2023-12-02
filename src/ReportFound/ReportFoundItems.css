@@ -1,12 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 
-.bg,
+body {
+  margin: 0;
+  line-height: normal;
+}
+:root {
+  /* fonts */
+  /* --font-inter: Inter;
+  --font-dm-sans: "DM Sans";
+  --font-cairo: Cairo; */
+
+  /* font sizes */
+  /* --font-size-5xl: 24px;
+  --font-size-xl: 20px;
+  --font-size-lg: 18px; */
+
+  /* Colors */
+  /* --white: #fff;
+  --color-slateblue: #4f45b6;
+  --gray-900: #161c24;
+  --gray-300: #dfe3e8;
+  --gray-400: #c4cdd5;
+  --gray-1: #f5effc;
+  --gray-4: #a098ae;
+  --gray-500: #919eab; */
+
+  /* Paddings */
+  /* --padding-xs: 12px;
+  --padding-xl: 20px;
+  --padding-11xs: 2px;
+  --padding-13xl: 32px; */
+
+  /* Border radiuses */
+  --br-7xs: 6px;
+}
+
+.bg1,
 .placeholder-icon {
   position: absolute;
   left: 0;
 }
-.bg {
+.bg1 {
   top: 0;
-  background-color: var(--color-slateblue);
+  background-color: #4F45B6;
   width: 100%;
   height: 160px;
 }
@@ -65,13 +104,14 @@
   padding: var(--padding-11xs) var(--padding-13xl) var(--padding-11xs) 20px;
   color: var(--gray-4);
 }
-.top-menu {
+.top-menu2 {
   position: absolute;
   top: 0;
   left: 1.11px;
   width: 100%;
   height: 160px;
   font-family: var(--font-cairo);
+  color: #4F45B6;
 }
 .report-found-items-child {
   position: absolute;
@@ -282,22 +322,22 @@
   font-size: var(--font-size-5xl);
   color: var(--gray-900);
 }
-.bg1 {
+.bg4 {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: var(--color-slateblue);
-  width: 198.55px;
+  background-color: #4F45B6;
+  width: 198px;
   height: 100%;
 }
-/* .b {
+.b {
   position: absolute;
   height: 32%;
   width: 21.74%;
   top: 17.65%;
   left: 33.5%;
   display: inline-block;
-} */
+}  
 
 .view-history {
   top: 409px;
@@ -428,13 +468,6 @@
   font-size: 12px;
 }
 .report-found-items {
-  --white: #fff;
-  --color-slateblue: #4f45b6;
-  --gray-900: #161c24;
-  --gray-300: #dfe3e8;
-  --gray-400: #c4cdd5;
-  --gray-1: #f5effc;
-  --gray-500: #919eab;
   position: relative;
   background-color: var(--white);
   width: 100%;
@@ -483,19 +516,3 @@
 .custom-modal button:hover {
   background-color: #45a049;
 }
-
-/* .report-found-items {
-  background-color: #fff;
-  width: 100%;
-  height: 100%;
-  text-align: left;
-  font-size: 24px;
-  color: #000
-}
-.top-menu {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 160px;
-  background-color: #4F45B6;
-} */

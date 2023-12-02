@@ -1,3 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+body {
+  margin: 0;
+  line-height: normal;
+}
+:root {
+  /* fonts */
+  /* --font-inter: Inter;
+  --font-dm-sans: "DM Sans";
+  --font-cairo: Cairo; */
+
+  /* font sizes */
+  /* --font-size-5xl: 24px;
+  --font-size-xl: 20px;
+  --font-size-lg: 18px; */
+
+  /* Colors */
+  /* --white: #fff;
+  --color-slateblue: #4f45b6;
+  --gray-900: #161c24;
+  --gray-300: #dfe3e8;
+  --gray-400: #c4cdd5;
+  --gray-1: #f5effc;
+  --gray-4: #a098ae;
+  --gray-500: #919eab; */
+
+  /* Paddings */
+  /* --padding-xs: 12px;
+  --padding-xl: 20px;
+  --padding-11xs: 2px;
+  --padding-13xl: 32px; */
+
+  /* Border radiuses */
+  /* --br-7xs: 6px; */
+}
 
 .bg,
 .placeholder-icon {
@@ -6,7 +45,7 @@
 }
 .bg {
   top: 0;
-  background-color: var(--color-slateblue);
+  background-color: #4F45B6;
   width: 100%;
   height: 160px;
 }
@@ -46,23 +85,23 @@
 }
 
 .searchtext {
+  height: 60px;
   border: 1px solid var(--gray-300);
   font-weight: 500;
   font-family: var(--font-dm-sans);
   font-size: var(--font-size-xl);
-  background-color: var(--gray-1);
-  position: absolute;
-  top: 47px;
-  left: calc(50% - 421.39px);
-  border-radius: 20px;
-  box-sizing: border-box;
-  width: 818px;
-  height: 63px;
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
-  padding: var(--padding-11xs) var(--padding-13xl) var(--padding-11xs) 20px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 47px;
+  left: calc(50% - 401px);
+  border-radius: 20px;
+  background-color: #F5EFFC;
+  width: 818px;
+  padding: 2px 32px 2px 20px;
   color: var(--gray-4);
 }
 .top-menu {
@@ -72,6 +111,7 @@
   width: 100%;
   height: 160px;
   font-family: var(--font-cairo);
+  color: #4F45B6;
 }
 .report-lost-items-child {
   position: absolute;
@@ -100,7 +140,7 @@
   cursor: pointer;
   border: 0;
   padding: 0;
-  background-color: var(--color-slateblue);
+  background-color: #4F45B6;
   position: absolute;
   top: 0;
   left: 0;
@@ -114,7 +154,7 @@
   left: 133px;
   font-size: 16px;
   font-family: var(--font-inter);
-  color: var(--white);
+  color: #fff;
   text-align: left;
 }
 .submit-button {
@@ -282,11 +322,11 @@
   font-size: var(--font-size-5xl);
   color: var(--gray-900);
 }
-.bg1 {
+.bglost {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: var(--color-slateblue);
+  background-color: #4F45B6;
   width: 198.55px;
   height: 100%;
 }

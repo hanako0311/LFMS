@@ -1,4 +1,5 @@
 import { useCallback } from "react";
+import { useNavigate } from "react-router-dom";
 import lost1 from './Group.png';
 import home from './Home.png';
 import logo from './LF splash 1.png';
@@ -7,50 +8,47 @@ import back from './Subtract.png';
 import calc from './calc.png';
 import heart from './heart.png';
 import "./home.css";
-import history from './image 5.png';
-import money from './money.png';
 import profile from './profile.png';
 import found from './report found.png';
-import lost2 from './search.png';
-import tablet from './tablet.png';
-import tumbler from './tumbler.png';
-import umbrella from './umbrella.png';
 
 const Home = () => {
+  const navigate = useNavigate();
+
+  const onHomePageClick = useCallback(() => {
+    navigate("/home"); //mao ni para ma click ang icon
+  }, [navigate]);
+
   const onUserContainerClick = useCallback(() => {
 
   }, []);
   const onContainer1Click = useCallback(() => {
-    // Please sync "Dashboard Lost Items" to the project
+    
   }, []);
 
-  const onHomeClick = useCallback(() => {
-
-  }, []);
 
   const onRectangle1Click = useCallback(() => {
-    // Please sync "Status/Claim Item Owner Side" to the project
+    
   }, []);
 
-  const onReportLostContainerClick = useCallback(() => {
-    // Please sync "Report Lost Items" to the project
-  }, []);
+  const onReportLostClick = useCallback(() => {
+    navigate("/report-lost-items");  //mao ni para ma click ang icon
+  }, [navigate]); 
 
   const onReportFoundClick = useCallback(() => {
-    // Please sync "Report Found Items" to the project
-  }, []);
+    navigate("/report-found-items"); //mao ni para ma click ang icon
+  }, [navigate]);
 
   const onHistoryClick = useCallback(() => {
 
   }, []);
 
   const onProfileClick = useCallback(() => {
-    // Please sync "Profile" to the project
-  }, []);
+    navigate("/profile"); //mao ni para ma click ang icon
+  }, [navigate]);
 
-  const onSubtractClick = useCallback(() => {
-    // Please sync "Landing" to the project
-  }, []);
+  const onSignOutClick = useCallback(() => {
+    navigate("/"); //mao ni para ma click ang icon
+  }, [navigate]);
 
   const onSearchBarContainerClick = useCallback(() => {
     // Please sync "Search item" to the project
@@ -59,9 +57,9 @@ const Home = () => {
   return (
     <div className="dashboard-found-items-defaul">
       <div className="top-menu">
-        <div className="bg" />
+        <div className="bg3" />
         <img className="top-menu-child" alt="" src="/line.svg" />
-        <div className="user" onClick={onUserContainerClick}>
+        <div className="user1" onClick={onUserContainerClick}>
           <img className="placeholder-icon" alt="" src={userImage} />
           <div className="name">
             <b className="zara-wardani">Zara Wardani</b>
@@ -78,7 +76,7 @@ const Home = () => {
               <div className="content1">
                 <div className="found-items">Found Items</div>
               </div>
-              <b className="b">2</b>
+              <b className="b3">2</b>
             </div>
           </div>
         </div>
@@ -288,7 +286,7 @@ const Home = () => {
         </div>
       </div>
       <div className="top-menu1">
-        <div className="bg1" />
+        <div className="bg2" />
         <img className="top-menu-item" alt="" src="/line1.svg" />
         <div className="nav">
           <div className="report-lost" onClick={onReportLostContainerClick}>
@@ -314,14 +312,14 @@ const Home = () => {
             src={profile}
             onClick={onProfileClick}
           />
-          <img className="home-icon" alt="" src={home}  onClick={onHomeClick} />
+          <img className="home-icon" alt="" src={home}  onClick={onHomePageClick} /> 
           <img className="image-5-icon" alt="" src={history} onClick={onHistoryClick} />
         </div>
         <img
           className="subtract-icon"
           alt=""
           src={back}
-          onClick={onSubtractClick}
+          onClick={onSignOutClick}
         />
       </div>
       <input

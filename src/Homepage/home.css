@@ -1,4 +1,4 @@
-.bg {
+.bg3 {
   position: absolute;
   top: 0px;
   left: 0px;
@@ -39,7 +39,7 @@
 }
 .name,
 .top-menu,
-.user {
+.user1 {
   position: absolute;
   top: 0;
   left: 0px;
@@ -48,7 +48,7 @@
   
 }
 .top-menu,
-.user {
+.user1 {
   top: 46px;
   left: 1554.6px;
   width: 193.2px;
@@ -88,7 +88,7 @@
   align-items: flex-start;
   justify-content: flex-start;
 }
-.b {
+.b3 {
   position: relative;
   font-size: 24px;
   font-weight: 600;
@@ -565,13 +565,13 @@
   font-size: var(--font-size-xl);
   font-family: var(--font-mulish);
 }
-.bg1 {
+.bg2 {
   position: absolute;
   top: 0;
-  left: 0.1px;
+  left: 0;
   background-color: #4F45B6;
-  width: 198.5px;
-  height: 1970px;
+  width: 198.55px;
+  height: 100%;
 }
 .top-menu-item {
   position: absolute;
