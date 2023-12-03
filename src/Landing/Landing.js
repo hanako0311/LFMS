@@ -1,12 +1,12 @@
 import React from 'react';
-import Navbar from '../Components/NavBar';
-import HeroSection from '../Components/Hero';
-import Features from '../Components/Features';
+import { Element } from 'react-scroll';
 import AboutUs from '../Components/AboutUs';
 import CTA from '../Components/CallToAction';
 import ContactForm from '../Components/ContactUs';
+import Features from '../Components/Features';
 import Footer from '../Components/Footer';
-import { Element } from 'react-scroll';
+import HeroSection from '../Components/Hero';
+import Navbar from '../Components/NavBar';
 import './Landing.css';
 
 const LandingPage = () => {
