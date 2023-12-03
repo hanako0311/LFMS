@@ -5,8 +5,8 @@ import '../App.css';
 const Register = () => {
   const [formData, setFormData] = useState({
     email: '',
-    firstName: '',
-    lastName: '',
+    firstname: '',
+    lastname: '',
     password: ''
   });
 
@@ -19,21 +19,24 @@ const Register = () => {
 
     try {
       // Make a POST request to your Spring Boot backend
-      const response = await fetch('http://localhost:8080/user/register', {
+      const response = await fetch('http://localhost:8080/users/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(formData),
       });
-
+      //Response not ok
+      if(!response.ok){
+        throw new Error('Http error! Status: $(response.status)');
+      }
       // Check if the request was successful (status code 200-299)
       if (response.ok) {
         alert('Registration Successful'); // Show a success message
         setFormData({ // Reset the form fields
           email: '',
-          firstName: '',
-          lastName: '',
+          firstname: '',
+          lastname: '',
           password: ''
         });
       } else {
@@ -56,25 +59,25 @@ const Register = () => {
             type="email"
             name="email"
             placeholder="Enter email"
-            value={formData.email}
+            value={formData.email || ''}
             onChange={handleChange}
             required
             style={{ textAlign: 'left', paddingLeft:'1em' }}
           />
           <input
             type="text"
-            name="firstName"
+            name="firstname"
             placeholder="Enter First Name"
-            value={formData.firstName}
+            value={formData.firstname || ''}
             onChange={handleChange}
             required
             style={{ textAlign: 'left', paddingLeft:'1em' }}
           />
           <input
             type="text"
-            name="lastName"
+            name="lastname"
             placeholder="Enter Last Name"
-            value={formData.lastName}
+            value={formData.lastname || ''}
             onChange={handleChange}
             required
             style={{ textAlign: 'left', paddingLeft:'1em' }}
@@ -83,7 +86,7 @@ const Register = () => {
             type="password"
             name="password"
             placeholder="Enter password"
-            value={formData.password}
+            value={formData.password || ''}
             onChange={handleChange}
             required
             style={{ textAlign: 'left', paddingLeft:'1em' }}

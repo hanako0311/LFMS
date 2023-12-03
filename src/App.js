@@ -2,12 +2,11 @@ import React from 'react';
 import { Link, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import './App.css';
 import Home from './Homepage/Home.js';
-import Login from './Login/Login.js'; 
+import Login from './Login/Login.js';
 import Registration from './Register/Register.js';
-import ReportFoundItems from './Report Found/ReportFoundItems.js';
-import ReportLostItems from './Report Lost/ReportLostItems.js';
+import ReportFoundItems from './ReportFound/ReportFoundItems.js';
+import ReportLostItems from './ReportLost/ReportLostItems.js';
 import backgroundImage from './landingbg.png';
-import ReportFoundItems from './ReportFound/ReportFoundItems.js'
 
 
 
