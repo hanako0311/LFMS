@@ -28,7 +28,6 @@ const LandingPage = () => {
       <Element name="contact-section">
         <ContactForm />
       </Element>
-      {/* Footer positioned outside Element components */}
       <Footer />
     </div>
   );
