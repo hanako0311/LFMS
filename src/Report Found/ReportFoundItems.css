@@ -38,15 +38,14 @@ body {
   --br-7xs: 6px;
 }
 
-.bg1,
 .placeholder-icon {
   position: absolute;
   left: 0;
 }
-.bg1 {
+.bgreportfound {
   top: 0;
-  background-color: var(--color-slateblue);
-  width: 100%;
+  background-color: #4F45B6;
+  width: 1958.55px;
   height: 160px;
 }
 .placeholder-icon {
@@ -70,41 +69,41 @@ body {
   width: 54.56px;
 }
 .name,
-.user {
+.userreportfound {
   position: absolute;
   top: 0;
   left: 93.53px;
   width: 116.91px;
   height: 68px;
 }
-.user {
+.userreportfound {
   top: 48px;
-  left: 2000px;
+  left: 1630px;
   width: 210.44px;
   cursor: pointer;
 }
 
-.searchtext {
+.searchtextreportfound {
+  height: 60px;
   border: 1px solid var(--gray-300);
   font-weight: 500;
   font-family: var(--font-dm-sans);
   font-size: var(--font-size-xl);
-  background-color: var(--gray-1);
-  position: absolute;
-  top: 47px;
-  left: calc(50% - 421.39px);
-  border-radius: 20px;
-  box-sizing: border-box;
-  width: 818px;
-  height: 63px;
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
-  padding: var(--padding-11xs) var(--padding-13xl) var(--padding-11xs) 20px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 47px;
+  left: 550px;
+  border-radius: 20px;
+  background-color: #F5EFFC;
+  width: 818px;
+  padding: 2px 32px 2px 20px;
   color: var(--gray-4);
 }
-.top-menu {
+.top-menureportfound {
   position: absolute;
   top: 0;
   left: 1.11px;
@@ -321,14 +320,7 @@ body {
   font-size: var(--font-size-5xl);
   color: var(--gray-900);
 }
-.bg1 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: var(--color-slateblue);
-  width: 198.55px;
-  height: 100%;
-}
+
 .b {
   position: absolute;
   height: 32%;
@@ -338,7 +330,7 @@ body {
   display: inline-block;
 }  
 
-.view-history {
+.view-historyreportfound {
   top: 409px;
   left: 6px;
   width: 60px;

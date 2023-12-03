@@ -37,16 +37,14 @@ body {
   /* Border radiuses */
   /* --br-7xs: 6px; */
 }
-
-.bg,
 .placeholder-icon {
   position: absolute;
   left: 0;
 }
-.bg {
+.bgreportlost {
   top: 0;
   background-color: #4F45B6;
-  width: 100%;
+  width: 1958.55px;
   height: 160px;
 }
 .placeholder-icon {
@@ -70,21 +68,15 @@ body {
   width: 54.56px;
 }
 .name,
-.user {
-  position: absolute;
-  top: 0;
-  left: 93.53px;
-  width: 116.91px;
-  height: 68px;
-}
-.user {
+.userreportlost {
   top: 48px;
-  left: 2000px;
+  left: 1630px;
   width: 210.44px;
+  height: 88px;
+  position: absolute;
   cursor: pointer;
 }
-
-.searchtext {
+.searchtextreportlost {
   height: 60px;
   border: 1px solid var(--gray-300);
   font-weight: 500;
@@ -97,7 +89,7 @@ body {
   box-sizing: border-box;
   position: absolute;
   top: 47px;
-  left: calc(50% - 401px);
+  left: 550px;
   border-radius: 20px;
   background-color: #F5EFFC;
   width: 818px;
@@ -321,7 +313,7 @@ body {
   font-size: var(--font-size-5xl);
   color: var(--gray-900);
 }
-.bg1 {
+.bglost {
   position: absolute;
   top: 0;
   left: 0;
@@ -338,7 +330,7 @@ body {
   display: inline-block;
 }
 
-.view-history {
+.view-historyreportlost {
   top: 409px;
   left: 6px;
   width: 60px;
@@ -458,7 +450,7 @@ body {
   margin-bottom: 45px;
   background-color: transparent;
 }
-.side-menu {
+.side-menureportlost {
   position: absolute;
   top: -20px;
   left: -19.89px;

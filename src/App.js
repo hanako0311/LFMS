@@ -7,6 +7,7 @@ import Registration from './Register/Register.js';
 import ReportFoundItems from './Report Found/ReportFoundItems.js';
 import ReportLostItems from './Report Lost/ReportLostItems.js';
 import backgroundImage from './landingbg.png';
+import DashboardLostItems from './Dashboard Lost/DashboardLostItems.js';
 
 
 
@@ -45,6 +46,7 @@ const App = () => {
         <Route path="/home" element={<Home />} />
         <Route path="/report-found-items" element={<ReportFoundItems />} />
         <Route path="/report-lost-items" element={<ReportLostItems />} />
+        <Route path="/dashboard-lost-items" element={<DashboardLostItems />} />
       </Routes>
     </Router>
   ); 

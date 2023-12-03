@@ -87,9 +87,9 @@ const ReportFoundItems = () => {
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <div className="report-found-items">
-        <div className="top-menu">
-          <div className="bg1" />
-          <div className="user" onClick={onUserContainerClick}>
+        <div className="top-menureportfound">
+          <div className="bgreportfound" />
+          <div className="userreportfound" onClick={onUserContainerClick}>
             <img className="placeholder-icon" alt="" src="Placeholder.png" />
             <div className="name">
               <b className="username">Zara Wardani</b>
@@ -97,21 +97,20 @@ const ReportFoundItems = () => {
             </div>
           </div>
           <input
-              className="searchtext"
+              className="searchtextreportfound"
               name="Search"
               placeholder="Search Here..."
               type="text"
             />
         </div>
         <div className="side-menu">
-          <div className="bg1" />
             <button className="logo" id="logo" />
           <div className="nav">
             <button className="home-button" id="home" onClick={onHomePageClick}/>
             <button className="profile-button" id="profile" />
             <button className="found" id="found"/>
             <button className="lost" id="lost" onClick={onReportLostClick}/>
-            <button className="view-history" id="history" />
+            <button className="view-historyreportfound" id="history" />
             <button className="back" id="back" onClick={onSignOutClick}/>
           </div>
         </div>

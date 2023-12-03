@@ -4,7 +4,9 @@ import { useCallback, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./ReportLostItems.css";
 
+
 const ReportLostItems = () => {
+  const [imageFile, setImageFile] = useState(null);
   const navigate = useNavigate();
   const [inputTextDateTimePickerValue, setInputTextDateTimePickerValue] = useState(null);
   const [isSuccessPopupVisible, setIsSuccessPopupVisible] = useState(false);
@@ -51,30 +53,43 @@ const ReportLostItems = () => {
     // Append the modal to the body
     document.body.appendChild(modal);
   };
-  
 
-  const onSubmitButtonClick = useCallback(() => {
+  const handleImageChange = (event) => {
+    const file = event.target.files[0];
+    setImageFile(file);
+  };
+  
+  const onSubmitButtonClick = useCallback(async () => {
     const itemName = document.querySelector('.inputtext').value;
     const dateLost = inputTextDateTimePickerValue;
     const locationLost = document.querySelector('.inputtext2').value;
     const itemDescription = document.querySelector('.inputtext3').value;
-
+  
     // Validate if all required fields are filled
     if (!itemName || !dateLost || !locationLost || !itemDescription) {
       // Show error popup
       showPopup('Please fill in all required fields.');
       return;
     }
+  
+    try {
+      const formData = new FormData();
+      formData.append('itemFound', itemName);
+      formData.append('dateFound', dateLost);
+      formData.append('locationFound', locationLost);
+      formData.append('itemDescription', itemDescription);
+      formData.append('image', imageFile); // Append the image file
 
-    // Assuming a successful submission, you can log the values or send them to a server
-    console.log('Item Name:', itemName);
-    console.log('Date Lost:', dateLost);
-    console.log('Location Lost:', locationLost);
-    console.log('Item Description:', itemDescription);
-
-    // Show success popup
-    showSuccessPopup();
-  }, [inputTextDateTimePickerValue]);
+      const response = await fetch('http://localhost:8080/lost-items', {
+        method: 'POST',
+        body: formData,
+      });
+    } catch (error) {
+      console.error('Error:', error);
+      showPopup('An unexpected error occurred.');
+    }
+  }, [imageFile, inputTextDateTimePickerValue]);
+  
 
   const onReportFoundClick = useCallback(() => {
     navigate("/report-found-items"); 
@@ -88,8 +103,8 @@ const ReportLostItems = () => {
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <div className="report-lost-items">
         <div className="top-menu">
-          <div className="bg" />
-          <div className="user" onClick={onUserContainerClick}>
+          <div className="bgreportlost" />
+          <div className="userreportlost" onClick={onUserContainerClick}>
             <img className="placeholder-icon" alt="" src="Placeholder.png" />
             <div className="name">
               <b className="username">Zara Wardani</b>
@@ -97,21 +112,22 @@ const ReportLostItems = () => {
             </div>
           </div>
           <input
-              className="searchtext"
+              className="searchtextreportlost"
               name="Search"
               placeholder="Search Here..."
               type="text"
             />
         </div>
-        <div className="side-menu">
-          <div className="bg1" />
+        </div>
+        <div className="side-menureportlost">
+          <div className="bglost" />
             <button className="logo" id="logo" />
           <div className="nav">
             <button className="home-button" id="home" onClick={onHomePageClick} />
             <button className="profile-button" id="profile" />
             <button className="lost" id="lost" onClick={onReportFoundClick}/>
             <button className="lost" id="history" />
-            <button className="view-history" id="history" />
+            <button className="view-historyreportlost" id="history" />
             <button className="back" id="back" onClick={onSignOutClick}/>
           </div>
         </div>
@@ -154,11 +170,11 @@ const ReportLostItems = () => {
           <textarea className="inputtext3" placeholder="Describe the item" />
           <div className="item-description">Item Description</div>
           <div className="insert-image">Insert Image</div>
-          <button className="choose-file" id="choose file">
+          <div className="choose-file">
+            <input type="file" onChange={handleImageChange} />
             <button className="choose-file-child" id="Choose file" />
             <button className="choose-file1">Choose file</button>
-          </button>
-        </div>
+          </div>
         <button className="submit-button" id="submit" onClick={onSubmitButtonClick}>
           <button className="submit-button-child" id="submt" />
           <div className="submit">Submit</div>
