@@ -6,8 +6,8 @@ import Home from './Homepage/Home.js';
 import Landing from './Landing/Landing.js';
 import Login from './Login/Login.js';
 import Registration from './Register/Register.js';
-import ReportFoundItems from './Report Found/ReportFoundItems.js';
-import ReportLostItems from './Report Lost/ReportLostItems.js';
+import ReportFoundItems from './ReportFound/ReportFoundItems.js';
+import ReportLostItems from './ReportLost/ReportLostItems.js';
 
 
 
