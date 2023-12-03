@@ -2,7 +2,7 @@
   position: absolute;
   left: 0;
 }
-.bghome {
+.bgdashlost {
   top: 0;
   background-color: #4f45b6;
   width: 1958.55px;
@@ -39,8 +39,7 @@
   width: 116.91px;
   height: 88px;
 }
-.search-bar,
-.userhome {
+.userdashlost {
   top: 48px;
   left: 1630px;
   width: 210.44px;
@@ -54,6 +53,7 @@
   font-size: 18px;
   background-color: #f5effc;
   top: 47px;
+  left: 550px;
   border-radius: 20px;
   width: 818px;
   height: 60px;
@@ -66,19 +66,12 @@
   color: black;
   position: absolute;
 }
-.bg1,
-.top-menu {
+.top-menudashlost {
   position: absolute;
   top: 0;
   left: 1.11px;
   width: 1958.55px;
   height: 160px;
-}
-.bg1 {
-  left: 0;
-  background-color: #4f45b6;
-  width: 198.55px;
-  height: 1113.04px;
 }
 .group-icon,
 .search-dollar-search-pay-prod-icon {
@@ -255,7 +248,6 @@
   width: 198.55px;
   height: 1113.04px;
   font-size: 12px;
-  background-color: #4f45b6;
 }
 .dashboard {
   position: absolute;
@@ -265,12 +257,12 @@
   font-family: var(--heading-2);
   color: #252525;
 }
-.found-items {
+.found-itemsdashlost {
   position: relative;
   font-size: 32px;
   font-weight: 800;
   font-family: var(--font-inter);
-  color: #fff;
+  color: #2f2f2f;
   text-align: left;
   display: inline-block;
   width: 305px;
@@ -282,26 +274,26 @@
   align-items: flex-start;
   justify-content: flex-start;
 }
-.b1 {
+.b1dashlost {
   position: relative;
   font-size: 24px;
   font-family: var(--heading-2);
-  color: #fff;
+  color: #2f2f2f;
   text-align: left;
 }
-.button,
+.buttondashlost,
 .content,
 .overview {
   position: absolute; 
   left: 0;
   width: 690px;
 }
-.button {
+.buttondashlost {
   top: -75px;
   cursor: pointer;
   border: 2px solid #f5effc;
   padding: 15px;
-  background-color: rgba(79, 69, 182, 0.98);
+  background-color: transparent;
   border-radius: 20px;
   box-sizing: border-box;
   display: flex;
@@ -318,13 +310,12 @@
   top: 328px;
   left: 329px;
 }
-.lost-items {
+.lost-itemsdashlost {
   position: relative;
   font-weight: 800;
   display: inline-block;
   width: 188px;
   flex-shrink: 0;
-  color: black;
 }
 .content2 {
   width: 168px;
@@ -333,18 +324,17 @@
   align-items: flex-start;
   justify-content: flex-start;
 }
-.b2 {
+.b2dashlost {
   position: relative;
   font-size: 24px;
   font-family: var(--heading-2);
-  color: black;
 }
-.div {
+.divdashlost {
   position: absolute;
   top: 250px;
   left: 1043px;
   border-radius: 20px;
-  background-color: #fff;
+  background-color: rgba(79, 69, 182, 0.98);
   border: 2px solid #f5effc;
   box-sizing: border-box;
   width: 690px;

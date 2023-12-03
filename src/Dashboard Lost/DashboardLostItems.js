@@ -1,14 +1,14 @@
 import { useCallback } from "react";
-import home from './Home.png';
+import "./DashboardLostItems.css";
 import logo from './LF splash 1.png';
-import back from './Subtract.png';
-import "./home.css";
-import history from './image 5.png';
+import home from './Home.png';
 import profile from './profile.png';
 import found from './report found.png';
-import lost from './report lost.png';
+import lost from './report lost.png'
+import history from './image 5.png';
+import back from './Subtract.png';
 
-const Home = () => {
+const DashboardLostItems = () => {
   const onUserContainerClick = useCallback(() => {
     // Please sync "Profile" to the project
   }, []);
@@ -35,9 +35,9 @@ const Home = () => {
 
   return (
     <div className="dashboard-lost-items">
-      <div className="top-menu">
-        <div className="bghome" />
-        <div className="userhome" onClick={onUserContainerClick}>
+      <div className="top-menudashlost">
+        <div className="bgdashlost" />
+        <div className="userdashlost" onClick={onUserContainerClick}>
           <img className="placeholder-icon" alt="" src="/placeholder@2x.png" />
           <div className="name">
             <b className="zara-wardani">Zara Wardani</b>
@@ -86,22 +86,22 @@ const Home = () => {
       <b className="dashboard">Dashboard</b>
       <div className="content">
         <div className="overview">
-          <button className="button" onClick={onButtonClick}>
+          <button className="buttondashlost" onClick={onButtonClick}>
             <div className="content1">
-              <div className="found-items">Found Items</div>
+              <div className="found-itemsdashlost">Found Items</div>
             </div>
-            <b className="b1">15</b>
+            <b className="b1dashlost">15</b>
           </button>
         </div>
       </div>
-      <div className="div">
+      <div className="divdashlost">
         <div className="content2">
-          <div className="lost-items">Lost Items</div>
+          <div className="lost-itemsdashlost">Lost Items</div>
         </div>
-        <b className="b2">34</b>
+        <b className="b2dashlost">34</b>
       </div>
     </div>
   );
 };
 
-export default Home;
+export default DashboardLostItems;

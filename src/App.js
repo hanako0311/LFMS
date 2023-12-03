@@ -1,14 +1,13 @@
 import React from 'react';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import './App.css';
+import DashboardLostItems from './Dashboard Lost/DashboardLostItems.js';
 import Home from './Homepage/Home.js';
 import Landing from './Landing/Landing.js';
 import Login from './Login/Login.js';
 import Registration from './Register/Register.js';
-import ReportFoundItems from './ReportFound/ReportFoundItems.js';
-import ReportLostItems from './ReportLost/ReportLostItems.js';
-//import backgroundImage from './landingbg.png';
-//import ReportFoundItems from './ReportFound/ReportFoundItems.js'
+import ReportFoundItems from './Report Found/ReportFoundItems.js';
+import ReportLostItems from './Report Lost/ReportLostItems.js';
 
 
 
@@ -47,6 +46,7 @@ const App = () => {
         <Route path="/home" element={<Home />} />
         <Route path="/report-found-items" element={<ReportFoundItems />} />
         <Route path="/report-lost-items" element={<ReportLostItems />} />
+        <Route path="/dashboard-lost-items" element={<DashboardLostItems />} />
       </Routes>
     </Router>
   ); 
