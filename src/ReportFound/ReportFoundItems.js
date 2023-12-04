@@ -3,78 +3,32 @@ import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import { useCallback, useState } from "react";
 import "./ReportFoundItems.css";
 import { useNavigate } from "react-router-dom";
+import axios from 'axios';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchFoundItems } from '../actions/foundItemActions';
+
 
 const ReportFoundItems = () => {
-  const navigate = useNavigate();
-
   const [inputTextDateTimePickerValue, setInputTextDateTimePickerValue] = useState(null);
   const [isSuccessPopupVisible, setIsSuccessPopupVisible] = useState(false);
+
+  const foundItems = useSelector(state => state.foundItem.items);
+  const dispatch = useDispatch();
+
+  const navigate = useNavigate();
 
   const showSuccessPopup = () => {
     setIsSuccessPopupVisible(true);
   };
+
   const hideSuccessPopup = () => {
     setIsSuccessPopupVisible(false);
   };
+
+
   const onHomePageClick = useCallback(() => {
     navigate("/home"); 
   }, [navigate]);
-
-  const onUserContainerClick = useCallback(() => {
-   
-  }, []);
-
-  const onSearchBarContainerClick = useCallback(() => {
-    
-  }, []);
-
-  const showPopup = (message) => {
-    // Create a div element for the modal
-    const modal = document.createElement('div');
-    modal.classList.add('custom-modal');
-
-    // Create content for the modal
-    const content = document.createElement('div');
-    content.textContent = message;
-
-    // Create a close button
-    const closeButton = document.createElement('button');
-    closeButton.textContent = 'Close';
-    closeButton.addEventListener('click', () => {
-      // Close the modal when the button is clicked
-      document.body.removeChild(modal);
-    });
-
-    // Append content and button to the modal
-    modal.appendChild(content);
-    modal.appendChild(closeButton);
-
-    // Append the modal to the body
-    document.body.appendChild(modal);
-  };
-
-  const onSubmitButtonClick = useCallback(() => {
-    const itemName = document.querySelector('.inputtext').value;
-    const dateLost = inputTextDateTimePickerValue;
-    const locationLost = document.querySelector('.inputtext2').value;
-    const itemDescription = document.querySelector('.inputtext3').value;
-
-    // Validate if all required fields are filled
-    if (!itemName || !dateLost || !locationLost || !itemDescription) {
-      // Show error popup
-      showPopup('Please fill in all required fields.');
-      return;
-    }
-
-    // Assuming a successful submission, you can log the values or send them to a server
-    console.log('Item Name:', itemName);
-    console.log('Date Lost:', dateLost);
-    console.log('Location Lost:', locationLost);
-    console.log('Item Description:', itemDescription);
-
-    // Show success popup
-    showSuccessPopup();
-  }, [inputTextDateTimePickerValue]);
 
   const onReportLostClick = useCallback(() => {
     navigate("/report-lost-items"); 
@@ -83,6 +37,59 @@ const ReportFoundItems = () => {
   const onSignOutClick = useCallback(() => {
     navigate("/"); 
   }, [navigate]);
+
+  const onUserContainerClick = useCallback(() => {
+   
+  }, []);
+
+
+  const handleFileInputChange = (event) => {
+    const file = event.target.files[0];
+    // Process the selected file (e.g., store it in state)
+    console.log('Selected file:', file);
+  };
+
+  const handleChooseFileClick = () => {
+    document.getElementById('fileInput').click(); // Trigger file input click
+  };
+
+  /*const onSubmitBtnClick = useCallback(() => {
+    navigate("/successpopup"); 
+  }, [navigate]); */
+
+  const onSubmitButtonClick = async () => {
+    const itemName = document.querySelector('.inputtext').value;
+    const dateFound = inputTextDateTimePickerValue;
+    const locationFound = document.querySelector('.inputtext2').value;
+    const itemDescription = document.querySelector('.inputtext3').value;
+    const imageFile = document.querySelector('#fileInput').files[0];
+
+    const formData = new FormData();
+    formData.append('foundEntity', JSON.stringify({
+      itemName,
+      dateFound,
+      locationFound,
+      itemDescription
+    }));
+    formData.append('imageFile', imageFile);
+
+    try {
+      const response = await axios.post('http://localhost:8080/found-items', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        }
+      }); 
+      console.log('Item reported successfully:', response.data);
+      showSuccessPopup();
+
+      dispatch(fetchFoundItems());
+      
+      navigate("/dash-found-items"); // Navigate back to dashboard after submission
+    } catch (error) {
+      console.error('Error reporting item:', error);
+    }
+  }; 
+
 
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
@@ -153,20 +160,30 @@ const ReportFoundItems = () => {
           <div className="location-found">Location Found</div>
           <textarea className="inputtext3" placeholder="Describe the item" />
           <div className="item-description">Item Description</div>
-          <div className="insert-image">Insert Image</div>
-          <button className="choose-file" id="choose file">
-            <button className="choose-file-child" id="Choose file" />
-            <button className="choose-file1">Choose file</button>
-          </button>
+          <input
+          type="file"
+          id="fileInput"
+          accept="image/*"
+          className="fileInput"
+          onChange={handleFileInputChange}
+          style={{ display: 'none' }} // Hide the file input
+        />
+        <div className="insert-image" onClick={handleChooseFileClick}>
+          Insert Image
+        </div>
+        {/* Optional button for choosing file */}
+        <button className="choose-file" onClick={handleChooseFileClick}>
+          Choose File
+        </button>
         </div>
         <button
           className="submit-button"
           id="submit"
           onClick={onSubmitButtonClick}
         >
-          <button className="submit-button-child" id="submt" />
           <div className="submit">Submit</div>
         </button>
+        
         {isSuccessPopupVisible && (
           <div className="success-popup">
             <p>Successfully reported found item!</p>

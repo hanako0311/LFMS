@@ -4,10 +4,10 @@ import './App.css';
 import Home from './Homepage/Home.js';
 import Login from './Login/Login.js'; 
 import Registration from './Register/Register.js';
-import ReportFoundItems from './Report Found/ReportFoundItems.js';
-import ReportLostItems from './Report Lost/ReportLostItems.js';
+import ReportFoundItems from './ReportFound/ReportFoundItems.js';
+import ReportLostItems from './ReportLost/ReportLostItems.js';
 import backgroundImage from './landingbg.png';
-import ReportFoundItems from './ReportFound/ReportFoundItems.js'
+import FoundItems from './DashboardFound/FoundItems.js';
 
 
 
@@ -46,6 +46,8 @@ const App = () => {
         <Route path="/home" element={<Home />} />
         <Route path="/report-found-items" element={<ReportFoundItems />} />
         <Route path="/report-lost-items" element={<ReportLostItems />} />
+        <Route path="/dash-found-items" element={<FoundItems />} />
+        
       </Routes>
     </Router>
   ); 

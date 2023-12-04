@@ -125,11 +125,15 @@
   height: 284px;
 }
 .content {
-  top: 328px;
-  left: 329px;
-  font-size: var(--font-size-13xl);
-  font-family: var(--font-inter);
+  display: flex; /* Use flexbox for layout */
+  align-items: flex-start; /* Align items to the top */
+  gap: 20px; /* Space between foundbtn and cards */
+  position: absolute; /* Keep your absolute positioning */
+  top: 328px; /* Adjust according to your layout */
+  left: 329px; /* Adjust according to your layout */
+  width: auto; /* Adjust the width as needed */
 }
+
 .lost-items {
   position: relative;
   font-weight: 800;
@@ -192,8 +196,6 @@
 .lostbtn:active {
   background-color: #4F45B6; /* Background color when clicked */
 }
-
-
 
 .sidebar {
   position: absolute;
@@ -364,4 +366,91 @@
   width: 122px;
   height: 130px;
   object-fit: cover;
+}
+
+.cards-container {
+  display: flex; 
+  flex-wrap: wrap;
+  /*justify-content: flex-start;  Center-align the cards */
+  gap: 16px; /* Adjust the gap between cards */
+  margin-top: 640px; /* Add space above the card container */
+  align-self: stretch;
+  max-width: 90%;
+  padding: 0 16px;
+}
+
+
+/* .card {
+  flex: 0 0 auto;
+  padding: 20px;
+  min-height: 250px;
+  width: 300px; 
+  box-shadow: 0px 10px 30px 0px rgba(50, 50, 50, 0.16);
+  border-radius: 10px;
+  margin: 8px;
+  background-color: #FFF; 
+
+} */
+
+.card {
+  flex: 0 0 auto;
+  padding: 20px;
+  min-height: 250px;
+  width: 340px; /* Adjust width as needed */
+  box-shadow: 0px 10px 30px 0px rgba(50, 50, 50, 0.16);
+  border-radius: 10px;
+  margin: 8px; /* Uniform margin */
+  background-color: #FFF; /* Card background color */
+  position: relative; /* Needed for absolute positioning of children */
+}
+
+.claim-button {
+  background-color: #4CAF50; /* Green background */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background-color 0.2s ease;
+  margin-top: 90px;
+  width: 340px;
+  height: 50px;
+}
+
+.claim-button:hover {
+  background-color: #45A049; /* Darker green on hover */
+}
+
+.delete-button {
+  background-color: #F44336; /* Red background */
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 30%; /* Circular button */
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+  position: absolute; /* Absolute position */
+  top: 10px; /* Space from the top */
+  right: 10px; /* Space from the right */
+}
+
+.delete-button:hover {
+  background-color: #D32F2F; /* Darker red on hover */
+}
+
+
+.title {
+  font-weight: bold;
+  font-size: 1.2em; /* Adjust font size */
+  color: #333; /* Font color */
+  margin-bottom: 10px; /* Space between title and description */
+}
+
+.desc {
+  font-size: 1em;
+  color: #666; /* Font color */
+  text-align: justify; /* Justify the text for better readability */
 }
