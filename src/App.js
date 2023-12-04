@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import { Link, Route, BrowserRouter as Router, Routes,Switch } from 'react-router-dom';
 import './App.css';
 import Home from './Homepage/Home.js';
 import Login from './Login/Login.js'; 
@@ -11,7 +11,7 @@ import FoundItems from './DashboardFound/FoundItems.js';
 
 
 
-const LandingPage = () => {
+/**const LandingPage = () => {
   return (
     <div className="landing-page" style={{ backgroundImage: `url(${backgroundImage})` }}>
       <div className="header">
@@ -34,13 +34,13 @@ const LandingPage = () => {
       </div>
     </div>
   );
-};
+};**/
 
 const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<LandingPage />} />
+      <Route path="/" element={<Landing />} />
         <Route path="/register" element={<Registration />} />
         <Route path="/login" element={<Login />} />
         <Route path="/home" element={<Home />} />

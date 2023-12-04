@@ -1,3 +1,8 @@
+:root {
+  --primary-color: #4f45b6;
+  --font-family: Poppins, sans-serif;
+}
+
 .logo-mark-icon {
   position: relative;
   width: 32px;
@@ -14,12 +19,15 @@
   position: relative;
   line-height: 130%;
 }
-.logo {
+.logo-container {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: flex-start;
-  gap: 6px;
+  gap: 10px; /* Adjust the gap between logo and text */
+}
+.logo-image {
+  width: 40px; /* Adjust the width of the logo */
+  height: auto; /* Let the height adjust automatically */
+  /* Add any additional styling as needed */
 }
 .arrowright-icon {
   position: relative;
@@ -39,14 +47,13 @@
   align-items: center;
   color: #009379;
 }
-.button,
-.button2,
-.button4 {
+.button, .button2, .button4 {
   border-radius: 20px;
   justify-content: center;
   gap: 8px;
   cursor: pointer;
 }
+
 .button2 {
   height: 30px;
   display: flex;
@@ -90,7 +97,7 @@
   position: relative;
   font-size: 21px;
   line-height: 150%;
-  font-family: Mulish;
+  font-family: Poppins;
   display: inline-block;
   width: 643px;
 }
@@ -154,7 +161,7 @@
   position: relative;
   font-size: 16px;
   line-height: 150%;
-  font-family: Mulish;
+  font-family: Poppins;
   color: #2d2d2d;
 }
 .headline-subhead {
@@ -191,7 +198,7 @@
   position: relative;
   font-size: 11.32px;
   line-height: 150%;
-  font-family: Mulish;
+  font-family: Poppins;
 }
 .text {
   align-self: stretch;
@@ -304,7 +311,7 @@
 .when-things-get {
   font-size: 11.82px;
   line-height: 160%;
-  font-family: Mulish;
+  font-family: Poppins;
   color: #2d2d2d;
 }
 .text4 {
@@ -379,7 +386,7 @@
 .break-figma-limits {
   font-size: 21px;
   line-height: 150%;
-  font-family: Mulish;
+  font-family: Poppins;
 }
 .ctas1,
 .ctas2,
@@ -422,6 +429,7 @@
   gap: 40px;
   font-size: 50px;
 }
+
 .lets-get-in {
   position: relative;
   letter-spacing: -0.02em;
@@ -434,7 +442,7 @@
   position: relative;
   font-size: 16px;
   line-height: 150%;
-  font-family: Mulish;
+  font-family: Poppins;
 }
 .headline-subhead2 {
   gap: 10px;
@@ -452,11 +460,13 @@
   width: 24px;
   height: 24px;
 }
+
 .div {
   flex: 1;
   position: relative;
   line-height: 150%;
 }
+
 .phone {
   width: 465px;
   display: flex;
@@ -574,7 +584,7 @@
   justify-content: flex-start;
   gap: 40px;
   font-size: 16px;
-  font-family: Mulish;
+  font-family: Poppins;
 }
 .contact-form,
 .contact-form1,
@@ -619,14 +629,14 @@
   text-align: left;
   font-size: 14px;
   color: #fff;
-  font-family: Mulish;
+  font-family: Poppins;
 }
+
 .landingpage {
   position: relative;
   background-color: #f8f9ff;
   width: 100%;
   height: 3504px;
-  overflow: hidden;
   flex-direction: column;
   justify-content: flex-start;
   text-align: center;
