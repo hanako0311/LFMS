@@ -24,7 +24,7 @@ const Register = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ ...formData, role: 'USER' }),
       });
       //Response not ok
       if(!response.ok){
