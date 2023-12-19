@@ -1,12 +1,13 @@
 import { useCallback } from "react";
-import home from './Home.png';
+import lost1 from './Group.png';
 import logo from './LF splash 1.png';
 import back from './Subtract.png';
 import "./home.css";
 import history from './image 5.png';
 import profile from './profile.png';
 import found from './report found.png';
-import lost from './report lost.png';
+import lost2 from './search.png';
+
 
 const Home = () => {
   const onUserContainerClick = useCallback(() => {
@@ -32,6 +33,26 @@ const Home = () => {
   const onButtonClick = useCallback(() => {
     // Please sync "Dashboard Found Items - Default" to the project
   }, []);
+
+  const onFoundButtonClick = useCallback(() => {
+    navigate("/dash-found-items"); //mao ni para ma click ang icon
+  }, [navigate]);
+
+  const onLostButtonClick = useCallback(() => {
+    navigate("/home"); //mao ni para ma click ang icon
+  }, [navigate]);
+
+  const onSearchBarContainerClick = useCallback(() => {
+    // Please sync "Search item" to the project
+  }, []);
+
+  const onFoundButtonClick = useCallback(() => {
+    navigate("/dash-found-items"); //mao ni para ma click ang icon
+  }, [navigate]);
+
+  const onLostButtonClick = useCallback(() => {
+    navigate("/home"); //mao ni para ma click ang icon
+  }, [navigate]);
 
   return (
     <div className="dashboard-lost-items">
@@ -86,19 +107,60 @@ const Home = () => {
       <b className="dashboard">Dashboard</b>
       <div className="content">
         <div className="overview">
-          <button className="button" onClick={onButtonClick}>
-            <div className="content1">
-              <div className="found-items">Found Items</div>
-            </div>
-            <b className="b1">15</b>
-          </button>
+          <div className="col-1" />
+          <div className="col-2">
+            <button className="foundbtn" onClick={onFoundButtonClick}>
+              <div className="content1">
+                <div className="found-items">Found Items</div>
+              </div>
+              <b className="no-of-found-items"></b>
+            </button>
+          </div>
         </div>
       </div>
-      <div className="div">
+      <button className="lostbtn" onClick={onLostButtonClick}>
         <div className="content2">
           <div className="lost-items">Lost Items</div>
         </div>
-        <b className="b2">34</b>
+        <b className="no-of-lost-items"></b>
+      </button>
+      
+      <div className="top-menu1">
+        <div className="sidebar" />
+       
+        <div className="nav">
+          <div className="report-lost" onClick={onReportLostClick}>
+            <img className="group-icon" alt="" src={lost1} />
+            <div className="search-dollar-search-pay-prod">
+              <img
+                className="search-dollar-search-pay-prod-icon"
+                alt=""
+                src={lost2}
+              />
+              <b className="b2">?</b>
+            </div>
+          </div>
+          <img
+            className="report-found-icon"
+            alt=""
+            src={found}
+            onClick={onReportFoundClick}
+          />
+          <img
+            className="profile-icon"
+            alt=""
+            src={profile}
+            onClick={onProfileClick}
+          />
+          <img className="home-icon" alt="" src={home}  onClick={onHomePageClick} /> 
+          <img className="image-5-icon" alt="" src={history} onClick={onHistoryClick} />
+        </div>
+        <img
+          className="subtract-icon"
+          alt=""
+          src={back}
+          onClick={onSignOutClick}
+        />
       </div>
     </div>
   );
