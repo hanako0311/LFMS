@@ -5,6 +5,7 @@ import DashboardLostItems from './Dashboard Lost/DashboardLostItems.js';
 import Home from './Homepage/Home.js';
 import Landing from './Landing/Landing.js';
 import Login from './Login/Login.js';
+import Profile from './Profile/Profile.js';
 import Registration from './Register/Register.js';
 import ReportFoundItems from './ReportFound/ReportFoundItems.js';
 import ReportLostItems from './ReportLost/ReportLostItems.js';
@@ -47,6 +48,7 @@ const App = () => {
         <Route path="/report-found-items" element={<ReportFoundItems />} />
         <Route path="/report-lost-items" element={<ReportLostItems />} />
         <Route path="/dashboard-lost-items" element={<DashboardLostItems />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </Router>
   ); 
