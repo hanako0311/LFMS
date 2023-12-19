@@ -1,10 +1,40 @@
 import { Button } from "@mui/material";
-import { useCallback } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./profile.css";
 
 const Profile = () => {
   const navigate = useNavigate();
+  const [userDetails, setUserDetails] = useState(null);
+  
+  useEffect(() => {
+    // Fetch user details when the component mounts
+    fetchUserDetails();
+  }, []);
+  const fetchUserDetails = async () => {
+    try {
+      // Make an API request to fetch user details from your Spring Boot backend
+      const response = await fetch('/users/getUserDetails', {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          // Add any authorization headers if needed
+        },
+        // You may need to include credentials if your backend requires it
+        credentials: 'include',
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        setUserDetails(data);
+      } else {
+        // Handle the error case
+        console.error('Failed to fetch user details');
+      }
+    } catch (error) {
+      console.error('Error fetching user details:', error);
+    }
+  };
 
   const onReportLostContainerClick = useCallback(() => {
     // Please sync "Report Lost Items" to the project
@@ -25,9 +55,20 @@ const Profile = () => {
   const onImage5Click = useCallback(() => {
     // Please sync "History" to the project
   }, []);
+  const onHomePageClick = useCallback(() => {
+    navigate("/home"); 
+  }, [navigate]);
+
+  const onSignOutClick = useCallback(() => {
+    navigate("/"); 
+  }, [navigate]);
+
+  const onUserContainerClick = useCallback(() => {
+    
+  }, []);
 
   return (
-    <div className="profile">
+    <div className="profilepage">
       <div className="card">
         <div className="background" />
         <Button
@@ -38,78 +79,47 @@ const Profile = () => {
         >
           EDIT PROFILE
         </Button>
-        <div className="address">
-          <div className="address1">Address</div>
-          <div className="skina-ubec-ytic">Skina, Ubec Ytic</div>
-        </div>
         <div className="email">
-          <div className="address1">Email</div>
-          <div className="skina-ubec-ytic">zara.w@schl.edu</div>
+          <div className="label">Email</div>
+          <div className="data">{userDetails?.email || 'Loading...'}</div>
         </div>
-        <div className="name">
-          <div className="address1">Name</div>
-          <div className="zara-wardani">Zara Wardani</div>
+        <div className="lname">
+          <div className="label">Last Name</div>
+          <div className="data">{userDetails?.lastname || 'Loading...'}</div>
+        </div>
+        <div className="fname">
+          <div className="label">First Name</div>
+          <div className="data">{userDetails?.firstname || 'Loading...'}</div>
         </div>
         <img className="picture-icon" alt="" src="/picture@2x.png" />
       </div>
       <div className="top-menu">
-        <div className="side-menu">
-          <div className="bg" />
-          <img className="side-menu-child" alt="" src="/line@2x.png" />
-          <div className="nav">
-            <div className="report-lost" onClick={onReportLostContainerClick}>
-              <img className="group-icon" alt="" src="/group@2x.png" />
-              <div className="search-dollar-search-pay-prod">
-                <img
-                  className="search-dollar-search-pay-prod-icon"
-                  alt=""
-                  src="/searchdollarsearchpayproductcurrencyquerymagnifyingcashbusinessmoneyglass@2x.png"
-                />
-                <b className="b">?</b>
-              </div>
+          <div className="bgreportlost" />
+          <div className="userreportlost" onClick={onUserContainerClick}>
+            <img className="placeholder-icon" alt="" src="Placeholder.png" />
+            <div className="name">
+              <b className="username">Zara Wardani</b>
+              <div className="user-type">Admin</div>
             </div>
-            <img
-              className="report-found-icon"
-              alt=""
-              src="/report-found@2x.png"
-              onClick={onReportFoundClick}
-            />
-            <img
-              className="profile-icon"
-              alt=""
-              src="/profile@2x.png"
-              onClick={onProfileClick}
-            />
-            <img
-              className="home-icon"
-              alt=""
-              src="/home@2x.png"
-              onClick={onHomeClick}
-            />
-            <img
-              className="image-5-icon"
-              alt=""
-              src="/image-5@2x.png"
-              onClick={onImage5Click}
-            />
           </div>
-          <img className="subtract-icon" alt="" src="/subtract@2x.png" />
+          <input
+              className="searchtextreportlost"
+              name="Search"
+              placeholder="Search Here..."
+              type="text"
+            />
         </div>
-        <div className="bg1" />
-        <div className="search-bar">
-          <div className="content">
-            <img className="magnifier-icon" alt="" src="/magnifier@2x.png" />
-            <div className="search-here">Search here...</div>
+      <div className="side-menureportlost">
+          <div className="bglost" />
+            <button className="logo" id="logo" />
+          <div className="nav">
+            <button className="home-button" id="home" onClick={onHomePageClick} />
+            <button className="profile-button" id="profile" />
+            <button className="lost" id="lost" onClick={onReportFoundClick}/>
+            <button className="lost" id="history" />
+            <button className="view-historyreportlost" id="history" />
+            <button className="back" id="back" onClick={onSignOutClick}/>
           </div>
-        </div>
-        <div className="user">
-          <img className="placeholder-icon" alt="" src="/placeholder@2x.png" />
-          <div className="name2">
-            <b className="zara-wardani1">Zara Wardani</b>
-            <div className="admin">Admin</div>
-          </div>
-        </div>
-        <img className="lf-splash-1" alt="" src="/lf-splash-1@2x.png" />
       </div>
     </div>
   );

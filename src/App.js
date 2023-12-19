@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import './App.css';
+import { AuthProvider } from './AuthProvider.js';
 import DashboardLostItems from './Dashboard Lost/DashboardLostItems.js';
 import Home from './Homepage/Home.js';
 import Landing from './Landing/Landing.js';
@@ -39,18 +40,22 @@ import ReportLostItems from './ReportLost/ReportLostItems.js';
 
 const App = () => {
   return (
-    <Router>
-      <Routes>
-      <Route path="/" element={<Landing />} />
-        <Route path="/register" element={<Registration />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/report-found-items" element={<ReportFoundItems />} />
-        <Route path="/report-lost-items" element={<ReportLostItems />} />
-        <Route path="/dashboard-lost-items" element={<DashboardLostItems />} />
-        <Route path="/profile" element={<Profile />} />
-      </Routes>
-    </Router>
+    
+      <Router>
+        <AuthProvider>
+        <Routes>
+          <Route path="/" element={<Landing />} />
+          <Route path="/register" element={<Registration />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/home" element={<Home />} requiresAuth />
+          <Route path="/report-found-items" element={<ReportFoundItems />} requiresAuth />
+          <Route path="/report-lost-items" element={<ReportLostItems />} requiresAuth />
+          <Route path="/dashboard-lost-items" element={<DashboardLostItems />} requiresAuth />
+          <Route path="/profile" element={<Profile />} requiresAuth />
+        </Routes>
+        </AuthProvider>
+      </Router>
+    
   ); 
 }; 
 

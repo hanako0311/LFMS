@@ -46,14 +46,6 @@ const Home = () => {
     // Please sync "Search item" to the project
   }, []);
 
-  const onFoundButtonClick = useCallback(() => {
-    navigate("/dash-found-items"); //mao ni para ma click ang icon
-  }, [navigate]);
-
-  const onLostButtonClick = useCallback(() => {
-    navigate("/home"); //mao ni para ma click ang icon
-  }, [navigate]);
-
   return (
     <div className="dashboard-lost-items">
       <div className="top-menu">

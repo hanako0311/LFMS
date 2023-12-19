@@ -11,36 +11,37 @@
 .editprofilebutton {
   position: absolute;
   top: 590px;
-  left: 173.23px;
 }
-.address1,
-.skina-ubec-ytic {
+.label,
+.data {
   position: absolute;
   top: 44px;
   left: 40.95px;
   display: inline-block;
   width: 215.51px;
   height: 29px;
+  padding: 10px;
 }
-.skina-ubec-ytic {
-  top: 0;
+.data {
+  top: 10px;
   left: 0;
+  bottom: 10px;
   font-size: 32px;
   color: #fff;
   width: 296.33px;
   height: 46px;
 }
-.address,
 .email,
-.zara-wardani {
+.lname,
+.fname {
   position: absolute;
   top: 480px;
   left: 137.02px;
   width: 296.33px;
   height: 73px;
 }
-.email,
-.zara-wardani {
+.lname,
+.fname {
   top: 389px;
 }
 .zara-wardani {
@@ -51,7 +52,7 @@
   display: inline-block;
   height: 46px;
 }
-.name,
+.fname,
 .picture-icon {
   position: absolute;
   top: 303px;
@@ -73,11 +74,12 @@
   left: 694.95px;
   width: 579.73px;
   height: 717px;
+  text-align: center;
 }
 .bg {
   top: 0;
   left: 0.11px;
-  background-color: #4f45b6;
+  
   width: 198.55px;
   height: 2019.38px;
 }
@@ -192,15 +194,16 @@
 .side-menu {
   top: 0;
   left: 0;
-  width: 199px;
-  height: 2032px;
+  width: 100%;
+  height: 100%;
   font-size: 12px;
+  background-color: #4f45b6;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 .bg1 {
   top: 17px;
   left: 1.11px;
-  background-color: #4f45b6;
+  
   width: 1958.55px;
   height: 160px;
 }
@@ -215,7 +218,7 @@
 .search-here {
   position: relative;
 }
-.content,
+.p-content,
 .search-bar {
   height: 60px;
   display: flex;
@@ -224,7 +227,7 @@
   justify-content: flex-start;
   box-sizing: border-box;
 }
-.content {
+.p-content {
   border-radius: 22px;
   padding: 23px 32px;
   gap: 16px;
@@ -287,19 +290,20 @@
   position: absolute;
   top: -17px;
   left: 0;
-  width: 1959.66px;
-  height: 2032px;
+  width: 100%;
+  height: 100%;
   text-align: left;
   font-size: 18px;
   color: #fff;
+  background-color: #4f45b6;
 }
-.profile {
+/* .profile {
   position: relative;
   background-color: #fff;
   width: 100%;
-  height: 1080px;
+  height: 100%;
   overflow: hidden;
   text-align: center;
   font-size: 23px;
   color: #a79ae0;
-}
+} */

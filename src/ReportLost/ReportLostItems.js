@@ -1,0 +1,213 @@
+import { DateTimePicker, LocalizationProvider } from "@mui/x-date-pickers";
+import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
+import { useCallback, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import "./ReportLostItems.css";
+
+
+const ReportLostItems = () => {
+  const [imageFile, setImageFile] = useState(null);
+  const navigate = useNavigate();
+  const [inputTextDateTimePickerValue, setInputTextDateTimePickerValue] = useState(null);
+  const [isSuccessPopupVisible, setIsSuccessPopupVisible] = useState(false);
+
+  const showSuccessPopup = () => {
+    setIsSuccessPopupVisible(true);
+  };
+  const hideSuccessPopup = () => {
+    setIsSuccessPopupVisible(false);
+  };
+  const onHomePageClick = useCallback(() => {
+    navigate("/home"); 
+  }, [navigate]);
+
+  const onUserContainerClick = useCallback(() => {
+    
+  }, []);
+
+  const onSearchBarContainerClick = useCallback(() => {
+    
+  }, []);
+
+  const showPopup = (message) => {
+    // Create a div element for the modal
+    const modal = document.createElement('div');
+    modal.classList.add('custom-modal');
+
+    // Create content for the modal
+    const content = document.createElement('div');
+    content.textContent = message;
+
+    // Create a close button
+    const closeButton = document.createElement('button');
+    closeButton.textContent = 'Close';
+    closeButton.addEventListener('click', () => {
+      // Close the modal when the button is clicked
+      document.body.removeChild(modal);
+    });
+
+    // Append content and button to the modal
+    modal.appendChild(content);
+    modal.appendChild(closeButton);
+
+    // Append the modal to the body
+    document.body.appendChild(modal);
+  };
+
+  const handleImageChange = (event) => {
+    const file = event.target.files[0];
+    setImageFile(file);
+  };  
+  
+  const onSubmitButtonClick = useCallback(async () => {
+    const itemName = document.querySelector('.inputtext').value;
+    const dateLost = inputTextDateTimePickerValue;
+    const locationLost = document.querySelector('.inputtext2').value;
+    const itemDescription = document.querySelector('.inputtext3').value;
+  
+    // Validate if all required fields are filled
+    if (!itemName || !dateLost || !locationLost || !itemDescription) {
+      // Show error popup
+      showPopup('Please fill in all required fields.');
+      return;
+    }
+  
+    try {
+      const formData = new FormData();
+      // Explicitly set Content-Type for lostEntity
+      formData.append(
+        'lostEntity',
+        new Blob([JSON.stringify({
+          itemFound: itemName,
+          dateFound: dateLost,
+          locationFound: locationLost,
+          itemDescription: itemDescription,
+        })], { type: 'application/json' })
+      );
+      formData.append('image', imageFile);
+  
+      const response = await fetch('http://localhost:8080/lost-items', {
+        method: 'POST',
+        body: formData,
+      });
+  
+      console.log('Form Data:', formData);
+      console.log('Response:', response);
+  
+      if (response.ok) {
+        // Handle success
+        console.log('Item reported successfully');
+        showSuccessPopup();
+      } else {
+        // Handle error
+        const errorData = await response.json();
+        console.error('Error:', errorData.message);
+        showPopup('Error: ${errorData.message}');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      showPopup('An unexpected error occurred.');
+    }
+  }, [imageFile, inputTextDateTimePickerValue]);
+    
+  
+
+  const onReportFoundClick = useCallback(() => {
+    navigate("/report-found-items"); 
+  }, [navigate]);
+
+  const onSignOutClick = useCallback(() => {
+    navigate("/"); 
+  }, [navigate]);
+
+  return (
+    <LocalizationProvider dateAdapter={AdapterDateFns}>
+      <div className="report-lost-items">
+        <div className="top-menu">
+          <div className="bgreportlost" />
+          <div className="userreportlost" onClick={onUserContainerClick}>
+            <img className="placeholder-icon" alt="" src="Placeholder.png" />
+            <div className="name">
+              <b className="username">Zara Wardani</b>
+              <div className="user-type">Admin</div>
+            </div>
+          </div>
+          <input
+              className="searchtextreportlost"
+              name="Search"
+              placeholder="Search Here..."
+              type="text"
+            />
+        </div>
+        </div>
+        <div className="side-menureportlost">
+          <div className="bglost" />
+            <button className="logo" id="logo" />
+          <div className="nav">
+            <button className="home-button" id="home" onClick={onHomePageClick} />
+            <button className="profile-button" id="profile" />
+            <button className="lost" id="lost" onClick={onReportFoundClick}/>
+            <button className="lost" id="history" />
+            <button className="view-historyreportlost" id="history" />
+            <button className="back" id="back" onClick={onSignOutClick}/>
+          </div>
+        </div>
+        <div className="report-lost-items-child" />
+        <div className="report-lost-item-wrapper">
+          <b className="report-lost-item">Report Lost Item</b>
+        </div>
+        <div className="lost-item-form">
+          <input
+            className="inputtext"
+            name="Item Lost"
+            placeholder="Name of item"
+            type="text"
+          />
+          <div className="item-lost">Item Lost</div>
+          <div className="inputtext1">
+            <DateTimePicker
+              label="Date Lost"
+              value={inputTextDateTimePickerValue}
+              onChange={(newValue) => {
+                setInputTextDateTimePickerValue(newValue);
+              }}
+              slotProps={{
+                textField: {
+                  variant: "standard",
+                  size: "medium",
+                  color: "primary",
+                },
+              }}
+            />
+          </div>
+          <div className="date-lost">Date Lost</div>
+          <input
+            className="inputtext2"
+            name="Location"
+            placeholder="Location"
+            type="text"
+          />
+          <div className="location-lost">Location Lost</div>
+          <textarea className="inputtext3" placeholder="Describe the item" />
+          <div className="item-description">Item Description</div>
+          <div className="insert-image">Insert Image</div>
+          <div className="choose-file">
+            <input type="file" onChange={handleImageChange} />
+          </div>
+        <button className="submit-buttonreportlost" id="submit" onClick={onSubmitButtonClick}>
+          <button className="submit-button-child" id="submt" />
+          <div className="submit">Submit</div>
+        </button>
+        {/* Success Popup */}
+        {isSuccessPopupVisible && (
+          <div className="success-popup">
+            <p>Successfully reported lost item!</p>
+            <button onClick={hideSuccessPopup}>Close</button>
+          </div>
+        )}
+      </div>
+    </LocalizationProvider>
+  );
+};
+
+export default ReportLostItems;
