@@ -4,8 +4,8 @@ import axios from 'axios';
 import { useCallback, useState } from "react";
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from "react-router-dom";
+import "../ReportLost/ReportLostItems.css";
 import { fetchFoundItems } from '../actions/foundItemActions';
-import "./ReportFoundItems.css";
 
 
 const ReportFoundItems = () => {
@@ -94,9 +94,9 @@ const ReportFoundItems = () => {
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <div className="report-found-items">
-        <div className="top-menu2">
-          <div className="bg1" />
-          <div className="user" onClick={onUserContainerClick}>
+        <div className="top-menu">
+          <div className="bgreportlost" />
+          <div className="userreportlost" onClick={onUserContainerClick}>
             <img className="placeholder-icon" alt="" src="Placeholder.png" />
             <div className="name">
               <b className="username">Zara Wardani</b>
@@ -110,8 +110,8 @@ const ReportFoundItems = () => {
               type="text"
             />
         </div>
-        <div className="side-menu">
-          <div className="bg4" />
+        <div className="side-menureportlost">
+          <div className="bglost" />
             <button className="logo" id="logo" />
           <div className="nav">
             <button className="home-button" id="home" onClick={onHomePageClick}/>
@@ -126,14 +126,14 @@ const ReportFoundItems = () => {
         <div className="report-found-item-wrapper">
           <b className="report-found-item">Report Found Item</b>
         </div>
-        <div className="found-item-form">
+        <div className="lost-item-form">
           <input
             className="inputtext"
             name="Item Found"
             placeholder="Name of item"
             type="text"
           />
-          <div className="item-found">Item Found</div>
+          <div className="item-lost">Item Found</div>
           <div className="inputtext1">
             <DateTimePicker
               label="Name of item"
@@ -150,14 +150,14 @@ const ReportFoundItems = () => {
               }}
             />
           </div>
-          <div className="date-found">Date Found</div>
+          <div className="date-lost">Date Found</div>
           <input
             className="inputtext2"
             name="Location"
             placeholder="Location"
             type="text"
           />
-          <div className="location-found">Location Found</div>
+          <div className="location-lost">Location Found</div>
           <textarea className="inputtext3" placeholder="Describe the item" />
           <div className="item-description">Item Description</div>
           <input
@@ -176,11 +176,8 @@ const ReportFoundItems = () => {
           Choose File
         </button>
         </div>
-        <button
-          className="submit-button"
-          id="submit"
-          onClick={onSubmitButtonClick}
-        >
+        <button className="submit-buttonreportlost" id="submit" onClick={onSubmitButtonClick}>
+          <button className="submit-button-child" id="submt" />
           <div className="submit">Submit</div>
         </button>
         

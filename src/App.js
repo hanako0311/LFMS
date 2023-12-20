@@ -3,7 +3,7 @@ import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import './App.css';
 import { AuthProvider } from './AuthProvider.js';
 import DashboardLostItems from './Dashboard Lost/DashboardLostItems.js';
-import Home from './Homepage/Home.js';
+import FoundItems from './DashboardFound/FoundItems.js';
 import Landing from './Landing/Landing.js';
 import Login from './Login/Login.js';
 import Profile from './Profile/Profile.js';
@@ -47,11 +47,12 @@ const App = () => {
           <Route path="/" element={<Landing />} />
           <Route path="/register" element={<Registration />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/home" element={<Home />} requiresAuth />
-          <Route path="/report-found-items" element={<ReportFoundItems />} requiresAuth />
-          <Route path="/report-lost-items" element={<ReportLostItems />} requiresAuth />
-          <Route path="/dashboard-lost-items" element={<DashboardLostItems />} requiresAuth />
-          <Route path="/profile" element={<Profile />} requiresAuth />
+          <Route path="/home" element={<FoundItems />} />
+          <Route path="/report-found-items" element={<ReportFoundItems />} />
+          <Route path="/report-lost-items" element={<ReportLostItems />} />
+          <Route path="/dashboard-lost-items" element={<DashboardLostItems />} />
+          <Route path="/dash-found-items" element={<FoundItems />} />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
         </AuthProvider>
       </Router>
