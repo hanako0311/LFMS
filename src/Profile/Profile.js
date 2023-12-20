@@ -14,27 +14,21 @@ const Profile = () => {
   const fetchUserDetails = async () => {
     try {
       // Make an API request to fetch user details from your Spring Boot backend
-      const response = await fetch('/users/getUserDetails', {
+      const email = window.sessionStorage.getItem("user")
+      console.log(email);
+      const response = await fetch(`http://localhost:8080/users/getUserDetails/${email}`, {
         method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-          // Add any authorization headers if needed
-        },
-        // You may need to include credentials if your backend requires it
-        credentials: 'include',
       });
-
-      if (response.ok) {
-        const data = await response.json();
-        setUserDetails(data);
-      } else {
-        // Handle the error case
-        console.error('Failed to fetch user details');
+      if(!response.ok){
+      console.error('Failed to fetch user details');
       }
+      const data = await response.json();
+      console.log(data);
+      setUserDetails(data);
     } catch (error) {
-      console.error('Error fetching user details:', error);
-    }
-  };
+        console.error('Error fetching user details:', error);
+      }
+    };
 
   const onReportLostContainerClick = useCallback(() => {
     // Please sync "Report Lost Items" to the project

@@ -8,7 +8,7 @@ function Login() {
     password: ''
   });
 
-  const navigate = useNavigate(); // Create history object
+  const navigate = useNavigate(); 
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -33,6 +33,8 @@ function Login() {
         if(data === 'Login successful') {
           // Show a popup message for successful login
           alert('Logged in Successfully');
+          window.sessionStorage.setItem("user", formData.email);
+
           // Navigate to the dashboard
           navigate('/home'); // Redirect to the dashboard
           } else {
