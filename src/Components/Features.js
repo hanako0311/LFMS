@@ -1,5 +1,9 @@
 import React from 'react';
-import '../Landing/Landing.css';
+import MagicWand from '../assets/images/magicwand.svg';
+import BoundingBox from '../assets/images/boundingbox.svg';
+import FlyingSaucer from '../assets/images/flyingsaucer.svg';
+import Confetti from '../assets/images/confetti.svg';
+import '../assets/Styles/Landing.css';
 
 const FeaturesSection = () => {
   return (
@@ -14,7 +18,7 @@ const FeaturesSection = () => {
       <div className="feature-card">
             <div className="card-info">
               <div className="icon">
-                <img className="magicwand-icon" alt="" src="/magicwand.svg" />
+                <img className="magicwand-icon" alt="" src={MagicWand} />
               </div>
               <div className="text">
                 <div className="user-friendly-reporting">
@@ -33,7 +37,7 @@ const FeaturesSection = () => {
                 <img
                   className="boundingbox-icon"
                   alt=""
-                  src="/boundingbox.svg"
+                  src={BoundingBox}
                 />
               </div>
               <div className="text">
@@ -54,7 +58,7 @@ const FeaturesSection = () => {
                 <img
                   className="boundingbox-icon"
                   alt=""
-                  src="/flyingsaucer.svg"
+                  src={FlyingSaucer}
                 />
               </div>
               <div className="text">
@@ -72,7 +76,7 @@ const FeaturesSection = () => {
         <div className="feature-card">
             <div className="card-info">
               <div className="icon3">
-                <img className="magicwand-icon" alt="" src="/confetti.svg" />
+                <img className="magicwand-icon" alt="" src={Confetti} />
               </div>
               <div className="text">
                 <div className="user-friendly-reporting">

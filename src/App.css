@@ -10,7 +10,7 @@ body {
 }
 
 .landing-page {
-  background-image: url('./landingbg.png');
+  background-image: url('../src/assets/images/landingbg.png');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -21,7 +21,7 @@ body {
 }
 
 .register-page {
-  background-image: url('./Register/registerbg.png');
+  background-image: url('../src/assets/images/registerbg.png');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -80,7 +80,7 @@ body {
 
   /* register page */
   .register-page {
-    background-image: url('./Register/registerbg.png');
+    background-image: url('../src/assets/images/registerbg.png');
     background-size: cover;
     display: flex;
     justify-content: center;

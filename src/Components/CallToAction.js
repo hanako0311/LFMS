@@ -1,5 +1,8 @@
 import React from 'react';
-import '../Landing/Landing.css';
+import rocket from '../assets/images/rocketlaunch1.svg';
+import arrowleft from '../assets/images/arrowleft.svg';
+import mockupicon from '../assets/images/mockup@2x.png';
+import '../assets/Styles/Landing.css';
 
 const CTA = ({ reference }) => {
   const onButtonContainer6Click = () => {
@@ -21,13 +24,13 @@ const CTA = ({ reference }) => {
         <div className="ctas1">
           <div className="ctas2">
             <div className="button5" onClick={onButtonContainer6Click}>
-              <img className="user-icon" alt="" src="/rocketlaunch1.svg" />
+              <img className="user-icon" alt="" src={rocket} />
               <div className="label">Get Started</div>
-              <img className="arrowright-icon" alt="" src="/arrowleft.svg" />
+              <img className="arrowright-icon" alt="" src={arrowleft} />
             </div>
           </div>
         </div>
-        <img className="mockup-icon" alt="" src="/mockup@2x.png" />
+        <img className="mockup-icon" alt="" src={mockupicon} />
       </div>
     </div>
   );

@@ -1,5 +1,9 @@
 import React from 'react';
-import '../Landing/Landing.css';
+import socialicons7 from '../assets/images/social-icons7.svg';
+import socialicons8 from '../assets/images/social-icons8.svg';
+import socialicons9 from '../assets/images/social-icons9.svg';
+import socialicons10 from '../assets/images/social-icons10.svg';
+import '../assets/Styles/Landing.css';
 
 const Footer = () => {
   const openSocialLink = (url) => {
@@ -30,25 +34,25 @@ const Footer = () => {
         <img
           className="social-icons12"
           alt=""
-          src="/social-icons7.svg"
+          src={socialicons7}
           onClick={onSocialIcons16Click}
         />
         <img
           className="social-icons12"
           alt=""
-          src="/social-icons8.svg"
+          src={socialicons8}
           onClick={onSocialIcons17Click}
         />
         <img
           className="social-icons12"
           alt=""
-          src="/social-icons9.svg"
+          src={socialicons9}
           onClick={onSocialIcons18Click}
         />
         <img
           className="social-icons12"
           alt=""
-          src="/social-icons10.svg"
+          src={socialicons10}
           onClick={onSocialIcons19Click}
         />
       </div>

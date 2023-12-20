@@ -1,12 +1,20 @@
 import React from 'react';
-import '../Landing/Landing.css';
+import '../assets/Styles/Landing.css';
+// Import the images here
+import hannah from '../assets/images/Hannah.jpg';
+import claude from '../assets/images/Claude.png';
+import joshua from '../assets/images/joshua.png';
+import denisse from '../assets/images/Denisse.png';
+import twitter from '../assets/images/twitter.svg';
+import facebook from '../assets/images/facebook.svg';
+import instagram from '../assets/images/instagram.svg';
 
 const AboutUs = () => {
   // Array of team members
   const teamMembers = [
     {
       name: 'Hannah Restauro',
-      imageUrl: '/profile-image-placeholder-1@2x.png',
+      imageUrl: hannah, // Use the imported variable here
       description: 'When things get worse, drink redhorse extra strong.',
       socialLinks: {
         twitter: 'https://twitter.com/ohhhannaahh',
@@ -16,7 +24,7 @@ const AboutUs = () => {
     },
     {
       name: 'Claude Babatid',
-      imageUrl: '/profile-image-placeholder-11@2x.png',
+      imageUrl: claude, // Use the imported variable here
       description: 'Coding with passion, building with purpose.',
       socialLinks: {
         twitter: 'https://twitter.com/claude',
@@ -26,7 +34,7 @@ const AboutUs = () => {
     },
     {
       name: 'John Joshua Jallorina',
-      imageUrl: '/joshua.png',
+      imageUrl: joshua, // Use the imported variable here
       description: 'Innovation is the key to unlock potential.',
       socialLinks: {
         twitter: 'https://twitter.com/claude',
@@ -36,7 +44,7 @@ const AboutUs = () => {
     },
     {
       name: 'Denisse Avila',
-      imageUrl: '/Denisse.png',
+      imageUrl: denisse, // Use the imported variable here
       description: 'Designing with empathy, leading with integrity.',
       socialLinks: {
         twitter: 'https://twitter.com/claude',
@@ -60,7 +68,7 @@ const AboutUs = () => {
             <img
               className="profile-image-placeholder-1"
               alt={member.name}
-              src={member.imageUrl}
+              src={member.imageUrl} // Use the imageUrl property here
             />
             <div className="text4">
               <div className="hannah-restauro">{member.name}</div>
@@ -72,19 +80,19 @@ const AboutUs = () => {
               <img
                 className="social-icons"
                 alt="Twitter"
-                src="/social-icons.svg"
+                src={twitter}
                 onClick={() => window.open(member.socialLinks.twitter)}
               />
               <img
                 className="social-icons"
                 alt="Facebook"
-                src="/social-icons1.svg"
+                src={facebook}
                 onClick={() => window.open(member.socialLinks.facebook)}
               />
               <img
                 className="social-icons"
                 alt="Instagram"
-                src="/social-icons2.svg"
+                src={instagram}
                 onClick={() => window.open(member.socialLinks.instagram)}
               />
             </div>

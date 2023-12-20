@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link as ScrollLink } from 'react-scroll';
 import { Link as RouterLink } from 'react-router-dom';
-import '../Landing/Landing.css';
+import logo from '../assets/images/lf-small.png';
+import '../assets/Styles/Landing.css';
 
 const Navbar = () => {
   const handleButtonClick = (sectionId) => {
@@ -11,7 +12,7 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="logo-container">
-      <img className="logo-image" alt="LFMS Logo" src="/lf-splash-1@2x.png" />
+      <img className="logo-image" alt="LFMS Logo" src={logo}/>
         <b className="landingpage1">LFMS</b>
       </div>
       <div className="navigation-menu">

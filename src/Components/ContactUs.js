@@ -1,4 +1,15 @@
 import React from 'react';
+import phonecall from '../assets/images/phonecall.svg';
+import envelope from '../assets/images/envelopesimple.svg';
+import socialicons3 from '../assets/images/social-icons3.svg';
+import socialicons4 from '../assets/images/social-icons4.svg';
+import socialicons5 from '../assets/images/social-icons5.svg';
+import socialicons6 from '../assets/images/social-icons6.svg';
+import arrowleft from '../assets/images/arrowleft.svg';
+import user from '../assets/images/user.svg';
+import envelopesimple1 from '../assets/images/envelopesimple1.svg';
+import '../assets/Styles/Landing.css';
+
 
 const ContactUs = () => {
   const onSocialIcons12Click = () => {
@@ -36,11 +47,11 @@ const ContactUs = () => {
           <div className="contact-details">
             <div className="input-fields-button">
               <div className="phone" style={{ display: 'flex', alignItems: 'center' }}>
-                <img className="phonecall-icon" alt="" src="/phonecall.svg" />
+                <img className="phonecall-icon" alt="" src={phonecall} />
                 <div style={{ marginLeft: '8px' }}>+63 966 4635 268</div>
               </div>
               <div className="phone" style={{ display: 'flex', alignItems: 'center', marginTop: '10px' }}>
-                <img className="phonecall-icon" alt="" src="/envelopesimple.svg" />
+                <img className="phonecall-icon" alt="" src={envelope} />
                 <div style={{ marginLeft: '8px' }}>lfms@gmail.com</div>
               </div>
             </div>
@@ -50,25 +61,25 @@ const ContactUs = () => {
                 <img
                   className="social-icons12"
                   alt=""
-                  src="/social-icons3.svg"
+                  src={socialicons3}
                   onClick={onSocialIcons12Click}
                 />
                 <img
                   className="social-icons12"
                   alt=""
-                  src="/social-icons4.svg"
+                  src={socialicons4}
                   onClick={onSocialIcons13Click}
                 />
                 <img
                   className="social-icons14"
                   alt=""
-                  src="/social-icons5.svg"
+                  src={socialicons5}
                   onClick={onSocialIcons14Click}
                 />
                 <img
                   className="social-icons12"
                   alt=""
-                  src="/social-icons6.svg"
+                  src={socialicons6}
                   onClick={onSocialIcons15Click}
                 />
               </div>
@@ -78,7 +89,7 @@ const ContactUs = () => {
             <div className="input-fields">
               <div className="input-field">
                 <div className="icon4">
-                  <img className="user-icon" alt="" src="/user.svg" />
+                  <img className="user-icon" alt="" src={user} />
                   <div className="divider" />
                 </div>
                 <input
@@ -95,7 +106,7 @@ const ContactUs = () => {
               </div>
               <div className="input-field">
                 <div className="icon4">
-                  <img className="user-icon" alt="" src="/envelopesimple1.svg" />
+                  <img className="user-icon" alt="" src={envelopesimple1} />
                   <div className="divider" />
                 </div>
                 <input
@@ -112,9 +123,9 @@ const ContactUs = () => {
               </div>
             </div>
             <div className="button7" onClick={onButtonContainer7Click}>
-              <img className="arrowright-icon" alt="" src="/arrowleft.svg" />
+              <img className="arrowright-icon" alt="" src={arrowleft} />
               <div className="label">Submit</div>
-              <img className="arrowright-icon" alt="" src="/arrowleft.svg" />
+              <img className="arrowright-icon" alt="" src={arrowleft} />
             </div>
           </div>
         </div>

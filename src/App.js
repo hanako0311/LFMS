@@ -1,14 +1,16 @@
 import React from 'react';
 import { Link, Route, BrowserRouter as Router, Routes,Switch } from 'react-router-dom';
 import './App.css';
-import Home from './Homepage/Home.js';
-import Login from './Login/Login.js'; 
-import Registration from './Register/Register.js';
-import ReportFoundItems from './ReportFound/ReportFoundItems.js';
-import ReportLostItems from './ReportLost/ReportLostItems.js';
-import backgroundImage from './landingbg.png';
-import FoundItems from './DashboardFound/FoundItems.js';
-
+import SideMenu from './assets/navs/SideMenu/SideMenu.js';
+import Home from './Pages/Homepage/Home.js';
+import Login from './Pages/Login/Login.js'; 
+import Profile from './Pages/Profile/Profile.js';
+import Registration from './Pages/Register/Register.js';
+import ReportFoundItems from './Pages/ReportFound/ReportFoundItems.js';
+import ReportLostItems from './Pages/ReportLost/ReportLostItems.js';
+import FoundItems from './Pages/DashboardFound/FoundItems.js';
+import Landing from './Pages/Landing/Landing.js';
+import LostItems from './Pages/DashboardLostItems/DashboardLostItems.js';
 
 
 /**const LandingPage = () => {
@@ -40,17 +42,18 @@ const App = () => {
   return (
     <Router>
       <Routes>
-      <Route path="/" element={<Landing />} />
+        <Route path="/" element={<Landing />} />
         <Route path="/register" element={<Registration />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/home" element={<Home />} />
+        <Route path="/home" element={<LostItems />} />
+        <Route path="/profile" element={<Profile />} />
         <Route path="/report-found-items" element={<ReportFoundItems />} />
         <Route path="/report-lost-items" element={<ReportLostItems />} />
         <Route path="/dash-found-items" element={<FoundItems />} />
-        
+        <Route path="/dash-lost-items" element={<LostItems />} />
       </Routes>
     </Router>
-  ); 
+  );
 }; 
 
 export default App;

@@ -1,0 +1,418 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.placeholder-icon {
+  position: absolute;
+  left: 0;
+}
+.bgdashlost {
+  top: 0;
+  background-color: #4f45b6;
+  width: 1958.55px;
+  height: 160px;
+}
+.placeholder-icon {
+  top: 4px;
+  border-radius: 10px;
+  width: 66.81px;
+  height: 60px;
+  object-fit: cover;
+}
+.zara-wardani {
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 129px;
+  color: #fff;
+}
+.admin,
+.name,
+.zara-wardani {
+  position: absolute;
+}
+.admin {
+  top: 34px;
+  left: 0;
+  color: #a098ae;
+  display: inline-block;
+  width: 54.56px;
+}
+.name {
+  top: 0;
+  left: 93.53px;
+  width: 116.91px;
+  height: 88px;
+}
+.userdashlost {
+  top: 48px;
+  left: 1630px;
+  width: 210.44px;
+  height: 88px;
+  position: absolute;
+  cursor: pointer;
+}
+.search-bar {
+  border: 0;
+  font-family: var(--font-poppins);
+  font-size: 18px;
+  background-color: #f5effc;
+  top: 47px;
+  left: 550px;
+  border-radius: 20px;
+  width: 818px;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2px 32px 2px 13px;
+  box-sizing: border-box;
+  color: black;
+  position: absolute;
+}
+.top-menudashlost {
+  position: absolute;
+  top: 0;
+  left: 1.11px;
+  width: 1958.55px;
+  height: 160px;
+}
+.group-icon,
+.search-dollar-search-pay-prod-icon {
+  position: absolute;
+  height: 72.92%;
+  width: 84.38%;
+  top: 13.54%;
+  right: 9.12%;
+  bottom: 13.54%;
+  left: 6.5%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.search-dollar-search-pay-prod-icon {
+  height: 96.39%;
+  width: 96.69%;
+  top: 1.81%;
+  right: 1.65%;
+  bottom: 1.81%;
+  left: 1.65%;
+}
+.b {
+  position: absolute;
+  height: 32%;
+  width: 21.74%;
+  top: 17.65%;
+  left: 33.5%;
+  display: inline-block;
+}
+.search-dollar-search-pay-prod {
+  position: absolute;
+  height: 41.67%;
+  width: 38.33%;
+  top: 50%;
+  right: 8.33%;
+  bottom: 8.33%;
+  left: 53.33%;
+  overflow: hidden;
+}
+.report-lost {
+  position: absolute;
+  top: 288px;
+  left: 1px;
+  width: 68px;
+  height: 68px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.vector-icon,
+.vector-icon1 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.vector-icon1 {
+  height: 8.57%;
+  top: 22.86%;
+  bottom: 68.57%;
+}
+.group {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  position: absolute;
+  height: 72.92%;
+  width: 84.38%;
+  top: 13.54%;
+  right: 9.12%;
+  bottom: 13.54%;
+  left: 6.5%;
+}
+.search-dollar-search-pay-prod-icon1 {
+  position: absolute;
+  height: 43.33%;
+  width: 41.67%;
+  top: 50%;
+  right: 5%;
+  bottom: 6.67%;
+  left: 53.33%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.report-found {
+  position: absolute;
+  top: 187px;
+  left: 0;
+  width: 67px;
+  height: 67px;
+  overflow: hidden;
+}
+.profile,
+.profile-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 68px;
+  height: 68px;
+}
+.profile {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  top: 99px;
+  left: 1px;
+}
+.vector-icon2 {
+  position: absolute;
+  height: 87.5%;
+  width: 87.5%;
+  top: 6.25%;
+  right: 6.25%;
+  bottom: 6.25%;
+  left: 6.25%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.home,
+.view-history {
+  position: absolute;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  top: 385px;
+  left: 0px;
+  width: 60px;
+  height: 59px;
+}
+.home {
+  top: 0;
+  left: 2px;
+  width: 65px;
+  height: 65px;
+  overflow: hidden;
+}
+.subtract-icondashlost {
+  position: relative;
+  width: 59.98px;
+  height: 60px;
+  top: 45px;
+}
+.lf-splash-5,
+.nav {
+  position: absolute;
+  top: 211px;
+  left: 70.89px;
+  width: 69px;
+  height: 581px;
+}
+.lf-splash-5 {
+  top: 51px;
+  left: 48.89px;
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  cursor: pointer;
+}
+.side-menudashlost {
+  position: absolute;
+  top: -20px;
+  left: -19.89px;
+  width: 198.55px;
+  height: 100%; /* Set to 100% */
+  font-size: 12px;
+  background-color:#4f45b6;
+}
+.dashboard {
+  position: absolute;
+  top: 180px;
+  left: 337px;
+  font-size: 2em;
+  font-family: var(--heading-2);
+  color: #252525;
+}
+.found-itemsdashlost {
+  position: relative;
+  font-size: 32px;
+  font-weight: 800;
+  font-family: var(--font-inter);
+  color: #2f2f2f;
+  text-align: left;
+  display: inline-block;
+  width: 305px;
+  flex-shrink: 0;
+}
+.content1 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.b1dashlost {
+  position: relative;
+  font-size: 24px;
+  font-family: var(--heading-2);
+  color: #2f2f2f;
+  text-align: left;
+}
+.buttondashlost,
+.content,
+.overview {
+  position: absolute; 
+  left: 0;
+  width: 690px;
+}
+.buttondashlost {
+  top: 250px;
+  left: 330px;
+  cursor: pointer;
+  border: 2px solid #f5effc;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 163px;
+}
+.content,
+.overview {
+  height: 109px;
+}
+.content {
+  top: 328px;
+  left: 329px;
+  position: relative;
+}
+.lost-itemsdashlost {
+  position: relative;
+  font-weight: 800;
+  display: inline-block;
+  width: 188px;
+  flex-shrink: 0;
+  color: #fff;
+}
+.content2 {
+  width: 168px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.b2dashlost {
+  position: relative;
+  font-size: 24px;
+  font-family: var(--heading-2);
+}
+.divdashlost {
+  position: absolute;
+  top: 250px;
+  left: 1043px;
+  border-radius: 20px;
+  background-color: rgba(79, 69, 182, 0.98);
+  border: 2px solid #f5effc;
+  box-sizing: border-box;
+  width: 690px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 15px 393px 15px 15px;
+  gap: 297px;
+  font-size: 32px;
+  font-family: var(--font-inter);
+  cursor: pointer;
+}
+
+/* Assume each item has a class named 'lost-item' */
+.lost-item {
+  width: calc(33.33% - 20px); /* Adjust width to fit three items in a row with some spacing */
+  margin-bottom: 20px; /* Adjust the bottom margin between items */
+  padding: 1em; /* Add padding around each item */
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.lost-item:last-child {
+  margin-right: 0;
+}
+
+/* Assume the container has a class named 'lost-items-container' */
+.lost-items-container {
+  position: absolute;
+  top: 0; /* Adjust as needed */
+  left: 384px; /* Adjust as needed */
+  display: grid;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr)); /* Grid layout */
+  gap: 2em; /* Spacing between items */
+}
+
+.detail {
+  margin-bottom: -10px; /* Adjust the margin as needed */
+}
+
+.button-remove {
+  background-color: #ff5c5c; 
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
+
+  /* Optional: Add hover effect */
+  &:hover {
+    background-color: #ff4444;  
+  }
+}
+
+.dashboard-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.dashboard-lost-items {
+  flex: 1; /* Fill remaining space */
+  background-color: #f5f5f5;
+  padding: 2em;
+}

@@ -1,0 +1,134 @@
+  .side-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px; /* Adjust width based on your design */
+    height: 100%; /* Adjust height based on your layout */
+    background-color: #4f45b6; /* Assuming this is the background color */
+    padding: 20px; /* Adjust padding based on your design */
+    box-sizing: border-box;
+    z-index: 999; /* Adjust as needed */
+  }
+  
+  .nav {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .report-lost,
+  .report-found,
+  .profile,
+  .home,
+  .view-history {
+    position: absolute;
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+  }
+  
+  /* Specific styles for each button/icon */
+  .report-lost {
+    top: 288px;
+    left: 1px;
+    width: 68px;
+    height: 68px;
+    overflow: hidden;
+  }
+  
+  .profile {
+    top: 99px;
+    left: 1px;
+    width: 68px;
+    height: 68px;
+  }
+  
+  .home {
+    top: 385px;
+    left: 0px;
+    width: 60px;
+    height: 59px;
+  }
+  
+  /* Icon styles */
+  .vector-icon,
+  .vector-icon1,
+  .vector-icon2,
+  .profile-child {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+  }
+  
+  /* Additional styles for specific icons */
+  .vector-icon1 {
+    height: 8.57%;
+    top: 22.86%;
+    bottom: 68.57%;
+  }
+  
+  .vector-icon2 {
+    height: 87.5%;
+    width: 87.5%;
+    top: 6.25%;
+    right: 6.25%;
+    bottom: 6.25%;
+    left: 6.25%;
+  }
+  
+  .lf-splash-5 {
+    position: absolute;
+    top: 51px;
+    left: 48.89px;
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    cursor: pointer;
+  }
+
+  .custom-side-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 90px; /* Adjust width based on your design */
+    height: 100%; /* Adjust height based on your layout */
+    background-color: #4f45b6; /* Assuming this is the background color */
+    padding-top: 70px; /* Adjust top padding based on your design */
+    z-index: 999; /* Adjust as needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    justify-content: flex-start;
+    transition: width 0.3s ease; /* Add transition for smoother animation */
+  }
+  
+  .custom-side-menu.collapsed {
+    width: 90px; /* Adjust width for collapsed state */
+  }
+  
+  /* Adjust NavText styles */
+  .custom-side-menu .nav-item-text {
+    display: none; /* Hide the text by default */
+    color: white; /* Customize text color */
+    font-size: 12px; /* Customize font size */
+  }
+  
+  /* Show text when the menu is expanded */
+  .custom-side-menu:not(.collapsed) .nav-item-text {
+    display: block;
+  }
+  
+  /* Adjust icon styles */
+  .custom-side-menu img {
+    width: 1.75em; /* Adjust icon size */
+  }
+  
+  
+
