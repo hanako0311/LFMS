@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import '../../assets/Styles/Login.css'; // Import the global CSS file
-import { Link } from 'react-router-dom';
-import backgroundImage from './Log-in.png';
-import {useNavigate } from 'react-router-dom';
 
 function Login() {
   const [formData, setFormData] = useState({
@@ -10,22 +8,48 @@ function Login() {
     password: ''
   });
 
-  const navigate = useNavigate(); // Create history object
+  const navigate = useNavigate(); 
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     // Handle the form submission logic here
-    console.log('Form data submitted:', formData);
-    alert('Logged in successfully'); // Show a popup message for successful login
+    try{
+      //Make POST request to the login endpoint
+      const response = await fetch('http://localhost:8080/users/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      console.log('Form data submitted:', formData);
 
-     // Navigate to the dashboard
-     navigate('/home'); // Redirect to the dashboard
+      if (response.ok){
+        const data = await response.text();
+        if(data === 'Login successful') {
+          // Show a popup message for successful login
+          alert('Logged in Successfully');
+          window.sessionStorage.setItem("user", formData.email);
 
-    setFormData({ // Reset the form fields
+          // Navigate to the dashboard
+          navigate('/home'); // Redirect to the dashboard
+          } else {
+            alert('Invalid Credentials');
+          }
+        } else {
+          console.error('Login Failed: ', response.statusText);
+          alert('Login failed. Please Try Again');
+        }
+      } catch (error) {
+        console.error('Login failed:', error.message);
+        alert('Login failed. Please try again.');
+      }
+  
+      setFormData({ // Reset the form fields
       email: '',
       password: ''
     });

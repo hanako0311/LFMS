@@ -1,8 +1,8 @@
 import React, { useCallback } from 'react';
-import userIcon from '../assets/images/rocketlaunch1.svg';
-import arrowRightIcon from '../assets/images/arrowleft.svg';
-import visualsIcon from '../assets/images/visuals.svg';
 import '../assets/Styles/Landing.css';
+import arrowRightIcon from '../assets/images/arrowleft.svg';
+import userIcon from '../assets/images/rocketlaunch1.svg';
+import visualsIcon from '../assets/images/visuals.svg';
 
 const Hero = () => {
   const onButtonContainer5Click = useCallback(() => {
@@ -26,7 +26,7 @@ const Hero = () => {
         <div className="ctas">
           <div className="button5" onClick={onButtonContainer5Click}>
             <img className="user-icon" alt="" src={userIcon} />
-            <div className="label">Get Started</div>
+            <div className="landing-label">Get Started</div>
             <img className="arrowright-icon" alt="" src={arrowRightIcon} />
           </div>
         </div>

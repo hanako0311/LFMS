@@ -2,8 +2,8 @@ import { Button } from "@mui/material";
 import { useCallback, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../../assets/Styles/profile.css";
-import TopMenu from "../../assets/navs/TopMenu/TopMenu";
 import SideMenu from "../../assets/navs/SideMenu/SideMenu";
+import TopMenu from "../../assets/navs/TopMenu/TopMenu";
 
 const Profile = () => {
   const navigate = useNavigate();
@@ -154,7 +154,7 @@ const Profile = () => {
         <img className="picture-icon" alt="" src="/picture@2x.png" />
       </div>
       <TopMenu />
-      <SideMenu/>
+      <SideMenu />
     </div>
   );
 };

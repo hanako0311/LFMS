@@ -1,8 +1,8 @@
 import React from 'react';
-import rocket from '../assets/images/rocketlaunch1.svg';
+import '../assets/Styles/Landing.css';
 import arrowleft from '../assets/images/arrowleft.svg';
 import mockupicon from '../assets/images/mockup@2x.png';
-import '../assets/Styles/Landing.css';
+import rocket from '../assets/images/rocketlaunch1.svg';
 
 const CTA = ({ reference }) => {
   const onButtonContainer6Click = () => {
@@ -25,7 +25,7 @@ const CTA = ({ reference }) => {
           <div className="ctas2">
             <div className="button5" onClick={onButtonContainer6Click}>
               <img className="user-icon" alt="" src={rocket} />
-              <div className="label">Get Started</div>
+              <div className="landing-label">Get Started</div>
               <img className="arrowright-icon" alt="" src={arrowleft} />
             </div>
           </div>

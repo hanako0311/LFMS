@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link as ScrollLink } from 'react-scroll';
 import { Link as RouterLink } from 'react-router-dom';
-import logo from '../assets/images/lf-small.png';
+import { Link as ScrollLink } from 'react-scroll';
 import '../assets/Styles/Landing.css';
+import logo from '../assets/images/lf-small.png';
 
 const Navbar = () => {
   const handleButtonClick = (sectionId) => {
@@ -18,29 +18,29 @@ const Navbar = () => {
       <div className="navigation-menu">
         <ScrollLink to="hero-section" spy={true} smooth={true} duration={500}>
           <div className="button2">
-            <div className="label">Home</div>
+            <div className="landing-label">Home</div>
           </div>
         </ScrollLink>
         <ScrollLink to="features-section" spy={true} smooth={true} duration={500}>
           <div className="button2">
-            <div className="label">Features</div>
+            <div className="landing-label">Features</div>
           </div>
         </ScrollLink>
         <ScrollLink to="team-section" spy={true} smooth={true} duration={500}>
           <div className="button2">
-            <div className="label">About Us</div>
+            <div className="landing-label">About Us</div>
           </div>
         </ScrollLink>
         <ScrollLink to="contact-section" spy={true} smooth={true} duration={500}>
           <div className="button2">
-            <div className="label">Contact Us</div>
+            <div className="landing-label">Contact Us</div>
           </div>
         </ScrollLink>
         <RouterLink to="/login">
           <div className="button4">
-            <div className="label">Login</div>
+            <div className="landing-label">Login</div>
           </div>
-        </RouterLink >
+        </RouterLink > 
       </div>
     </div>
   );

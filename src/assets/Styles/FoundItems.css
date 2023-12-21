@@ -93,20 +93,22 @@
   font-family: var(--heading-2);
 }
 
-.align,
+.align-btn,
 .content,
 .overview {
   position: absolute;
-  top: 160px;
+  top: 200px;
   left: 160px;
 }
 
-.align {
+.align-btn {
   width: 120px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+  top:320px;
+  left: 160px;
 }
 
 .overview {
@@ -131,20 +133,28 @@
   justify-content: flex-start;
 } */
 
-.foundbtn {
-  border-radius: 20px;
-  background-color: #EDEDED; /* Default background color */
-  border: 2px solid #F5EFFC;
-  box-sizing: border-box;
+
+.foundbtn,
+.content,
+.overview {
+  position: absolute; 
+  left: 0;
   width: 690px;
+}
+.foundbtn {
+  top: 250px;
+  left: 330px;
+  cursor: pointer;
+  border: 2px solid #f5effc;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  padding: 32px;
   gap: 163px;
-  cursor: pointer;
-  transition: background-color 0.3s ease; /* Transition for smooth color change */
 }
 
 .lostbtn {
@@ -364,23 +374,25 @@
   background-color: transparent;
 }
 
-.cards-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px; /* Adjust the gap between cards */
-  margin-top: 16px; /* Add space above the card container */
-  max-width: 90%;
-  padding: 0 16px;
+
+.cards {
+  margin-right: 150px; 
+  margin-bottom: 50px; 
+  background-color: #f5f5f5;
 }
 
-.card {
-  flex: 0 0 calc(33.33% - 16px); /* Each card takes up one-third of the container width with spacing */
-  padding: 20px;
-  min-height: 250px;
-  box-shadow: 0px 10px 30px 0px rgba(50, 50, 50, 0.16);
-  border-radius: 10px;
-  background-color: #FFF; /* Card background color */
-  margin-bottom: 16px; /* Add spacing between rows */
+.cards:last-child {
+  margin-right: 0;
+}
+
+
+.cards-container {
+  position: absolute;
+  top: 0; 
+  left: 384px; 
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 410px; 
 }
 
 

@@ -1,9 +1,9 @@
 import React from 'react';
-import MagicWand from '../assets/images/magicwand.svg';
-import BoundingBox from '../assets/images/boundingbox.svg';
-import FlyingSaucer from '../assets/images/flyingsaucer.svg';
-import Confetti from '../assets/images/confetti.svg';
 import '../assets/Styles/Landing.css';
+import BoundingBox from '../assets/images/boundingbox.svg';
+import Confetti from '../assets/images/confetti.svg';
+import FlyingSaucer from '../assets/images/flyingsaucer.svg';
+import MagicWand from '../assets/images/magicwand.svg';
 
 const FeaturesSection = () => {
   return (
@@ -20,7 +20,7 @@ const FeaturesSection = () => {
               <div className="icon">
                 <img className="magicwand-icon" alt="" src={MagicWand} />
               </div>
-              <div className="text">
+              <div className="landing-text">
                 <div className="user-friendly-reporting">
                   User-Friendly Reporting
                 </div>
@@ -40,7 +40,7 @@ const FeaturesSection = () => {
                   src={BoundingBox}
                 />
               </div>
-              <div className="text">
+              <div className="landing-text">
                 <div className="user-friendly-reporting">
                   <p className="searchable">Searchable</p>
                   <p className="searchable"> Database</p>
@@ -61,7 +61,7 @@ const FeaturesSection = () => {
                   src={FlyingSaucer}
                 />
               </div>
-              <div className="text">
+              <div className="landing-text">
                 <div className="user-friendly-reporting">
                   Efficient Item Categorization
                 </div>
@@ -78,7 +78,7 @@ const FeaturesSection = () => {
               <div className="icon3">
                 <img className="magicwand-icon" alt="" src={Confetti} />
               </div>
-              <div className="text">
+              <div className="landing-text">
                 <div className="user-friendly-reporting">
                   Community Interaction
                 </div>

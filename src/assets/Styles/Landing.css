@@ -35,7 +35,7 @@
   height: 20px;
   display: none;
 }
-.label {
+.landing-label {
   position: relative;
   line-height: 24px;
   font-weight: 600;
@@ -200,14 +200,14 @@
   line-height: 150%;
   font-family: Poppins;
 }
-.text {
+.landing-text {
   align-self: stretch;
   justify-content: flex-start;
   gap: 16.97px;
 }
 .card-info,
 .feature-card,
-.text {
+.landing-text {
   display: flex;
   flex-direction: column;
   align-items: center;

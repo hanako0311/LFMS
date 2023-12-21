@@ -1,17 +1,15 @@
 import React from 'react';
-import { Link, Route, BrowserRouter as Router, Routes,Switch } from 'react-router-dom';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import './App.css';
-import SideMenu from './assets/navs/SideMenu/SideMenu.js';
-import Home from './Pages/Homepage/Home.js';
-import Login from './Pages/Login/Login.js'; 
+import FoundItems from './Pages/DashboardFound/FoundItems.js';
+import LostItems from './Pages/DashboardLostItems/DashboardLostItems.js';
+import FoundItemDetails from './Pages/FoundItemDetails/FoundItemsDetails.js';
+import Landing from './Pages/Landing/Landing.js';
+import Login from './Pages/Login/Login.js';
 import Profile from './Pages/Profile/Profile.js';
 import Registration from './Pages/Register/Register.js';
 import ReportFoundItems from './Pages/ReportFound/ReportFoundItems.js';
 import ReportLostItems from './Pages/ReportLost/ReportLostItems.js';
-import FoundItems from './Pages/DashboardFound/FoundItems.js';
-import Landing from './Pages/Landing/Landing.js';
-import LostItems from './Pages/DashboardLostItems/DashboardLostItems.js';
-
 
 /**const LandingPage = () => {
   return (
@@ -51,6 +49,7 @@ const App = () => {
         <Route path="/report-lost-items" element={<ReportLostItems />} />
         <Route path="/dash-found-items" element={<FoundItems />} />
         <Route path="/dash-lost-items" element={<LostItems />} />
+        <Route path="/found-items/:itemId" element={<FoundItemDetails />} />
       </Routes>
     </Router>
   );

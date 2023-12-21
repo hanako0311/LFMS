@@ -1,14 +1,14 @@
 import React from 'react';
-import phonecall from '../assets/images/phonecall.svg';
+import '../assets/Styles/Landing.css';
+import arrowleft from '../assets/images/arrowleft.svg';
 import envelope from '../assets/images/envelopesimple.svg';
+import envelopesimple1 from '../assets/images/envelopesimple1.svg';
+import phonecall from '../assets/images/phonecall.svg';
 import socialicons3 from '../assets/images/social-icons3.svg';
 import socialicons4 from '../assets/images/social-icons4.svg';
 import socialicons5 from '../assets/images/social-icons5.svg';
 import socialicons6 from '../assets/images/social-icons6.svg';
-import arrowleft from '../assets/images/arrowleft.svg';
 import user from '../assets/images/user.svg';
-import envelopesimple1 from '../assets/images/envelopesimple1.svg';
-import '../assets/Styles/Landing.css';
 
 
 const ContactUs = () => {
@@ -124,7 +124,7 @@ const ContactUs = () => {
             </div>
             <div className="button7" onClick={onButtonContainer7Click}>
               <img className="arrowright-icon" alt="" src={arrowleft} />
-              <div className="label">Submit</div>
+              <div className="landing-text">Submit</div>
               <img className="arrowright-icon" alt="" src={arrowleft} />
             </div>
           </div>
